@@ -1,0 +1,447 @@
+ESTADO,Deputado,Partido,Voto
+RORAIMA,Abel Mesquita Jr.,DEM,Não
+RORAIMA,Carlos Andrade,PHS,Não
+RORAIMA,Edio Lopes,PR,Sim
+RORAIMA,Hiran Gonçalves,PP,Sim
+RORAIMA,Maria Helena,PSB,Sim
+RORAIMA,Remídio Monai,PR,Sim
+RORAIMA,Shéridan,PSDB,Sim
+AMAPÁ,André Abdon,PP,Sim
+AMAPÁ,Janete Capiberibe,PSB,Não
+AMAPÁ,Marcos Reategui,PSD,Sim
+AMAPÁ,Professora Marcivania,PCdoB,Não
+AMAPÁ,Roberto Góes,PDT,Não
+PARÁ,Arnaldo Jordy,PPS,Sim
+PARÁ,Beto Faro,PT,Não
+PARÁ,Beto Salame,PP,Sim
+PARÁ,Delegado Éder Mauro,PSD,Sim
+PARÁ,Edmilson Rodrigues,PSOL,Não
+PARÁ,Elcione Barbalho,PMDB,Sim
+PARÁ,Hélio Leite,DEM,Não
+PARÁ,Joaquim Passarinho,PSD,Sim
+PARÁ,José Priante,PMDB,Sim
+PARÁ,Josué Bengtson,PTB,Abstenção
+PARÁ,Júlia Marinho,PSC,Não
+PARÁ,Lúcio Vale,PR,Não
+PARÁ,Nilson Pinto,PSDB,Sim
+PARÁ,Simone Morgado,PMDB,Não
+PARÁ,Wladimir Costa,Solidaried,Sim
+PARÁ,Zé Geraldo,PT,Não
+AMAZONAS,Alfredo Nascimento,PR,Sim
+AMAZONAS,Arthur Virgílio Bisneto,PSDB,Sim
+AMAZONAS,Conceição Sampaio,PP,Sim
+AMAZONAS,Hissa Abrahão,PDT,Não
+AMAZONAS,Pauderney Avelino,DEM,Sim
+AMAZONAS,Sabino Castelo Branco,PTB,Sim
+RONDONIA,Expedito Netto,PSD,Não
+RONDONIA,Lindomar Garçon,PRB,Não
+RONDONIA,Luiz Cláudio,PR,Não
+RONDONIA,Marcos Rogério,DEM,Sim
+RONDONIA,Marinha Raupp,PMDB,Não
+RONDONIA,Nilton Capixaba,PTB,Sim
+ACRE,Alan Rick,PRB,Não
+ACRE,Angelim,PT,Não
+ACRE,César Messias,PSB,Não
+ACRE,Flaviano Melo,PMDB,Sim
+ACRE,Leo de Brito,PT,Não
+ACRE,Rocha,PSDB,Não
+TOCANTINS,Carlos Henrique Gaguim,PTN,Sim
+TOCANTINS,Dulce Miranda,PMDB,Sim
+TOCANTINS,Irajá Abreu,PSD,Sim
+TOCANTINS,Josi Nunes,PMDB,Sim
+TOCANTINS,Lázaro Botelho,PP,Sim
+TOCANTINS,Professora Dorinha Seabra Rezende,DEM,Sim
+TOCANTINS,Vicentinho Júnior,PR,Não
+MARANHÃO,Aluisio Mendes,PTN,Sim
+MARANHÃO,André Fufuca,PP,Não
+MARANHÃO,Eliziane Gama,PPS,Sim
+MARANHÃO,Hildo Rocha,PMDB,Sim
+MARANHÃO,João Marcelo Souza,PMDB,Sim
+MARANHÃO,José Reinaldo,PSB,Sim
+MARANHÃO,Julião Amin Castro,PDT,Não
+MARANHÃO,Junior Marreca,PEN,Sim
+MARANHÃO,Juscelino Filho,DEM,Sim
+MARANHÃO,Luana Costa,PSB,Sim
+MARANHÃO,Pedro Fernandes,PTB,Sim
+MARANHÃO,Rubens Pereira Júnior,PCdoB,Não
+MARANHÃO,Victor Mendes,PSD,Sim
+MARANHÃO,Waldir Maranhão,PP,Não
+MARANHÃO,Zé Carlos,PT,Não
+CEARÁ,Adail Carneiro,PP,Sim
+CEARÁ,André Figueiredo,PDT,Não
+CEARÁ,Cabo Sabino,PR,Sim
+CEARÁ,Chico Lopes,PCdoB,Não
+CEARÁ,Danilo Forte,PSB,Sim
+CEARÁ,Domingos Neto,PSD,Sim
+CEARÁ,Genecias Noronha,Solidaried,Sim
+CEARÁ,Gorete Pereira,PR,Não
+CEARÁ,José Guimarães,PT,Não
+CEARÁ,Leônidas Cristino,PDT,Não
+CEARÁ,Macedo,PP,Sim
+CEARÁ,Moses Rodrigues,PMDB,Sim
+CEARÁ,Odorico Monteiro,PROS,Não
+CEARÁ,Paulo Henrique Lustosa,PP,Sim
+CEARÁ,Raimundo Gomes de Matos,PSDB,Sim
+CEARÁ,Ronaldo Martins,PRB,Não
+CEARÁ,Vaidon Oliveira,DEM,Sim
+PIAUÍ,Assis Carvalho,PT,Sim
+PIAUÍ,Átila Lira,PSB,Sim
+PIAUÍ,Heráclito Fortes,PSB,Sim
+PIAUÍ,Iracema Portella,PP,Sim
+PIAUÍ,Júlio Cesar,PSD,Sim
+PIAUÍ,Maia Filho,PP,Sim
+PIAUÍ,Marcelo Castro,PMDB,Sim
+PIAUÍ,Paes Landim,PTB,Sim
+PIAUÍ,Rodrigo Martins,PSB,Não
+RIO GRANDE DO NORTE,Antônio Jácome,PTN,Sim
+RIO GRANDE DO NORTE,Fábio Faria,PSD,Sim
+RIO GRANDE DO NORTE,Felipe Maia,DEM,Sim
+RIO GRANDE DO NORTE,Rafael Motta,PSB,Sim
+RIO GRANDE DO NORTE,Rogério Marinho,PSDB,Sim
+RIO GRANDE DO NORTE,Walter Alves,PMDB,Sim
+RIO GRANDE DO NORTE,Zenaide Maia,PR,Não
+PARAÍBA,André Amaral,PMDB,Não
+PARAÍBA,Benjamin Maranhão,Solidaried,Sim
+PARAÍBA,Damião Feliciano,PDT,Não
+PARAÍBA,Hugo Motta,PMDB,Não
+PARAÍBA,Luiz Couto,PT,Não
+PARAÍBA,Pedro Cunha Lima,PSDB,Sim
+PARAÍBA,Rômulo Gouveia,PSD,Não
+PARAÍBA,Veneziano Vital do Rêgo,PMDB,Não
+PARAÍBA,Wellington Roberto,PR,Não
+PARAÍBA,Wilson Filho,PTB,Sim
+PERNAMBUCO,Adalberto Cavalcanti,PTB,Sim
+PERNAMBUCO,André de Paula,PSD,Sim
+PERNAMBUCO,Augusto Coutinho,Solidaried,Sim
+PERNAMBUCO,Betinho Gomes,PSDB,Sim
+PERNAMBUCO,Carlos Eduardo Cadoca,PDT,Sim
+PERNAMBUCO,Creuza Pereira,PSB,Sim
+PERNAMBUCO,Daniel Coelho,PSDB,Sim
+PERNAMBUCO,Danilo Cabral,PSB,Sim
+PERNAMBUCO,Eduardo da Fonte,PP,Sim
+PERNAMBUCO,Fernando Monteiro,PP,Sim
+PERNAMBUCO,Gonzaga Patriota,PSB,Não
+PERNAMBUCO,Guilherme Coelho,PSDB,Sim
+PERNAMBUCO,Jarbas Vasconcelos,PMDB,Sim
+PERNAMBUCO,João Fernando Coutinho,PSB,Sim
+PERNAMBUCO,Jorge Côrte Real,PTB,Sim
+PERNAMBUCO,Kaio Maniçoba,PMDB,Não
+PERNAMBUCO,Marinaldo Rosendo,PSB,Sim
+PERNAMBUCO,Pastor Eurico,PHS,Não
+PERNAMBUCO,Ricardo Teobaldo,PTN,Não
+PERNAMBUCO,Severino Ninho,PSB,Sim
+PERNAMBUCO,Silvio Costa,PTdoB,Não
+PERNAMBUCO,Tadeu Alencar,PSB,Sim
+PERNAMBUCO,Zeca Cavalcanti,PTB,Não
+ALAGOAS,Cícero Almeida,PMDB,Sim
+ALAGOAS,Givaldo Carimbão,PHS,Não
+ALAGOAS,JHC,PSB,Não
+ALAGOAS,Nivaldo Albuquerque,PRP,Sim
+ALAGOAS,Paulão,PT,Não
+ALAGOAS,Pedro Vilela,PSDB,Sim
+SERGIPE,Adelson Barreto,PR,Não
+SERGIPE,Andre Moura,PSC,Sim
+SERGIPE,Fábio Mitidieri,PSD,Não
+SERGIPE,Fabio Reis,PMDB,Não
+SERGIPE,João Daniel,PT,Não
+SERGIPE,Jony Marcos,PRB,Não
+SERGIPE,Laercio Oliveira,Solidaried,Não
+SERGIPE,Valadares Filho,PSB,Sim
+BAHIA,Afonso Florence,PT,Não
+BAHIA,Alice Portugal,PCdoB,Não
+BAHIA,Arthur Oliveira Maia,PPS,Sim
+BAHIA,Bacelar,PTN,Não
+BAHIA,Bebeto,PSB,Não
+BAHIA,Benito Gama,PTB,Sim
+BAHIA,Cacá Leão,PP,Sim
+BAHIA,Caetano,PT,Não
+BAHIA,Claudio Cajado,DEM,Sim
+BAHIA,Daniel Almeida,PCdoB,Não
+BAHIA,Elmar Nascimento,DEM,Sim
+BAHIA,Erivelton Santana,PEN,Não
+BAHIA,Félix Mendonça Júnior,PDT,Não
+BAHIA,João Gualberto,PSDB,Sim
+BAHIA,Jorge Solla,PT,Não
+BAHIA,José Carlos Aleluia,DEM,Sim
+BAHIA,José Carlos Araújo,PR,Sim
+BAHIA,José Nunes,PSD,Sim
+BAHIA,Jutahy Junior,PSDB,Sim
+BAHIA,Lucio Vieira Lima,PMDB,Sim
+BAHIA,Márcio Marinho,PRB,Sim
+BAHIA,Mário Negromonte Jr.,PP,Não
+BAHIA,Nelson Pellegrino,PT,Não
+BAHIA,Paulo Azi,DEM,Sim
+BAHIA,Paulo Magalhães,PSD,Sim
+BAHIA,Pr. Luciano Braga,PRB,Sim
+BAHIA,Roberto Britto,PP,Sim
+BAHIA,Robinson Almeida,PT,Não
+BAHIA,Ronaldo Carletto,PP,Sim
+BAHIA,Sérgio Brito,PSD,Sim
+BAHIA,Valmir Assunção,PT,Não
+BAHIA,Waldenor Pereira,PT,Não
+MINAS GERAIS,Adelmo Carneiro Leão,PT,Não
+MINAS GERAIS,Ademir Camilo,PTN,Sim
+MINAS GERAIS,Aelton Freitas,PR,Sim
+MINAS GERAIS,Bilac Pinto,PR,Sim
+MINAS GERAIS,Bonifácio de Andrada,PSDB,Sim
+MINAS GERAIS,Caio Narcio,PSDB,Sim
+MINAS GERAIS,Carlos Melles,DEM,Sim
+MINAS GERAIS,Dâmina Pereira,PSL,Sim
+MINAS GERAIS,Delegado Edson Moreira,PR,Sim
+MINAS GERAIS,Dimas Fabiano,PP,Sim
+MINAS GERAIS,Domingos Sávio,PSDB,Sim
+MINAS GERAIS,Eduardo Barbosa,PSDB,Sim
+MINAS GERAIS,Eros Biondini,PROS,Sim
+MINAS GERAIS,Franklin Lima,PP,Sim
+MINAS GERAIS,Gabriel Guimarães,PT,Sim
+MINAS GERAIS,George Hilton,PSB,Não
+MINAS GERAIS,Jaime Martins,PSD,Sim
+MINAS GERAIS,Jô Moraes,PCdoB,Não
+MINAS GERAIS,Júlio Delgado,PSB,Sim
+MINAS GERAIS,Leonardo Monteiro,PT,Não
+MINAS GERAIS,Leonardo Quintão,PMDB,Sim
+MINAS GERAIS,Lincoln Portela,PRB,Não
+MINAS GERAIS,Luis Tibé,PTdoB,Sim
+MINAS GERAIS,Luiz Fernando Faria,PP,Sim
+MINAS GERAIS,Marcelo Álvaro Antônio,PR,Sim
+MINAS GERAIS,Marcelo Aro,PHS,Sim
+MINAS GERAIS,Marcos Montes,PSD,Sim
+MINAS GERAIS,Marcus Pestana,PSDB,Sim
+MINAS GERAIS,Margarida Salomão,PT,Não
+MINAS GERAIS,Mário Heringer,PDT,Não
+MINAS GERAIS,Mauro Lopes,PMDB,Sim
+MINAS GERAIS,Padre João,PT,Não
+MINAS GERAIS,Patrus Ananias,PT,Não
+MINAS GERAIS,Paulo Abi-Ackel,PSDB,Sim
+MINAS GERAIS,Raquel Muniz,PSD,Sim
+MINAS GERAIS,Reginaldo Lopes,PT,Não
+MINAS GERAIS,Renato Andrade,PP,Sim
+MINAS GERAIS,Renzo Braz,PP,Sim
+MINAS GERAIS,Rodrigo de Castro,PSDB,Sim
+MINAS GERAIS,Rodrigo Pacheco,PMDB,Sim
+MINAS GERAIS,Stefano Aguiar,PSD,Sim
+MINAS GERAIS,Subtenente Gonzaga,PDT,Não
+MINAS GERAIS,Tenente Lúcio,PSB,Sim
+MINAS GERAIS,Toninho Pinheiro,PP,Sim
+MINAS GERAIS,Weliton Prado,PMB,Não
+MINAS GERAIS,Zé Silva,Solidaried,Sim
+ESPÍRITO SANTO,Carlos Manato,Solidaried,Sim
+ESPÍRITO SANTO,Dr. Jorge Silva,PHS,Não
+ESPÍRITO SANTO,Evair Vieira de Melo,PV,Não
+ESPÍRITO SANTO,Givaldo Vieira,PT,Não
+ESPÍRITO SANTO,Helder Salomão,PT,Não
+ESPÍRITO SANTO,Lelo Coimbra,PMDB,Sim
+ESPÍRITO SANTO,Marcus Vicente,PP,Sim
+ESPÍRITO SANTO,Norma Ayub,DEM,Sim
+ESPÍRITO SANTO,Sergio Vidigal,PDT,Não
+RIO DE JANEIRO,Alessandro Molon,REDE,Não
+RIO DE JANEIRO,Alexandre Serfiotis,PMDB,Não
+RIO DE JANEIRO,Alexandre Valle,PR,Sim
+RIO DE JANEIRO,Altineu Côrtes,PMDB,Sim
+RIO DE JANEIRO,Arolde de Oliveira,PSC,Sim
+RIO DE JANEIRO,Aureo,Solidaried,Sim
+RIO DE JANEIRO,Benedita da Silva,PT,Não
+RIO DE JANEIRO,Cabo Daciolo,PTdoB,Não
+RIO DE JANEIRO,Celso Jacob,PMDB,Sim
+RIO DE JANEIRO,Celso Pansera,PMDB,Sim
+RIO DE JANEIRO,Chico Alencar,PSOL,Não
+RIO DE JANEIRO,Chico D Angelo,PT,Não
+RIO DE JANEIRO,Cristiane Brasil,PTB,Sim
+RIO DE JANEIRO,Dejorge Patrício,PRB,Sim
+RIO DE JANEIRO,Deley,PTB,Sim
+RIO DE JANEIRO,Ezequiel Teixeira,PTN,Sim
+RIO DE JANEIRO,Glauber Braga,PSOL,Não
+RIO DE JANEIRO,Hugo Leal,PSB,Sim
+RIO DE JANEIRO,Jair Bolsonaro,PSC,Não
+RIO DE JANEIRO,Jandira Feghali,PCdoB,Não
+RIO DE JANEIRO,Jean Wyllys,PSOL,Não
+RIO DE JANEIRO,Julio Lopes,PP,Sim
+RIO DE JANEIRO,Laura Carneiro,PMDB,Sim
+RIO DE JANEIRO,Luiz Carlos Ramos,PTN,Não
+RIO DE JANEIRO,Luiz Sérgio,PT,Não
+RIO DE JANEIRO,Marcelo Delaroli,PR,Sim
+RIO DE JANEIRO,Marcelo Matos,PHS,Sim
+RIO DE JANEIRO,Marco Antônio Cabral,PMDB,Sim
+RIO DE JANEIRO,Marcos Soares,DEM,Sim
+RIO DE JANEIRO,Miro Teixeira,REDE,Sim
+RIO DE JANEIRO,Otavio Leite,PSDB,Sim
+RIO DE JANEIRO,Paulo Feijó,PR,Sim
+RIO DE JANEIRO,Pedro Paulo,PMDB,Sim
+RIO DE JANEIRO,Rodrigo Maia,DEM,Art. 17
+RIO DE JANEIRO,Rosangela Gomes,PRB,Sim
+RIO DE JANEIRO,Sergio Zveiter,PMDB,Sim
+RIO DE JANEIRO,Simão Sessim,PP,Sim
+RIO DE JANEIRO,Soraya Santos,PMDB,Sim
+RIO DE JANEIRO,Sóstenes Cavalcante,DEM,Sim
+RIO DE JANEIRO,Wadih Damous,PT,Não
+RIO DE JANEIRO,Walney Rocha,PEN,Sim
+RIO DE JANEIRO,Wilson Beserra,PMDB,Sim
+RIO DE JANEIRO,Zé Augusto Nalin,PMDB,Sim
+SÃO PAULO,Adérmis Marini,PSDB,Sim
+SÃO PAULO,Alex Manente,PPS,Sim
+SÃO PAULO,Alexandre Leite,DEM,Sim
+SÃO PAULO,Andres Sanchez,PT,Não
+SÃO PAULO,Arlindo Chinaglia,PT,Não
+SÃO PAULO,Arnaldo Faria de Sá,PTB,Sim
+SÃO PAULO,Beto Mansur,PRB,Sim
+SÃO PAULO,Bruna Furlan,PSDB,Sim
+SÃO PAULO,Capitão Augusto,PR,Sim
+SÃO PAULO,Carlos Zarattini,PT,Sim
+SÃO PAULO,Celso Russomanno,PRB,Sim
+SÃO PAULO,Dr. Sinval Malheiros,PTN,Não
+SÃO PAULO,Eduardo Bolsonaro,PSC,Não
+SÃO PAULO,Eduardo Cury,PSDB,Sim
+SÃO PAULO,Eli Corrêa Filho,DEM,Sim
+SÃO PAULO,Evandro Gussi,PV,Sim
+SÃO PAULO,Flavinho,PSB,Não
+SÃO PAULO,Gilberto Nascimento,PSC,Sim
+SÃO PAULO,Goulart,PSD,Sim
+SÃO PAULO,Guilherme Mussi,PP,Sim
+SÃO PAULO,Herculano Passos,PSD,Sim
+SÃO PAULO,Ivan Valente,PSOL,Não
+SÃO PAULO,Izaque Silva,PSDB,Sim
+SÃO PAULO,Jefferson Campos,PSD,Sim
+SÃO PAULO,João Paulo Papa,PSDB,Sim
+SÃO PAULO,Jorge Tadeu Mudalen,DEM,Sim
+SÃO PAULO,José Mentor,PT,Não
+SÃO PAULO,Keiko Ota,PSB,Sim
+SÃO PAULO,Lobbe Neto,PSDB,Sim
+SÃO PAULO,Luiz Lauro Filho,PSB,Sim
+SÃO PAULO,Luiza Erundina,PSOL,Não
+SÃO PAULO,Major Olimpio,Solidaried,Sim
+SÃO PAULO,Mara Gabrilli,PSDB,Sim
+SÃO PAULO,Marcelo Aguiar,DEM,Sim
+SÃO PAULO,Marcelo Squassoni,PRB,Sim
+SÃO PAULO,Marcio Alvino,PR,Sim
+SÃO PAULO,Miguel Haddad,PSDB,Sim
+SÃO PAULO,Miguel Lombardi,PR,Sim
+SÃO PAULO,Milton Monti,PR,Sim
+SÃO PAULO,Missionário José Olimpio,DEM,Sim
+SÃO PAULO,Nelson Marquezelli,PTB,Sim
+SÃO PAULO,Nilto Tatto,PT,Não
+SÃO PAULO,Orlando Silva,PCdoB,Não
+SÃO PAULO,Paulo Freire,PR,Sim
+SÃO PAULO,Paulo Pereira da Silva,Solidaried,Sim
+SÃO PAULO,Paulo Teixeira,PT,Não
+SÃO PAULO,Pollyana Gama,PPS,Sim
+SÃO PAULO,Pr. Marco Feliciano,PSC,Não
+SÃO PAULO,Renata Abreu,PTN,Sim
+SÃO PAULO,Ricardo Izar,PP,Sim
+SÃO PAULO,Ricardo Tripoli,PSDB,Sim
+SÃO PAULO,Roberto Alves,PRB,Sim
+SÃO PAULO,Roberto de Lucena,PV,Sim
+SÃO PAULO,Sérgio Reis,PRB,Sim
+SÃO PAULO,Silvio Torres,PSDB,Sim
+SÃO PAULO,Tiririca,PR,Sim
+SÃO PAULO,Valmir Prascidelli,PT,Não
+SÃO PAULO,Vanderlei Macris,PSDB,Sim
+SÃO PAULO,Vicente Candido,PT,Sim
+SÃO PAULO,Vicentinho,PT,Não
+SÃO PAULO,Vinicius Carvalho,PRB,Sim
+SÃO PAULO,Vitor Lippi,PSDB,Sim
+SÃO PAULO,Walter Ihoshi,PSD,Sim
+MATO GROSSO,Adilton Sachetti,PSB,Sim
+MATO GROSSO,Carlos Bezerra,PMDB,Sim
+MATO GROSSO,Ezequiel Fonseca,PP,Sim
+MATO GROSSO,Fabio Garcia,PSB,Sim
+MATO GROSSO,Nilson Leitão,PSDB,Sim
+MATO GROSSO,Professor Victório Galli,PSC,Não
+MATO GROSSO,Ságuas Moraes,PT,Não
+MATO GROSSO,Valtenir Pereira,PMDB,Sim
+DISTRITO FEDERAL,Alberto Fraga,DEM,Sim
+DISTRITO FEDERAL,Augusto Carvalho,Solidaried,Sim
+DISTRITO FEDERAL,Erika Kokay,PT,Não
+DISTRITO FEDERAL,Izalci Lucas,PSDB,Sim
+DISTRITO FEDERAL,Laerte Bessa,PR,Sim
+DISTRITO FEDERAL,Ronaldo Fonseca,PROS,Sim
+DISTRITO FEDERAL,Rôney Nemer,PP,Sim
+GOIÁS,Alexandre Baldy,PTN,Sim
+GOIÁS,Célio Silveira,PSDB,Sim
+GOIÁS,Daniel Vilela,PMDB,Sim
+GOIÁS,Delegado Waldir,PR,Não
+GOIÁS,Fábio Sousa,PSDB,Abstenção
+GOIÁS,Flávia Morais,PDT,Não
+GOIÁS,Giuseppe Vecci,PSDB,Sim
+GOIÁS,Heuler Cruvinel,PSD,Sim
+GOIÁS,João Campos,PRB,Sim
+GOIÁS,Jovair Arantes,PTB,Sim
+GOIÁS,Lucas Vergilio,Solidaried,Sim
+GOIÁS,Magda Mofatto,PR,Sim
+GOIÁS,Marcos Abrão,PPS,Sim
+GOIÁS,Roberto Balestra,PP,Sim
+GOIÁS,Rubens Otoni,PT,Não
+GOIÁS,Thiago Peixoto,PSD,Sim
+MATO GROSSO DO SUL,Carlos Marun,PMDB,Sim
+MATO GROSSO DO SUL,Dagoberto Nogueira,PDT,Não
+MATO GROSSO DO SUL,Elizeu Dionizio,PSDB,Não
+MATO GROSSO DO SUL,Geraldo Resende,PSDB,Sim
+MATO GROSSO DO SUL,Mandetta,DEM,Sim
+MATO GROSSO DO SUL,Tereza Cristina,PSB,Sim
+MATO GROSSO DO SUL,Vander Loubet,PT,Não
+MATO GROSSO DO SUL,Zeca do Pt,PT,Não
+PARANÁ,Alex Canziani,PTB,Sim
+PARANÁ,Alfredo Kaefer,PSL,Sim
+PARANÁ,Aliel Machado,REDE,Sim
+PARANÁ,Assis do Couto,PDT,Sim
+PARANÁ,Christiane de Souza Yared,PR,Não
+PARANÁ,Delegado Francischini,Solidaried,Sim
+PARANÁ,Diego Garcia,PHS,Sim
+PARANÁ,Dilceu Sperafico,PP,Sim
+PARANÁ,Edmar Arruda,PSD,Sim
+PARANÁ,Enio Verri,PT,Não
+PARANÁ,Evandro Roman,PSD,Sim
+PARANÁ,João Arruda,PMDB,Sim
+PARANÁ,Leandre,PV,Sim
+PARANÁ,Leopoldo Meyer,PSB,Sim
+PARANÁ,Luciano Ducci,PSB,Sim
+PARANÁ,Luiz Carlos Hauly,PSDB,Sim
+PARANÁ,Luiz Nishimori,PR,Sim
+PARANÁ,Nelson Meurer,PP,Sim
+PARANÁ,Nelson Padovani,PSDB,Sim
+PARANÁ,Osmar Bertoldi,DEM,Sim
+PARANÁ,Reinhold Stephanes,PSD,Sim
+PARANÁ,Rocha Loures,PMDB,Sim
+PARANÁ,Sandro Alex,PSD,Sim
+PARANÁ,Sergio Souza,PMDB,Sim
+PARANÁ,Takayama,PSC,Sim
+PARANÁ,Toninho Wandscheer,PROS,Sim
+PARANÁ,Zeca Dirceu,PT,Sim
+SANTA CATARINA,Carmen Zanotto,PPS,Sim
+SANTA CATARINA,Celso Maldaner,PMDB,Sim
+SANTA CATARINA,Cesar Souza,PSD,Sim
+SANTA CATARINA,Décio Lima,PT,Não
+SANTA CATARINA,Esperidião Amin,PP,Sim
+SANTA CATARINA,Geovania de Sá,PSDB,Sim
+SANTA CATARINA,João Paulo Kleinübing,PSD,Sim
+SANTA CATARINA,Jorge Boeira,PP,Não
+SANTA CATARINA,Jorginho Mello,PR,Sim
+SANTA CATARINA,Marco Tebaldi,PSDB,Sim
+SANTA CATARINA,Mauro Mariani,PMDB,Sim
+SANTA CATARINA,Pedro Uczai,PT,Não
+SANTA CATARINA,Rogério Peninha Mendonça,PMDB,Sim
+SANTA CATARINA,Valdir Colatto,PMDB,Sim
+RIO GRANDE DO SUL,Afonso Hamm,PP,Sim
+RIO GRANDE DO SUL,Afonso Motta,PDT,Sim
+RIO GRANDE DO SUL,Alceu Moreira,PMDB,Sim
+RIO GRANDE DO SUL,Assis Melo,PCdoB,Não
+RIO GRANDE DO SUL,Bohn Gass,PT,Não
+RIO GRANDE DO SUL,Cajar Nardes,PR,Sim
+RIO GRANDE DO SUL,Covatti Filho,PP,Sim
+RIO GRANDE DO SUL,Danrlei de Deus Hinterholz,PSD,Sim
+RIO GRANDE DO SUL,Darcísio Perondi,PMDB,Sim
+RIO GRANDE DO SUL,Heitor Schuch,PSB,Sim
+RIO GRANDE DO SUL,Henrique Fontana,PT,Não
+RIO GRANDE DO SUL,Jerônimo Goergen,PP,Sim
+RIO GRANDE DO SUL,João Derly,REDE,Sim
+RIO GRANDE DO SUL,Jones Martins,PMDB,Sim
+RIO GRANDE DO SUL,José Fogaça,PMDB,Sim
+RIO GRANDE DO SUL,Jose Stédile,PSB,Sim
+RIO GRANDE DO SUL,Luis Carlos Heinze,PP,Sim
+RIO GRANDE DO SUL,Marco Maia,PT,Não
+RIO GRANDE DO SUL,Marcon,PT,Não
+RIO GRANDE DO SUL,Mauro Pereira,PMDB,Sim
+RIO GRANDE DO SUL,Onyx Lorenzoni,DEM,Sim
+RIO GRANDE DO SUL,Paulo Pimenta,PT,Não
+RIO GRANDE DO SUL,Pepe Vargas,PT,Não
+RIO GRANDE DO SUL,Pompeo de Mattos,PDT,Sim
+RIO GRANDE DO SUL,Sérgio Moraes,PTB,Sim
