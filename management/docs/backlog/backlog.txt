@@ -1,6 +1,7 @@
 Melhorias
 **Essencial/Crítica
 *****Login com o firebase;
+*****Descutir e Coletar Mais Questões;
 *****Colocar btn para detalhamento do deputado;
 *****Tela de Detalhamento do Deputado referente ao voto;
 *****Eliminar duplicidade de deputados com mudança de partidos;
