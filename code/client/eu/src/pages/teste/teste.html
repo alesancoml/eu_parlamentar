@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="preto">
+    <ion-title> Usuários
+    </ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>
+    <ion-card>
+      <ion-card-content *ngFor="let user of users">
+        <p>{{user.id}}</p>
+        <p>{{user.email}}</p>
+        <p>{{user.uf}}</p>
+        <p></p>
+      </ion-card-content>
+    </ion-card>
+    <ion-icon class='arrowRight' name="arrow-dropright-circle" (click)="proximaTela()"></ion-icon> 
+  </p>
+   
+</ion-content>

@@ -1,0 +1,36 @@
+page-login {
+    
+    .btnLogin * {
+        font-size: 1em;
+    }
+    .corpo {
+        background-color: #fff;
+    }
+    .scroll-content {
+        overflow-y: auto !important;
+     }
+
+    .titulo {
+        color: dark;
+    }
+    .conteudo1 {
+        position: relative;
+        margin: auto;
+        padding: 100px;
+        width: 100%;
+        box-shadow: none;
+        background-color: #fff;
+        
+    }
+    .conteudo2 {
+        position: relative;
+        background-color: #fff;
+        width: 100%;
+        height: 150px;
+        margin: 0px;
+       
+        box-shadow: none;
+        
+    }
+    
+}

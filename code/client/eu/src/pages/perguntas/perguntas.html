@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar color="preto">
+    <ion-title> Perguntas
+    </ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class='corpo'>
+  <p>
+    <ion-card *ngFor="let pergunta of perguntas" class='cards'>
+      <form [formGroup]="langForm" >
+        <ion-list radio-group formControlName="langs">
+          <ion-card-content >
+            <p class='titulo'>{{pergunta.id}}º {{pergunta.pergunta}}</p>
+            <p class='obs'>Proposta: {{pergunta.codigo}}</p>
+            <p class='obs'>Votada dia: {{pergunta.data}}</p>
+            <button ion-button class="btnDoc" color="primary">Ler Doc</button>
+            <ion-grid class='formulario'>
+              <ion-row class='linha'>
+                <ion-col class='coluna'>
+                  <ion-item class='item'>
+                      <ion-radio value="Sim" checked="false" (click)="doSubmit('Sim', pergunta.id)"></ion-radio>
+                    <ion-label>Sim</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col ></ion-col>
+                <ion-col ></ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-grid class='formulario'>
+              <ion-row class='linha'>
+                <ion-col class='coluna'>
+                  <ion-item class='item' >
+                    <ion-radio value="Nao" checked="false" (click)="doSubmit('Nao', pergunta.id)"></ion-radio>
+                    <ion-label>Não</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col></ion-col>
+                <ion-col ></ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-grid class='formulario'>
+              <ion-row class='linha'>
+                <ion-col class='coluna'>
+                  <ion-item class='item' >
+                    <ion-radio value="Abstencao" checked="false" (click)="doSubmit('Abstencao', pergunta.id)"></ion-radio>
+                    <ion-label>Abstenção</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col ></ion-col>
+                <ion-col ></ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-list>
+      </form>
+    </ion-card>
+    <ion-icon class='arrowRight' name="arrow-dropright-circle" (click)="enviar()"></ion-icon> 
+  </p>
+</ion-content>

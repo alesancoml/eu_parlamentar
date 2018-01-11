@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar color="preto">
+      <ion-title> {{estado}}
+      </ion-title>
+      <button ion-button menuToggle>
+        <ion-icon name='menu'></ion-icon>
+      </button>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding class='corpo'>
+    <ion-list *ngFor="let score of scores; let i = index;" class='lista'  no-lines>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/fotos/{{score[4]}}">
+        </ion-thumbnail>
+        <p class="deputado">{{score[1]}}</p>
+        <p class="partido">{{score[2]}}</p>
+        <ion-note class="score note" [ngClass]="{
+          'note-md0': (score[3] == 100),
+          'note-md1': (score[3] < 100 && score[3] >= 70),
+          'note-md2': (score[3] < 70 && score[3] >= 50),
+          'note-md3': (score[3] < 50 && score[3] >= 30),
+          'note-md4': (score[3] < 30)}" item-end>{{score[3]}}%</ion-note>
+      
+        <!-- <ion-thumbnail item-end class="teste">
+            <img src="assets/imgs/fotos/{{score[4]}}">
+        </ion-thumbnail> -->
+          
+      </ion-item> 
+    </ion-list>
+</ion-content>

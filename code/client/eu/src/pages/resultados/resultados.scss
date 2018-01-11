@@ -1,0 +1,76 @@
+page-resultados {
+    .arrowRight {
+        zoom: 200%;
+        padding: 10px 50%;
+        color: white;     
+    }
+    .scroll-content {
+        overflow-y: auto !important;
+    }
+    .lista{
+        margin-left: -5px;
+        margin-right: -8px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    .item{
+        background-color: #eee;
+        padding: 0px;
+        margin: 0px;
+        height: 60px;        
+    }
+    .deputado{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: justify;
+        margin: 7px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        font-size: 12px;
+        //font-weight: bold;
+        text-transform: uppercase;
+    }
+    .partido{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: justify;
+        margin: -2px 0px 5px 0px;
+        padding: 0px 0px 0px 0px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .corpo{
+        background-color: #fff;
+    }
+    .score.note{
+        font-size: 12px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: justify;
+        font-weight: bold;
+        color:  #000;
+        margin-left: auto;
+        margin: 0px;
+        padding: 0px;
+    }
+    .item ion-thumbnail {
+        min-width: 4.5rem;
+        min-height: 6rem; 
+            
+        img {
+            
+            max-width: 4.5rem;
+            max-height: 6rem;
+            min-width: 4.5rem;
+            min-height: 6rem; 
+        }
+    }
+    .item-inner{
+        //background-color: #000;
+        margin-left: -10px;
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+    .note-md0{ background-color: #16cbd1;}
+    .note-md1{ background-color: #00ff00;}
+    .note-md2{ background-color: #ffff00;}
+    .note-md3{ background-color: #ffa500;}
+    .note-md4{ background-color: #ff0000;}
+    //background-image: url('../../assets/imgs/bg_1.png');
+}

@@ -1,0 +1,70 @@
+page-perguntas {
+    .arrowRight {
+        zoom: 200%;
+        padding: 10px 50%;
+        color: white;     
+    }
+    .corpo{
+        background-color: #000;
+    }
+    .cards{
+        background-color: #fff;
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    .titulo{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: justify;
+        margin: 0px 0px 5px 0px;
+        padding: 0px 0px 0px 0px;
+        font-size: 12px;
+        font-weight: bold;
+        color:  #000;
+    }
+    .obs{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: justify;
+        color:  #777;
+        font-size: 10px;
+        margin: 0px;
+        padding: 0px;
+        font-weight: bold;
+    }
+    .btnDoc{
+        font-size: 10px;
+        color:  #fff;
+        height: 20px;
+        text-transform: initial;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0px;
+        padding: 10px;
+        border-radius: 0%;
+        box-shadow: none;
+        margin: 5px 0px 0px 0px;
+    }
+    .scroll-content {
+        overflow-y: auto !important;
+     }
+    .item{
+        margin: 0px;
+        padding: 0px;
+        font-size: 12px;
+        line-height: 10px;
+        float: left;
+        font-weight: bolder;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .formulario,.coluna{
+        margin: 0px;
+        padding: 0px;
+        //background-color: green;
+        font-size: 0;
+    }
+    .linha{
+        width: 50%;
+        height: 35px;
+        font-size: 0;
+        display: inline-block;
+    }
+}

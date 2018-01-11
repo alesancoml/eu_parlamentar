@@ -1,0 +1,16 @@
+<ion-menu [content]='menu'swipeEnabled="true">        
+    <ion-content class="background-menu" >
+        <ion-card class="conteudo1">
+           <ion-card-header>
+              <!-- <img src="assets/imgs/Logo10.png" id="fotoUsuario">  -->
+            </ion-card-header>
+        </ion-card>                
+        <ion-list >
+             <button  ion-item detail-none no-lines  detail-none menuClose  *ngFor="let p of pages" (click)="openPage(p)" class="background-btn-menu" text-wrap>
+                {{p.title}}
+              </button>
+              <!-- <img src="assets/imgs/eu.png" class="conteudo1">                -->
+        </ion-list>        
+    </ion-content>
+</ion-menu>
+<ion-nav #menu [root]="rootPage"></ion-nav>
