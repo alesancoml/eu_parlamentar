@@ -8,8 +8,8 @@ import { Estado } from '../pages/estado/estado';
 import { Tutorial } from '../pages/tutorial/tutorial';
 import { HomePage } from '../pages/home/home';
 import { Perguntas } from '../pages/perguntas/perguntas';
-import { Teste } from '../pages/teste/teste';
-import { Teste2 } from '../pages/teste2/teste2';
+import { Detalhamento } from '../pages/detalhamento/detalhamento';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -26,12 +26,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Tutorial', component: Tutorial},
-      { title: 'Estado', component: Estado },
-      { title: 'Usuários', component: Teste },
-      { title: 'Perguntas', component: Perguntas },
       { title: 'Compartilhe', component: Sobre },
       { title: 'Sobre', component: Sobre },
-      { title: 'Teste', component: Teste2 },
     ];
   
     platform.ready().then(() => {

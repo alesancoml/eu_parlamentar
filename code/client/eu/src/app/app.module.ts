@@ -11,8 +11,7 @@ import { Login } from '../pages/login/login';
 import { Tutorial } from '../pages/tutorial/tutorial';
 import { Estado } from '../pages/estado/estado';
 import { Sobre } from '../pages/sobre/sobre';
-import { Teste } from '../pages/teste/teste';
-import { Teste2 } from '../pages/teste2/teste2';
+import { Detalhamento } from '../pages/detalhamento/detalhamento';
 import { Perguntas } from '../pages/perguntas/perguntas';
 import { Resultados } from '../pages/resultados/resultados';
 import { ServiceProvider } from '../providers/service-provider';
@@ -25,10 +24,9 @@ import { ServiceProvider } from '../providers/service-provider';
     Tutorial,
     Estado,
     Sobre,
-    Teste,
-    Teste2,
     Perguntas,
-    Resultados
+    Resultados,
+    Detalhamento
   ],
   imports: [
     BrowserModule,
@@ -43,10 +41,9 @@ import { ServiceProvider } from '../providers/service-provider';
     Tutorial,
     Estado,
     Sobre,
-    Teste,
-    Teste2,
     Perguntas,
-    Resultados
+    Resultados,
+    Detalhamento
   ],
   providers: [
     StatusBar,

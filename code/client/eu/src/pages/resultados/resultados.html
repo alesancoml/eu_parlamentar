@@ -1,32 +1,43 @@
 <ion-header>
-    <ion-navbar color="preto">
-      <ion-title> {{estado}}
-      </ion-title>
-      <button ion-button menuToggle>
-        <ion-icon name='menu'></ion-icon>
-      </button>
-    </ion-navbar>
-  </ion-header>
+  <ion-navbar color="preto">
+    <ion-title class="titulo"> {{estado}}
+    </ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
 
 <ion-content padding class='corpo'>
     <ion-list *ngFor="let score of scores; let i = index;" class='lista'  no-lines>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/imgs/fotos/{{score[4]}}">
-        </ion-thumbnail>
-        <p class="deputado">{{score[1]}}</p>
-        <p class="partido">{{score[2]}}</p>
-        <ion-note class="score note" [ngClass]="{
-          'note-md0': (score[3] == 100),
-          'note-md1': (score[3] < 100 && score[3] >= 70),
-          'note-md2': (score[3] < 70 && score[3] >= 50),
-          'note-md3': (score[3] < 50 && score[3] >= 30),
-          'note-md4': (score[3] < 30)}" item-end>{{score[3]}}%</ion-note>
-      
-        <!-- <ion-thumbnail item-end class="teste">
+      <ion-item-sliding>
+        <ion-item (click)="detalhamento(score)">
+          <ion-thumbnail item-start>
             <img src="assets/imgs/fotos/{{score[4]}}">
-        </ion-thumbnail> -->
-          
-      </ion-item> 
+          </ion-thumbnail>
+          <p class="deputado">{{score[1]}}</p>
+          <p class="partido">{{score[2]}}</p>
+          <ion-avatar item-end class="teste" [ngClass]="{
+            'note-md0': (score[3] == 100),
+            'note-md1': (score[3] < 100 && score[3] >= 70),
+            'note-md2': (score[3] < 70 && score[3] >= 50),
+            'note-md3': (score[3] < 50 && score[3] >= 30),
+            'note-md4': (score[3] < 30)}">{{score[3]}}%</ion-avatar> 
+          <ion-thumbnail item-end class="forward" [ngClass]="{
+            'seta-md0': (score[3] == 100),
+            'seta-md1': (score[3] < 100 && score[3] >= 70),
+            'seta-md2': (score[3] < 70 && score[3] >= 50),
+            'seta-md3': (score[3] < 50 && score[3] >= 30),
+            'seta-md4': (score[3] < 30)}">
+              <img src="assets/imgs/arrow_forward.png">
+          </ion-thumbnail>
+        </ion-item>
+        <ion-item-options side="right">
+            <button ion-button color="preto" class="votos" (click)="detalhamento(score)">
+              <ion-icon name="checkmark-circle"></ion-icon>
+              Votos
+            </button>
+        </ion-item-options>
+      </ion-item-sliding>
     </ion-list>
 </ion-content>

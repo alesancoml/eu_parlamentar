@@ -20,7 +20,7 @@ export class Login {
   }
 
   login(metodo: string){
-    console.log(metodo)
+    //console.log(metodo)
     this.navCtrl.setRoot(Tutorial, {forma: metodo});
   }
 

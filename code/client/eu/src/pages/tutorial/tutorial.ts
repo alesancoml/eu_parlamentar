@@ -12,7 +12,7 @@ export class Tutorial {
   
     constructor(public navCtrl: NavController, public navParams: NavParams) {
       this._variavel = this.navParams.get('forma');
-      console.log(this._variavel);
+      //console.log(this._variavel);
     }
   
   proximaTela(){

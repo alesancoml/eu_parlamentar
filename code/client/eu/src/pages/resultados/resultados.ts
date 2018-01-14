@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, MenuController, NavParams } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
+import { Detalhamento } from '../detalhamento/detalhamento';
 
 @Component({
   selector: 'page-resultados',
@@ -30,12 +31,14 @@ export class Resultados {
         this.estado = data.estado;
         this.opinioes = data.opinioes;
         this.scores = data.pontuacao;
-        console.log(this.scores)
+        //console.log(this.scores);
       },
       err => console.log(err)
     );
   }
-
+  detalhamento(linha: any[]){
+    this.navCtrl.push(Detalhamento, {deputado: linha, opina: this.opinioes});
+  }
   
 
 }
