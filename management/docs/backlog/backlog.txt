@@ -1,0 +1,28 @@
+Melhorias
+**Essencial/Crítica
+*****Login com o firebase;
+*****Descutir e Coletar Mais Questões;
+*****Colocar btn para detalhamento do deputado;
+*****Tela de Detalhamento do Deputado referente ao voto;
+*****Eliminar duplicidade de deputados com mudança de partidos;
+*****Rever a forma de entrada de deputados no banco (pequenas variações ex: nome, mudança de partido); 
+*****Implementar efeito de transição de tela;
+*****Implementar mecanismo de propaganda na app;
+*****Rever pilha de navegação geral;
+*****Rever layout;
+*****Colocar load e alert para problemas com servidores e comunicação para usuários;
+**********Alerta 
+Alerta de conexão com o banco;
+Não respondeu todas as perguntas;
+**********Load
+Buscas em geral;
+
+**Interface/Melhoria
+*****Dialect do BD com UTF8;
+
+**Implementação Futura (Feature)
+*****Menu com histórico de respostas da pesquisa do usuário;
+*****Mostrar relação de deputados por estados com base nas resposta do histórico do usuário;
+*****Mostrar votos de matéria por partidos;
+*****Adicionar campo na tabela deputados para ativos e inativos, prever isso na parte de inserção de deputados.
+
