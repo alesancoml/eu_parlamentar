@@ -83,6 +83,7 @@ CREATE TABLE `questoes` (
   `codigo` varchar(20) NOT NULL,
   `pergunta` varchar(500) NOT NULL,
   `link` varchar(300) NOT NULL,
+  `resumo` varchar(45) NOT NULL,
   PRIMARY KEY (`id_questao`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -93,7 +94,7 @@ CREATE TABLE `questoes` (
 
 LOCK TABLES `questoes` WRITE;
 /*!40000 ALTER TABLE `questoes` DISABLE KEYS */;
-INSERT INTO `questoes` VALUES (1,'2016-04-17','DCR 1/2015','Na sua opinião, a presidente Dilma Roussef deve ser afastada do cargo para investigação de possível crime de responsabilidade em seu mandato?','http://bit.ly/EP_Dilma'),(2,'2017-03-22','PL 4302/1998','Você apoia o uso da terceirização em todas as áreas (atividade-fim e atividade-meio) das empresas?','http://bit.ly/EP_Terceirizacao'),(3,'2017-03-29','PEC 395/14','Você autoriza universidades públicas e institutos federais a cobrar por cursos de extensão e pós-graduação lato sensu (especializações)?','http://bit.ly/EP_Ensino'),(4,'2017-04-26','PL 6787/16','Você apoia o projeto de lei da reforma trabalhista (PL 6787/16), onde altera a Consolidação das Leis do Trabalho (CLT) para prever, entre outras medidas, a prevalência do acordo sobre a lei, regras para o trabalho intermitente e o fim da contribuição sindical obrigatória?','http://bit.ly/EP_Trabalhista'),(5,'2017-08-02','SIP 1/2017','Você rejeita o pedido de abertura de processo, por crime comum, contra o presidente da República Michel Temer?','http://bit.ly/EP_Temer');
+INSERT INTO `questoes` VALUES (1,'2016-04-17','DCR 1/2015','Na sua opinião, a presidente Dilma Roussef deve ser afastada do cargo para investigação de possível crime de responsabilidade em seu mandato?','http://bit.ly/EP_Dilma','Afastar Dilma'),(2,'2017-03-22','PL 4302/1998','Você apoia o uso da terceirização em todas as áreas (atividade-fim e atividade-meio) das empresas?','http://bit.ly/EP_Terceirizacao','Terceirização para tudo'),(3,'2017-03-29','PEC 395/14','Você autoriza universidades públicas e institutos federais a cobrar por cursos de extensão e pós-graduação lato sensu (especializações)?','http://bit.ly/EP_Ensino','Especializações pagas'),(4,'2017-04-26','PL 6787/16','Você apoia o projeto de lei da reforma trabalhista (PL 6787/16), onde altera a Consolidação das Leis do Trabalho (CLT) para prever, entre outras medidas, a prevalência do acordo sobre a lei, regras para o trabalho intermitente e o fim da contribuição sindical obrigatória?','http://bit.ly/EP_Trabalhista','Reforma trabalhista'),(5,'2017-08-02','SIP 1/2017','Você rejeita o pedido de abertura de processo, por crime comum, contra o presidente da República Michel Temer?','http://bit.ly/EP_Temer','Arquivar investigação Temer');
 /*!40000 ALTER TABLE `questoes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,7 +110,7 @@ CREATE TABLE `usuarios` (
   `email` varchar(100) NOT NULL,
   `estado_user` varchar(45) NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -158,4 +159,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-10 22:34:36
+-- Dump completed on 2018-01-14 22:39:12

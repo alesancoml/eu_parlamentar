@@ -18,6 +18,7 @@ export class Perguntas {
   respostas = ["Sim","Não","Abs"];
   coleta1=[];
   coleta2=[];
+  coleta3=[];
   indice;
   private usuario;
 
@@ -36,10 +37,11 @@ export class Perguntas {
       )
   }
 
-  doSubmit(resp,pergunta) {
+  doSubmit(resp,pergunta,resumo) {
     if (!this.coleta1.some(x => x === pergunta)){
       this.coleta1.push(pergunta);
       this.coleta2.push(resp);
+      this.coleta3.push(resumo);
       
     }else{
       this.indice = this.coleta1.indexOf(pergunta);
@@ -48,7 +50,7 @@ export class Perguntas {
   }
   enviar(){
     if(this.coleta1.length==this.perguntas.length){
-      this.navCtrl.push(Resultados,{Perguntas: this.coleta1, Respostas: this.coleta2, Usuario: this.usuario});
+      this.navCtrl.push(Resultados,{Perguntas: this.coleta1, Respostas: this.coleta2, Usuario: this.usuario, Resumos: this.coleta3});
     } else{
       console.log("Ainda falta responder alguma questão!");
     }

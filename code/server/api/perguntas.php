@@ -19,7 +19,8 @@ if($m){
         $out .= '"data": "'.$value["data"].'",';
         $out .= '"pergunta": "'.$value["pergunta"].'",';
         $out .= '"link": "'.$value["link"].'",';
-        $out .= '"codigo": "'.$value["codigo"].'"}';
+        $out .= '"codigo": "'.$value["codigo"].'",';
+        $out .= '"resumo": "'.$value["resumo"].'"}';
     }
     $out .= "]";
     $out = utf8_encode($out);

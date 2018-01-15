@@ -1,14 +1,50 @@
-<ion-header>
+<ion-header no-border>
   <ion-navbar color="preto">
-    <ion-title class="titulo"> {{deputado[1]}}
-    </ion-title>
-    <button ion-button menuToggle>
-      <ion-icon name='menu'></ion-icon>
-    </button>
+    <ion-title class="titulo">Detalhamento</ion-title>
+  </ion-navbar>
+  <ion-navbar class="barra" >
+    <ion-list>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/fotos/{{deputado[4]}}">
+        </ion-thumbnail>
+        <p class="deputado">{{deputado[1]}}</p>
+        <p class="partido">{{deputado[2]}}</p>
+        <ion-avatar item-end class="teste" 
+        [ngClass]="{'note-md0': (deputado[3] == 100),
+        'note-md1': (deputado[3] < 100 && deputado[3] >= 70),
+        'note-md2': (deputado[3] < 70 && deputado[3] >= 50),
+        'note-md3': (deputado[3] < 50 && deputado[3] >= 30),
+        'note-md4': (deputado[3] < 30)}">{{deputado[3]}}%</ion-avatar> 
+      </ion-item>
+    </ion-list>
   </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-grid >
+    <ion-row>
+      <ion-col col-8 class="tituloCol1">Questão</ion-col>
+      <ion-col col-2 class="tituloCol2">Dep</ion-col>
+      <ion-col col-2 class="tituloCol3">Você</ion-col>
+    </ion-row>
+    <div *ngFor="let voto of votos; let i = index;">
+      <ion-row>
+        <ion-col col-8 class="conteudoCol1">{{voto[0]}} - {{resumos[i]}}</ion-col>
+        <ion-col col-2 class="conteudoCol2" 
+        [ngClass]=
+          "{'sim': (voto[1] == 'Sim'),
+            'nao': (voto[1] == 'Não'),
+            'abs': (voto[1] == 'Abstencao' || voto[1] == 'Faltou'  || voto[1] == 'Art. 17' || voto[1] == 'Ausente')}">
+          {{voto[1].slice(0,4)}}</ion-col>
+        <ion-col col-2 class="conteudoCol3" 
+        [ngClass]=
+          "{'sim': (opinioes[i][1] == 'Sim'),
+            'nao': (opinioes[i][1] == 'Não'),
+            'abs': (opinioes[i][1] == 'Abstencao')}">
+          {{opinioes[i][1].slice(0,4)}}</ion-col>
+      </ion-row>
+    </div>
+    <ion-row class="ultima"></ion-row>
+  </ion-grid>
 </ion-content>

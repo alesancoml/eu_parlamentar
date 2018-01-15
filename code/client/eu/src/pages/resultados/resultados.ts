@@ -16,11 +16,13 @@ export class Resultados {
   public opinioes:any[];
   public deputados:any[];
   public scores:any[];
+  public resumos:any[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public service:ServiceProvider) {
     this.perguntas = navParams.get('Perguntas');
     this.respostas = navParams.get('Respostas');
     this.usuario = navParams.get('Usuario');
+    this.resumos = navParams.get('Resumos');
     this.postDados();
   }
 
@@ -31,13 +33,12 @@ export class Resultados {
         this.estado = data.estado;
         this.opinioes = data.opinioes;
         this.scores = data.pontuacao;
-        //console.log(this.scores);
       },
       err => console.log(err)
     );
   }
   detalhamento(linha: any[]){
-    this.navCtrl.push(Detalhamento, {deputado: linha, opina: this.opinioes});
+    this.navCtrl.push(Detalhamento, {deputado: linha, opina: this.opinioes, resumos: this.resumos});
   }
   
 
