@@ -125,11 +125,11 @@ for estado in os.listdir(endereco1):
                                 print local,dep
 
 
-c.close()
-d.close()
-e.close()
-g.close()
-h.close()
+##c.close()
+##d.close()
+##e.close()
+##g.close()
+##h.close()
 con.close()                               
 
         

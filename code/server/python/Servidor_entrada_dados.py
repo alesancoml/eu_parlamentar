@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 import MySQLdb
 import csv
+from difflib import SequenceMatcher
 
 con = MySQLdb.connect(host='localhost', user='root', passwd='', db='eu_parlamentar')
 c = con.cursor()
+
+def calculo(a,b):
+    return SequenceMatcher(None,a,b).ratio()
 
 def menu():
     print "*********************************"
@@ -32,7 +36,7 @@ def menu2():
     listarQuestoes()
     questao  = raw_input("Digite o número da questao: ")
     arquivo  = raw_input("Digite o nome do arquivo de dados com sua extensao: ")
-    arquivo = '../Questoes/'+arquivo
+    arquivo = './questoes/'+arquivo
     capturarVotos(questao, arquivo)
 
 def cadastrarQuestao():
@@ -43,12 +47,13 @@ def cadastrarQuestao():
     codigo  = raw_input("Codigo da questao: ")
     questao = raw_input("Texto da questao: ")
     link    = raw_input("Link para consulta da questao: ")
+    resumo  = raw_input("Resumo da questao: ")
     dia = data[0:2]
     mes = data[3:5]
     ano = data[6::]
     data = ano+"/"+mes+"/"+dia    
     try:
-        c.execute("INSERT INTO questoes VALUES(NULL,'%s','%s','%s','%s')" % (data, codigo, questao, link))
+        c.execute("INSERT INTO questoes VALUES(NULL,'%s','%s','%s','%s','%s')" % (data, codigo, questao, link,resumo))
         idQuestao = c.lastrowid
         con.commit()
         print "OK - Questao inserida com sucesso"
@@ -89,10 +94,39 @@ def capturarVotos(questao, arquivo):
 def coletaDeputado(estado, nome, partido):
     verifica = c.execute("SELECT id_deputado FROM deputados WHERE nome='%s' and partido='%s' and estado='%s'" % (nome, partido, estado))
     if (verifica == 0):
-        c.execute("INSERT INTO deputados VALUES(NULL,%s,%s, %s)" , (nome, partido, estado))
-        idDeputado = c.lastrowid
-        con.commit()
-        return idDeputado
+        sql = "SELECT * FROM deputados where estado='%s'"% (estado)
+        c.execute(sql)
+        results = c.fetchall()
+        similar = []
+        pessoa = nome.replace(' ','').upper()
+        for row in results:
+            nomeDoBanco = row[1].replace(' ','').upper()
+            similaridade = calculo(nomeDoBanco,pessoa)
+            similaridade = "%.3f" %(similaridade)
+            if (len(similar)!=0):
+                if (similar[3]<similaridade and float(similaridade)>0.75):
+                    similar[0] = row[0]
+                    similar[1] = row[1]
+                    similar[2] = row[2]
+                    similar[3] = similaridade
+            else:
+                if float(similaridade)>0.75:
+                    similar.append(row[0])
+                    similar.append(row[1])
+                    similar.append(row[2])
+                    similar.append(similaridade)
+        if len(similar)==0:
+            c.execute("INSERT INTO deputados VALUES(NULL,%s,%s,%s,NULL)" , (nome, partido, estado))
+            idDeputado = c.lastrowid
+            con.commit()
+            return idDeputado
+        else:
+            if (partido!=similar[2]):
+                c.execute("INSERT INTO historico VALUES(NULL,%s,%s, %s)" , (similar[0], similar[2], estado))
+                con.commit()
+                c.execute("UPDATE deputados SET partido=%s WHERE id_deputado=%s",(partido,similar[0]))
+                con.commit()
+            return similar[0]
     else:
         lista       = c.fetchall()
         idDeputado  = long(lista[0][0])
