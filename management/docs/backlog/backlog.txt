@@ -1,28 +1,30 @@
-Melhorias
-**Essencial/Crítica
-*****Login com o firebase;
-*****Descutir e Coletar Mais Questões;
-*****Colocar btn para detalhamento do deputado;	(DONE!!!)
-*****Tela de Detalhamento do Deputado referente ao voto; (DONE!!!)
-*****Eliminar duplicidade de deputados com mudança de partidos; (DONE!!!)
-*****Rever a forma de entrada de deputados no banco (pequenas variações ex: nome, mudança de partido);  (DONE!!!)
-*****Implementar efeito de transição de tela;
-*****Implementar mecanismo de propaganda na app;
-*****Rever pilha de navegação geral;
-*****Rever layout;
-*****Colocar load e alert para problemas com servidores e comunicação para usuários;
-**********Alerta 
-Alerta de conexão com o banco;
-Não respondeu todas as perguntas;
-**********Load
-Buscas em geral;
+﻿MELHORIAS
 
-**Interface/Melhoria
-*****Dialect do BD com UTF8;
+Essencial/Crítica
 
-**Implementação Futura (Feature)
-*****Menu com histórico de respostas da pesquisa do usuário;
-*****Mostrar relação de deputados por estados com base nas resposta do histórico do usuário;
-*****Mostrar votos de matéria por partidos;
-*****Adicionar campo na tabela deputados para ativos e inativos, prever isso na parte de inserção de deputados.
+- Login com o firebase;
+- Descutir e Coletar Mais Questões;
+- Implementar efeito de transição de tela;
+- Implementar mecanismo de propaganda na app;
+- Menu;
+- Rever layout.
 
+
+Implementação Futura (Feature)
+
+- Dialect do BD com UTF8;
+- Menu com histórico de respostas da pesquisa do usuário;
+- Mostrar relação de deputados por estados com base nas resposta do histórico do usuário;
+- Mostrar votos de matéria por partidos;
+- Buscas em geral;
+- Adicionar campo na tabela deputados para ativos e inativos, prever isso na parte de inserção de deputados.
+
+
+DONE!!!
+- Colocar btn para detalhamento do deputado;
+- Tela de Detalhamento do Deputado referente ao voto;
+- Colocar load e alert para problemas com servidor e comunicação com usuários;
+- Toast para "Não respondeu todas as perguntas";
+- Rever pilha de navegação geral;
+- Rever a forma de entrada de deputados no banco;
+- Eliminar duplicidade de deputados com mudança de partidos;

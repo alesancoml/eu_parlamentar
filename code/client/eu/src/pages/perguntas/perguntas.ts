@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
-import { NavController, MenuController, NavParams } from 'ionic-angular';
+import { Component, OnInit } from '@angular/core';
+import { NavController, MenuController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
 import { FormGroup, FormControl} from '@angular/forms';
-import { Teste2 } from '../teste2/teste2';
+import { Tutorial } from '../tutorial/tutorial';
 import { Resultados } from '../resultados/resultados';
 
 @Component({
   selector: 'page-perguntas',
   templateUrl: 'perguntas.html',
 })
-export class Perguntas {
+export class Perguntas implements OnInit {
 
   cadastro: any = {};
   perguntas: any[];
@@ -21,20 +21,45 @@ export class Perguntas {
   coleta3=[];
   indice;
   private usuario;
+  private loader;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public service:ServiceProvider) {
+  constructor(
+    public navCtrl:     NavController, 
+    public navParams:   NavParams, 
+    public service:     ServiceProvider, 
+    public loadingCtrl: LoadingController,
+    public toastCtrl:   ToastController) {}
+  
+  ngOnInit(){
     this.usuario = this.navParams.get('user');
+    this.loader = this.loadingCtrl.create({content: 'Buscando perguntas. Aguarde...'});
     this.getDados();
     this.langForm = new FormGroup({
       "langs": new FormControl()
     });
   }
-  
+
+  showToast(position: string, mensagem: string) {
+    let toast = this.toastCtrl.create({
+      duration: 3000,
+      message: mensagem,
+      position: position
+    });
+    toast.present(toast);
+  }
+
   getDados(){
-      this.service.getPerguntas().subscribe(
-        data => this.perguntas = data,
-        err => console.log(err)
-      )
+    //this.loader.present();
+    this.service.getPerguntas().subscribe(
+      data => {
+        //this.loader.dismiss();
+        this.perguntas = data},
+      err => {
+        //this.loader.dismiss();
+        this.showToast('bottom','Servidor fora do ar! Tente mais tarde.');
+        this.navCtrl.setRoot(Tutorial);
+      }
+    )
   }
 
   doSubmit(resp,pergunta,resumo) {
@@ -52,7 +77,7 @@ export class Perguntas {
     if(this.coleta1.length==this.perguntas.length){
       this.navCtrl.push(Resultados,{Perguntas: this.coleta1, Respostas: this.coleta2, Usuario: this.usuario, Resumos: this.coleta3});
     } else{
-      console.log("Ainda falta responder alguma questão!");
+      this.showToast('bottom','Favor, responder todas as questões!');
     }
   }
 
