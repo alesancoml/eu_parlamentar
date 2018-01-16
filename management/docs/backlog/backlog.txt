@@ -4,8 +4,8 @@ Melhorias
 *****Descutir e Coletar Mais Questões;
 *****Colocar btn para detalhamento do deputado;	(DONE!!!)
 *****Tela de Detalhamento do Deputado referente ao voto; (DONE!!!)
-*****Eliminar duplicidade de deputados com mudança de partidos;
-*****Rever a forma de entrada de deputados no banco (pequenas variações ex: nome, mudança de partido); 
+*****Eliminar duplicidade de deputados com mudança de partidos; (DONE!!!)
+*****Rever a forma de entrada de deputados no banco (pequenas variações ex: nome, mudança de partido);  (DONE!!!)
 *****Implementar efeito de transição de tela;
 *****Implementar mecanismo de propaganda na app;
 *****Rever pilha de navegação geral;
