@@ -3,15 +3,6 @@
 Essencial/Crítica
 
 - Login com o firebase;
-- Discutir e coletar mais questões;
-	- Doação de empresas a partidos			OK
-	- Cassação de Cunha				OK
-	- PEC do teto					OK
-
-- Maioridade penal aos 16 anos (não votado ainda)
-- Estatuto da família (votado em comissão)
-- Reforma do ensino médio  (votaram muitos destaques e ficou confuso o que avaliar aqui)
-
 - Menu;
 	- Tutorial
 	- Perguntas
@@ -23,6 +14,7 @@ Essencial/Crítica
 - Na tela Resultados, colocar botões na parte de baixo para mudança de estado aproveitando respostas, mudança só de respostas e mudança de tudo.
 - Rever layout. (só depois de todo o conteúdo já estiver no app).
 - Implementar mecanismo de propaganda na app; (Interessante fazer em conjunto nós dois)
+- Colocar informativos na tela de Detalhamento.
 
 
 Implementação Futura (Feature)
@@ -43,3 +35,11 @@ DONE!!!
 - Rever pilha de navegação geral;
 - Rever a forma de entrada de deputados no banco;
 - Eliminar duplicidade de deputados com mudança de partidos;
+- Discutir e coletar mais questões;			
+   - Doação de empresas a partidos			
+   - Cassação de Cunha				
+   - PEC do teto
+   NÃO:
+   - Maioridade penal aos 16 anos (não votado ainda)
+   - Estatuto da família (votado em comissão)
+   - Reforma do ensino médio  (votaram muitos destaques e ficou confuso o que avaliar aqui)	
