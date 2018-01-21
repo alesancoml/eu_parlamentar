@@ -34,7 +34,7 @@ def menu2():
     print "*******************"
     print "INSERIR VOTOS PARA QUAL QUESTAO?"
     listarQuestoes()
-    questao  = raw_input("Digite o número da questao: ")
+    questao  = raw_input("Digite o numero da questao: ")
     arquivo  = raw_input("Digite o nome do arquivo de dados com sua extensao: ")
     arquivo = './questoes/'+arquivo
     capturarVotos(questao, arquivo)
@@ -69,7 +69,7 @@ def listarQuestoes():
     print ""
     for row in results:
         print "PERGUNTA",row[0],"-",
-        print row[3]
+        print row[3][0:150]
     print ""
 
 def capturarVotos(questao, arquivo):

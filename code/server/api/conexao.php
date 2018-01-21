@@ -13,7 +13,7 @@
         }
 
         public function insereUsuario( $tabela, Array $dados){
-            $dado = "VALUES (".$dados[0].", '".$dados[1]."', '".$dados[2]."')";
+            $dado = "VALUES (".$dados[0].", '".$dados[1]."', '".$dados[2]."', '".$dados[3]."')";
             if($qs = $this->db->query(" INSERT INTO `{$tabela}` {$dado} ") )
             {
                 $query = "email = '".$dados[1]."' AND estado_user = '".$dados[2]."' ORDER BY id_usuario desc";

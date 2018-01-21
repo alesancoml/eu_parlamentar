@@ -1,15 +1,16 @@
 <ion-header>
-  <ion-navbar color="preto">
-    <ion-title> Perguntas
-    </ion-title>
+  <ion-navbar color="preto" class="barra">
+    <ion-title class="tituloPrincipal"> Perguntas </ion-title>
     <button ion-button menuToggle>
-      <ion-icon name='menu'></ion-icon>
-    </button>
+        <ion-icon name='menu'></ion-icon>
+      </button>
+    <img src="assets/imgs/eu.png" id="logo10" class="logo">
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class='corpo'>
   <p>
+    <ion-spinner name="circles" *ngIf="perguntas == []"></ion-spinner>
     <ion-card *ngFor="let pergunta of perguntas" class='cards'>
       <form [formGroup]="langForm" >
         <ion-list radio-group formControlName="langs">

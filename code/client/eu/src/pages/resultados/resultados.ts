@@ -56,6 +56,7 @@ export class Resultados implements OnInit {
         this.scores = data.pontuacao;
       },
       err => {
+        console.log(err);
         this.loader.dismiss();
         this.showToast('bottom','Problemas no servidor ou em sua internet.');
         this.navCtrl.pop();

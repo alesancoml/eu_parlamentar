@@ -1,14 +1,46 @@
 page-resultados {
-    .arrowRight {
-        zoom: 200%;
-        padding: 10px 50%;
-        color: white;     
-    }
+    //GERAL###############################################
     .scroll-content {
         overflow-y: auto !important;
     }
-    .titulo{
-        text-transform: initial;
+    
+    //BARRA TOPO##########################################    
+    .tituloPrincipal {
+        text-transform: capitalize;
+        float: left;
+        text-align: left;
+        margin-top: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .toolbar-title{
+        font-size: 16px;
+        margin-top: 5px;
+        color: white;
+    }
+    .bar-button{
+        color: white;
+    }
+    .toolbar-title-ios{
+        width: 200px;
+        margin-top: -7px;
+        margin-left: -40px;
+        text-align: left;
+        padding:0px;
+    }
+    .toolbar-title-wp{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        text-transform: capitalize;
+    }
+    
+    .logo{
+        float: right;
+        max-width: 4rem;
+        min-width: 4rem;
+        margin-right: 6px;
+        margin-top: auto;
+        padding: 2px;
     }
     .corpo{
         background-color: #fff;
@@ -117,29 +149,4 @@ page-resultados {
         text-transform: initial;
 
     }
-
-
-    // .col1{
-    //     padding: 0px;
-    //     margin: 0px;
-    //     width: 30px;
-    //     background-color: rgb(194, 194, 194);
-    // }
-    // .col2{
-    //     padding: 0px;
-    //     margin: 0px;
-    //     width: 30px;
-    //     padding-right: 15px;
-    //     text-align: right;
-    //     background-color: rgb(165, 165, 165);
-    // }
-    // COM CÍRCULOS (a classe precisa ser dentro de um <p>
-    // border-radius: 100%;
-    // height: 35px;
-    // width: 35px;
-    // background-color: red;
-    // color: #fff;
-    // padding: 20% 0px;
-    // text-align: center;
-    // margin: 20px 0px;
 }

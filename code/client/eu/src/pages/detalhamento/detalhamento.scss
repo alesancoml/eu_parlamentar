@@ -1,17 +1,71 @@
 page-detalhamento {
+    //GERAL###############################################
     .scroll-content {
-        overflow-y: auto !important;
+        flex-direction: column;
+        overflow: hidden;
+        margin-top: 150px;
+    }
+        
+    //BARRA TOPO##########################################
+    .tituloPrincipal {
+        text-transform: capitalize;
+        float: left;
+        text-align: left;
+        margin-top: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .toolbar-title{
+        font-size: 16px;
+        margin-top: 5px;
+        color: white;
+    }
+    .bar-button{
+        color: white;
+    }
+    .logo{
+        float: right;
+        max-width: 4rem;
+        min-width: 4rem;
+        margin-right: 10px;
+        margin-top: auto;
+        padding: 2px;
     }
     
     .barra{
-        height: 120px;
         margin: 0px;
         margin-top: 0px;
         padding: 0px;
         padding-top: 0px;
-        
         margin-bottom: 0px;
     }
+    .toolbar-background-md{
+        background: #000;
+        height: 60px;
+    }
+    .toolbar-background-ios{
+        background: #000;
+        height: 70px;
+    }
+    .toolbar-background-wp{
+        
+        background: #000;
+        height: 60px;
+    }
+    .toolbar-title-ios{
+        width: 200px;
+        margin-top: -7px;
+        margin-left: -40px;
+        text-align: left;
+        padding:0px;
+    }
+    .toolbar-title-wp{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        text-transform: capitalize;
+    }
+    
+    //IDENTIFICAÇÃO DO PARLAMENTAR########################
     .item{
         background-color: #eee;
         padding: 0px;
@@ -19,14 +73,8 @@ page-detalhamento {
         margin-top: 0px;
         margin-bottom: 0px;
         height: 100px;
-        //background-color: #16d164;
-    }
-    .toolbar-background-md{
-        background: #000;
-        height: 58px;
     }
     .deputado{
-        //background: rgb(209, 188, 1);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: left;
         margin: 10px 0px 0px 0px;
@@ -40,14 +88,13 @@ page-detalhamento {
         //height: 50px;
         width:160px;
         white-space: normal;
-
     }
     .partido{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: left;
         margin: 0px 0px 5px 0px;
         padding: 0px;
-        font-size: 12px;
+        font-size: 10px;
         color: rgb(102, 102, 102);
         font-weight: bold;
     }
@@ -67,9 +114,9 @@ page-detalhamento {
     .item-inner{
         margin-right: -16px;
         padding: 0px;
-        //background-color: red;
         margin-left: -10px;
         width:200;
+        //background-color: red;
     }
     .teste{
         padding: 50% 1px;
@@ -82,19 +129,27 @@ page-detalhamento {
             margin: 15px;
         }
     }
-    
     .note-md0{ background-color: #16cbd1;}
     .note-md1{ background-color: #00ff00;}
     .note-md2{ background-color: #ffff00;}
     .note-md3{ background-color: #ffa500;}
     .note-md4{ background-color: #fd5f5f;}
 
-    .seta-md0{ background-color: #15969b;}
-    .seta-md1{ background-color: #00c900;}
-    .seta-md2{ background-color: #c7c700;}
-    .seta-md3{ background-color: #cc8501;}
-    .seta-md4{ background-color: #d34c4c;}
+    
+    .toolbar-content .toolbar-content-ios{
+        background-color: #16cbd1;
+    }
 
+    //TABELA##########################################
+    ion-grid{
+        margin-top: 0px;
+    }
+    .header-md{
+        height: 0px;
+    }
+    .content-md{
+        margin-top:0px;
+    }
     .tituloCol1 {
         background-color: #ccc;
         border-left: 1px solid #666;
@@ -147,18 +202,20 @@ page-detalhamento {
         border-top: 1px solid #666;
     }
     p {
-        padding: 10px 0 0 10px !important;
+        padding: 0px 0 0 10px !important;
         margin: 0;
     }
     .sim{
         color: rgb(22, 187, 0);
-        
+        //padding-top:2px;
     }
     .nao{
         color: rgb(243, 117, 0);
-        
+        //padding-top:2px;
     }
     .abs{
-        color: rgb(138, 138, 138);
+        color: black;
+        font-size: 9px;
+        padding-top:7px;
     }
 }

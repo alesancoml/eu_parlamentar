@@ -31,7 +31,11 @@ import { ServiceProvider } from '../providers/service-provider';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{platforms: {
+      ios: {
+        backButtonText: ''
+      }
+    }})
   ],
   bootstrap: [IonicApp],
   entryComponents: [

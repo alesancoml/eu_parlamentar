@@ -21,12 +21,19 @@
 
     $dados; // RECEBE ARRAY PARA RETORNO
 
+    // PEGA A DATA
+    $tz_string      = "America/Recife"; // Use one from list of TZ names http://php.net/manual/en/timezones.php 
+    $tz_object      = new DateTimeZone($tz_string); 
+    $datetime       = new DateTime(); 
+    $datetime       ->setTimezone($tz_object); 
+    $dataAtual      = $datetime->format('Y-m-d');
+
     // ABRE CONEXÃO
     $m = new Model();
     
    //SE TIVER CONEXÃO, TENTA A INSERÇÃO
     if($m){
-        $insercao = $m->insereUsuario( 'usuarios', ['NULL', $email, $uf] );
+        $insercao = $m->insereUsuario( 'usuarios', ['NULL', $email, $uf, $dataAtual] );
         if(!$insercao){
             $dados = array('mensage' => "Não foi possivel enviar os dados ", 'idUser' => "");
             echo json_encode($dados);

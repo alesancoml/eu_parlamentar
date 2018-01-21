@@ -37,7 +37,9 @@ export class ServiceProvider {
       headers: headers,
       method:"POST"
     }).map(
-      (res:Response) => {return res.json();}
+      (res:Response) => {
+        return res.json();
+      }
     );
   }
 

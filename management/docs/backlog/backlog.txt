@@ -3,22 +3,37 @@
 Essencial/Crítica
 
 - Login com o firebase;
-- Descutir e Coletar Mais Questões;
-- Implementar efeito de transição de tela;
-- Implementar mecanismo de propaganda na app;
+- Discutir e coletar mais questões;
+	- Doação de empresas a partidos			OK
+	- Cassação de Cunha				OK
+	- PEC do teto					OK
+
+- Maioridade penal aos 16 anos (não votado ainda)
+- Estatuto da família (votado em comissão)
+- Reforma do ensino médio  (votaram muitos destaques e ficou confuso o que avaliar aqui)
+
 - Menu;
-- Rever layout.
+	- Tutorial
+	- Perguntas
+	- Sugestões
+	- Compartilhe
+	- Sobre
+	- Logout
+- Fazer ligação do botão nas questões com o seu conteúdo em navegador.
+- Na tela Resultados, colocar botões na parte de baixo para mudança de estado aproveitando respostas, mudança só de respostas e mudança de tudo.
+- Rever layout. (só depois de todo o conteúdo já estiver no app).
+- Implementar mecanismo de propaganda na app; (Interessante fazer em conjunto nós dois)
 
 
 Implementação Futura (Feature)
 
+- Implementar efeito de transição de tela;
 - Dialect do BD com UTF8;
 - Menu com histórico de respostas da pesquisa do usuário;
 - Mostrar relação de deputados por estados com base nas resposta do histórico do usuário;
 - Mostrar votos de matéria por partidos;
 - Buscas em geral;
 - Adicionar campo na tabela deputados para ativos e inativos, prever isso na parte de inserção de deputados.
-
 
 DONE!!!
 - Colocar btn para detalhamento do deputado;

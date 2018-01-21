@@ -115,7 +115,8 @@ for estado in os.listdir(endereco1):
                                         similar.append(row[1])
                                         similar.append(similaridade)
                             if len(similar)==0:
-                                print pessoa, "##################################################################NAO ACHOU"
+                                pass
+                                #print pessoa, "##################################################################NAO ACHOU"
                             else:
                                 
                                 local = estado[0:2]+"/"+foto

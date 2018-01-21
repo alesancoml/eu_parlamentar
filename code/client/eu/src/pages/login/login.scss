@@ -1,5 +1,36 @@
 page-login {
-    
+    .titulo {
+        float: left;
+        text-align: left;
+        margin-top: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .logo{
+        float: right;
+        max-width: 4rem;
+        min-width: 4rem;
+        margin-right: 6px;
+        margin-top: auto;
+        padding: 2px;
+    }
+    .toolbar-title-ios{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: left;
+        float: left;
+        margin-left: -70px;
+        font-size: 22px;
+        width: 170px;
+        margin-top: -5px;
+    }
+    .toolbar-content-ios{
+        margin-top: 0px;
+    }
+    .toolbar-title-wp{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: capitalize;
+        font-size: 22px;
+        font-weight: normal;
+    }
     .btnLogin * {
         font-size: 1em;
     }
@@ -7,12 +38,11 @@ page-login {
         background-color: #fff;
     }
     .scroll-content {
-        overflow-y: auto !important;
+        flex-direction: column;
+        overflow: hidden;
      }
 
-    .titulo {
-        color: dark;
-    }
+    
     .conteudo1 {
         position: relative;
         margin: auto;

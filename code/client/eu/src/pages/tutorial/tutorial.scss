@@ -3,15 +3,49 @@ page-tutorial {
         zoom: 200%;
         padding: 10px 50%;        
     }
+    .titulo {
+        float: left;
+        text-align: left;
+        margin-top: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .logo{
+        float: right;
+        max-width: 4rem;
+        min-width: 4rem;
+        margin-right: 6px;
+        margin-top: auto;
+        padding: 2px;
+    }
+    .toolbar-title-ios{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: left;
+        float: left;
+        margin-left: -30px;
+        font-size: 22px;
+        width: 170px;
+        margin-top: -10px;
+        
+    }
+    .toolbar-content-ios{
+        margin-top: 0px;
+    }
+    .toolbar-title-wp{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: capitalize;
+        font-size: 22px;
+        font-weight: normal;
+    }
     .corpo{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: justify;
         margin: 20px 0px 0px 0px;
         padding: 0px 10px 0px 10px;
-        
     }
-    
     .scroll-content {
-        overflow-y: auto !important;
+        //margin-top: 0 !important;
+        //display: flex;
+        flex-direction: column;
+        overflow: hidden;
      }
 }

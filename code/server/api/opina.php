@@ -16,7 +16,9 @@
     $respostas      = $objData->R;
     $userId         = $objData->U;
 
-    
+    // $perguntas      = ["1", "2", "3", "4", "5", "6", "7", "8"];
+    // $respostas      = ["Nao", "Nao", "Nao", "Nao", "Nao", "Nao", "Nao", "Nao"];
+    // $userId         = "1";
 
     $tz_string      = "America/Recife"; // Use one from list of TZ names http://php.net/manual/en/timezones.php 
     $tz_object      = new DateTimeZone($tz_string); 
