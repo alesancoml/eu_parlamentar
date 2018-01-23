@@ -3,6 +3,10 @@
 Essencial/Crítica
 
 - Login com o firebase;
+- Rever layout.
+- Fazer ligação do botão nas questões com o seu conteúdo em navegador.
+- Na tela Resultados, colocar botão para refazer questionário.
+- Implementar mecanismo de propaganda na app;
 - Menu;
 	- Tutorial
 	- Perguntas
@@ -10,11 +14,6 @@ Essencial/Crítica
 	- Compartilhe
 	- Sobre
 	- Logout
-- Fazer ligação do botão nas questões com o seu conteúdo em navegador.
-- Na tela Resultados, colocar botões na parte de baixo para mudança de estado aproveitando respostas, mudança só de respostas e mudança de tudo.
-- Rever layout. (só depois de todo o conteúdo já estiver no app).
-- Implementar mecanismo de propaganda na app; (Interessante fazer em conjunto nós dois)
-- Colocar informativos na tela de Detalhamento.
 
 
 Implementação Futura (Feature)
@@ -28,6 +27,7 @@ Implementação Futura (Feature)
 - Adicionar campo na tabela deputados para ativos e inativos, prever isso na parte de inserção de deputados.
 
 DONE!!!
+- Colocar informativos na tela de Detalhamento.
 - Colocar btn para detalhamento do deputado;
 - Tela de Detalhamento do Deputado referente ao voto;
 - Colocar load e alert para problemas com servidor e comunicação com usuários;
