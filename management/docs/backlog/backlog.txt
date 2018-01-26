@@ -1,14 +1,13 @@
-﻿MELHORIAS
+MELHORIAS
 
 Essencial/Crítica
 
 - Login com o firebase;
-- Rever layout.
-- Fazer ligação do botão nas questões com o seu conteúdo em navegador.
-- Na tela Resultados, colocar botão para refazer questionário.
-- Implementar mecanismo de propaganda na app;
 - Menu;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fa8d168f8733a69894774c5531ff0cabad28f15c
     - Tutorial
     - Perguntas
     - Sugestões
@@ -20,6 +19,7 @@ Essencial/Crítica
 - Transferir banco e api para um servidor real.
 - Limpar o código.
 
+<<<<<<< HEAD
 =======
 	- Tutorial
 	- Perguntas
@@ -28,6 +28,8 @@ Essencial/Crítica
 	- Sobre
 	- Logout
 >>>>>>> ca3c45da2fe645fc52d6f4424b73c5078e8ee730
+=======
+>>>>>>> fa8d168f8733a69894774c5531ff0cabad28f15c
 
 
 Implementação Futura (Feature)
@@ -42,6 +44,9 @@ Implementação Futura (Feature)
 - Adicionar campo na tabela deputados para ativos e inativos, prever isso na parte de inserção de deputados.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fa8d168f8733a69894774c5531ff0cabad28f15c
 ##########   DONE   #######################################################################################
 - Rever layout.
     - Tela inicial
@@ -59,9 +64,12 @@ Implementação Futura (Feature)
 	- Botão de envio
 	- Toasts
 - Na tela Resultados, colocar botões na parte de baixo para mudança de estado aproveitando respostas, mudança só de respostas e mudança de tudo.
+<<<<<<< HEAD
 =======
 DONE!!!
 >>>>>>> ca3c45da2fe645fc52d6f4424b73c5078e8ee730
+=======
+>>>>>>> fa8d168f8733a69894774c5531ff0cabad28f15c
 - Colocar informativos na tela de Detalhamento.
 - Colocar btn para detalhamento do deputado;
 - Tela de Detalhamento do Deputado referente ao voto;
