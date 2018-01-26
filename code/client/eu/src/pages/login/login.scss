@@ -1,17 +1,7 @@
 page-login {
-    .titulo {
-        float: left;
-        text-align: left;
-        margin-top: 5px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .logo{
-        float: right;
-        max-width: 4rem;
-        min-width: 4rem;
-        margin-right: 6px;
-        margin-top: auto;
-        padding: 2px;
+    .scroll-content {
+        flex-direction: column;
+        overflow: hidden;
     }
     .toolbar-title-ios{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -31,36 +21,71 @@ page-login {
         font-size: 22px;
         font-weight: normal;
     }
-    .btnLogin * {
-        font-size: 1em;
-    }
     .corpo {
-        background-color: #fff;
+        background-color:white;
     }
-    .scroll-content {
-        flex-direction: column;
-        overflow: hidden;
-     }
-
-    
     .conteudo1 {
         position: relative;
         margin: auto;
-        padding: 100px;
+        padding: 0px auto;
         width: 100%;
+        height: 70%;
         box-shadow: none;
-        background-color: #fff;
-        
+        background-color: white;
+        img{
+            margin: 20% auto 2%;
+            max-width: 20rem;
+            min-width: 20rem;
+        }
+    }
+    .frase{
+        margin: 20px auto;
+    }
+    .frase1{
+        color: #000;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        font-weight: bolder;
     }
     .conteudo2 {
         position: relative;
-        background-color: #fff;
+        background-color: rgb(255, 255, 255);
         width: 100%;
-        height: 150px;
+        height: 100%;
         margin: 0px;
-       
+        margin-top: 40px;
         box-shadow: none;
+    }
+    .entrar{
+        text-align: center;
+    }
+    .coluna1{
+        margin-left:40px;
+        margin-top:0px;
+        padding: 0px;
+        height: 40px;
+        background-color: rgb(74,110,169);
+    }
+    .coluna2{
+        margin-right:40px;
+        margin-top:0px;
+        padding: 0px;
+        height: 40px;
+        background-color: rgb(157,5,2);
         
     }
+    .logo1{
+        max-width: 1.5rem;
+        min-width: 1.5rem;
+        margin: 10px auto;
+    }
+    .logo2{
+        max-width: 2.5rem;
+        min-width: 2.5rem;
+        margin: 13px auto 0px;
+    } 
+    
+
     
 }

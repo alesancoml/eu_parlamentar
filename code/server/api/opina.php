@@ -15,6 +15,7 @@
     $perguntas      = $objData->P;
     $respostas      = $objData->R;
     $userId         = $objData->U;
+    $estado         = $objData->E;
 
     // $perguntas      = ["1", "2", "3", "4", "5", "6", "7", "8"];
     // $respostas      = ["Nao", "Nao", "Nao", "Nao", "Nao", "Nao", "Nao", "Nao"];
@@ -43,8 +44,8 @@
             echo json_encode($dados);
         }
         else{
-            $busca = buscaResultados($userId);
-            $estado = $busca["estado"];
+            $busca = buscaResultados($userId, $estado);
+            //$estado = $busca["estado"];
             $opinioes = $busca["opinioes"];
             $pontuacao = $busca["scores"];
             $dados = array('mensage' => "Os dados foram inseridos com sucesso.", 'id' => $userId, 'estado' => $estado, 'opinioes' => $opinioes, 'pontuacao' => $pontuacao);

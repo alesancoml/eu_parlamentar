@@ -4,30 +4,48 @@ Essencial/Crítica
 
 - Login com o firebase;
 - Menu;
-	- Tutorial
-	- Perguntas
-	- Sugestões
-	- Compartilhe
-	- Sobre
-	- Logout
-- Fazer ligação do botão nas questões com o seu conteúdo em navegador.
-- Na tela Resultados, colocar botões na parte de baixo para mudança de estado aproveitando respostas, mudança só de respostas e mudança de tudo.
-- Rever layout. (só depois de todo o conteúdo já estiver no app).
+    - Tutorial
+    - Perguntas
+    - Sugestões
+    - Compartilhe
+    - Sobre
+    - Logout
 - Implementar mecanismo de propaganda na app; (Interessante fazer em conjunto nós dois)
-- Colocar informativos na tela de Detalhamento.
+- Bug nas transições de tela quando há problema com a conexão. (Reorganizar as chamadas ao provider).
+- Transferir banco e api para um servidor real.
+- Limpar o código.
+
 
 
 Implementação Futura (Feature)
 
 - Implementar efeito de transição de tela;
 - Dialect do BD com UTF8;
+- Fazer ligação do botão nas questões com o seu conteúdo em navegador.
 - Menu com histórico de respostas da pesquisa do usuário;
 - Mostrar relação de deputados por estados com base nas resposta do histórico do usuário;
 - Mostrar votos de matéria por partidos;
 - Buscas em geral;
 - Adicionar campo na tabela deputados para ativos e inativos, prever isso na parte de inserção de deputados.
 
-DONE!!!
+##########   DONE   #######################################################################################
+- Rever layout.
+    - Tela inicial
+	- Botões de credenciamento
+	- Frase central 
+	- Cor da barra de navegação
+    - Tela Tutorial
+	- Texto
+	- Botão para prosseguir
+    - Eliminação da tela Estado
+    - Tela Perguntas:
+	- Caixa de seleção do Estado
+	- Botões de resposta
+	- Cores em geral
+	- Botão de envio
+	- Toasts
+- Na tela Resultados, colocar botões na parte de baixo para mudança de estado aproveitando respostas, mudança só de respostas e mudança de tudo.
+- Colocar informativos na tela de Detalhamento.
 - Colocar btn para detalhamento do deputado;
 - Tela de Detalhamento do Deputado referente ao voto;
 - Colocar load e alert para problemas com servidor e comunicação com usuários;
@@ -36,10 +54,10 @@ DONE!!!
 - Rever a forma de entrada de deputados no banco;
 - Eliminar duplicidade de deputados com mudança de partidos;
 - Discutir e coletar mais questões;			
-   - Doação de empresas a partidos			
-   - Cassação de Cunha				
-   - PEC do teto
+   - Doação de empresas a partidos	OK		
+   - Cassação de Cunha			OK	
+   - PEC do teto			OK
    NÃO:
-   - Maioridade penal aos 16 anos (não votado ainda)
+   - Maioridade penal aos 16 anos (não votado ainda)(achei app que conta com essa votação MeuDeputado)
    - Estatuto da família (votado em comissão)
-   - Reforma do ensino médio  (votaram muitos destaques e ficou confuso o que avaliar aqui)	
+   - Reforma do ensino médio  (votaram muitos destaques e ficou confuso o que avaliar aqui)(achei app que conta com essa votação Monitora Brasil site)	

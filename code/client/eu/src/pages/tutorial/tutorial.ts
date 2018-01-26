@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, MenuController, NavParams } from 'ionic-angular';
-import { Estado } from '../estado/estado';
+import { Perguntas } from '../perguntas/perguntas';
  
 @Component({
   selector: 'page-tutorial',
@@ -8,15 +8,14 @@ import { Estado } from '../estado/estado';
 })
 export class Tutorial {
 
-  private _variavel;
+  private usuario;
   
     constructor(public navCtrl: NavController, public navParams: NavParams) {
-      this._variavel = this.navParams.get('forma');
-      //console.log(this._variavel);
+      this.usuario = this.navParams.get('user');
     }
   
   proximaTela(){
-      this.navCtrl.push(Estado);
+      this.navCtrl.push(Perguntas, {user: this.usuario});
     }
 
 }

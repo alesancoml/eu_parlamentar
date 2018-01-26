@@ -10,18 +10,17 @@ import { Tutorial } from '../tutorial/tutorial';
 })
 export class Login {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
-    
-  }
+  idUser: string = "";
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ngOnInit() {
     console.log("Tudo carregado")
+    this.idUser = "47";
   }
 
   login(metodo: string){
-    //console.log(metodo)
-    this.navCtrl.setRoot(Tutorial, {forma: metodo});
+    this.navCtrl.setRoot(Tutorial, {user: this.idUser});
   }
 
 }

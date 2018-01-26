@@ -1,26 +1,34 @@
 <ion-header>
-  <ion-navbar color="preto" class="barra">
-    <ion-title class="titulo"> Eu Parlamentar
+  <ion-navbar color="verde" class="barra">
+    <ion-title class="titulo">Eu Parlamentar
     </ion-title>
-    <img src="assets/imgs/eu.png" id="logo10" class="logo">
+    <button ion-button menuToggle>
+      <ion-icon name='menu'></ion-icon>
+    </button>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content class="corpo">
   <ion-card class="conteudo1">
-      <ion-card-header>
-        <img src="assets/imgs/Logo10.png" id="logo10"> 
-      </ion-card-header>
+    <ion-card-header>
+      <img src="assets/imgs/Logo10.png" id="logo10"> 
+    </ion-card-header>
+    <ion-card-content class="frase">
+        <P class="frase1">Afinal...</P>
+      <P class="frase1">quem nos <span style="color:rgb(157,5,2)">representa</span>?</P>
+    </ion-card-content>
   </ion-card>
   <ion-card class="conteudo2">
     <ion-card-content>
       <ion-grid>
-        <ion-row >
-          <ion-col ><button ion-button full class="btnLogin" color="primary" (click)="login('facebook')">Entrar pelo Facebook</button></ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col ><button ion-button full class="btnLogin" color="danger" (click)="login('google')">Entrar pelo Google</button></ion-col>
+        <ion-row class="linha">
+          <ion-col class="coluna1" (click)="login('facebook')">
+            <p><img src="assets/imgs/f.png" id="face" class="logo1"></p>
+          </ion-col>
+          <ion-col class="coluna2" (click)="login('google')">
+              <p><img src="assets/imgs/g.png" id="google" class="logo2"></p>
+          </ion-col>
         </ion-row>
       </ion-grid>
     </ion-card-content>

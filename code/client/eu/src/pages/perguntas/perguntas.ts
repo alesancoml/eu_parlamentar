@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, MenuController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
-import { FormGroup, FormControl} from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import { Tutorial } from '../tutorial/tutorial';
 import { Resultados } from '../resultados/resultados';
 
@@ -21,12 +21,14 @@ export class Perguntas implements OnInit {
   coleta3=[];
   indice;
   private usuario;
+  private estado: string = "";
+  frase="Informe um Estado?";
   private loader;
 
   constructor(
     public navCtrl:     NavController, 
     public navParams:   NavParams, 
-    public service:     ServiceProvider, 
+    public service:     ServiceProvider,
     public loadingCtrl: LoadingController,
     public toastCtrl:   ToastController) {}
   
@@ -56,7 +58,7 @@ export class Perguntas implements OnInit {
         this.perguntas = data},
       err => {
         //this.loader.dismiss();
-        this.showToast('bottom','Servidor fora do ar! Tente mais tarde.');
+        this.showToast('middle','Servidor fora do ar! Tente mais tarde.');
         this.navCtrl.setRoot(Tutorial);
       }
     )
@@ -67,18 +69,30 @@ export class Perguntas implements OnInit {
       this.coleta1.push(pergunta);
       this.coleta2.push(resp);
       this.coleta3.push(resumo);
+      console.log(this.coleta1);
+      console.log(this.coleta2);
+      console.log(this.coleta3);
       
     }else{
       this.indice = this.coleta1.indexOf(pergunta);
       this.coleta2[this.indice] = resp;
+      console.log(this.coleta1);
+      console.log(this.coleta2);
+      console.log(this.coleta3);
     }
   }
   enviar(){
-    if(this.coleta1.length==this.perguntas.length){
-      this.navCtrl.push(Resultados,{Perguntas: this.coleta1, Respostas: this.coleta2, Usuario: this.usuario, Resumos: this.coleta3});
-    } else{
-      this.showToast('bottom','Favor, responder todas as questões!');
+    if (!this.estado){
+      this.showToast('middle','Favor, informar um Estado!');
     }
+    else{
+      if(this.coleta1.length==this.perguntas.length){
+        this.navCtrl.push(Resultados,{Perguntas: this.coleta1, Respostas: this.coleta2, Usuario: this.usuario, Estado: this.estado, Resumos: this.coleta3});
+      } else{
+        this.showToast('middle','Favor, responder todas as questões!');
+      }
+    }
+   
   }
 
 }

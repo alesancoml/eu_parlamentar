@@ -21,7 +21,7 @@ page-detalhamento {
     }
     .bar-button{
         color: white;
-    }
+    } 
     .logo{
         float: right;
         max-width: 4rem;
@@ -39,7 +39,7 @@ page-detalhamento {
         margin-bottom: 0px;
     }
     .toolbar-background-md{
-        background: #000;
+        background: rgb(44, 138, 48);
         height: 60px;
     }
     .toolbar-background-ios{
@@ -217,5 +217,21 @@ page-detalhamento {
         color: black;
         font-size: 9px;
         padding-top:7px;
+    }
+    .legenda{
+        margin-left:    0px;
+        width:          280px;
+        margin-top:     15px;
+        font-size:      11px;
+        text-align:     justify;
+        color:          red;
+        font-weight:    bold;
+        
+    }
+    
+    .corpo{
+        color: #666;
+        font-size: 11px;  
+        font-weight: normal;      
     }
 }

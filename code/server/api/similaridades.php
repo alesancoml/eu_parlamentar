@@ -7,10 +7,10 @@ header("Content-Type: application/x-www-form-urlencoded");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 
-function buscaResultados($userId){
+function buscaResultados($userId, $uf){
     
     $usuario 	= dadosUser($userId);
-    $estado 	= $usuario[2];
+    $estado 	= $uf;
     $opinioes 	= coletaOpinioes($usuario);
     $deputados 	= coletaDeputadosDoEstado($estado);
     $votos 		= coletaVotos($deputados);
