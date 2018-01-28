@@ -18,6 +18,35 @@ USE `eu_parlamentar`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `contatos`
+--
+
+DROP TABLE IF EXISTS `contatos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contatos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `estado` varchar(30) NOT NULL,
+  `mensagem` varchar(2000) NOT NULL,
+  `data` date NOT NULL,
+  `respondido` varchar(1) NOT NULL,
+  `resposta` varchar(2000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contatos`
+--
+
+LOCK TABLES `contatos` WRITE;
+/*!40000 ALTER TABLE `contatos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `contatos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `deputados`
 --
 
@@ -139,7 +168,7 @@ CREATE TABLE `usuarios` (
   `estado_user` varchar(45) NOT NULL,
   `data` date NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -189,4 +218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-26  0:54:32
+-- Dump completed on 2018-01-28  5:54:08

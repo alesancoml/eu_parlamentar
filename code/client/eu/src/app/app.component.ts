@@ -9,6 +9,7 @@ import { Tutorial } from '../pages/tutorial/tutorial';
 import { HomePage } from '../pages/home/home';
 import { Perguntas } from '../pages/perguntas/perguntas';
 import { Detalhamento } from '../pages/detalhamento/detalhamento';
+import { Contato } from '../pages/contato/contato';
 
 
 @Component({
@@ -31,16 +32,17 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage:any = Login;
   
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icone_ios: string, icone_md: string}>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: Login},
-      { title: 'Tutorial', component: Tutorial},
-      { title: 'Compartilhe', component: Sobre },
-      { title: 'Sobre', component: Sobre },
+      { title: 'Home', component: Login, icone_ios: 'ios-home', icone_md: 'md-home' },
+      { title: 'Tutorial', component: Tutorial, icone_ios: 'ios-bulb', icone_md: 'md-bulb' },
+      //{ title: 'Compartilhe', component: Sobre, icone_ios: 'ios-share', icone_md: 'md-share' },
+      { title: 'Sobre', component: Sobre, icone_ios: 'ios-information-circle', icone_md: 'md-information-circle' },
+      { title: 'Contato', component: Contato, icone_ios: 'ios-contact', icone_md: 'md-contact' },
     ];
   
     platform.ready().then(() => {

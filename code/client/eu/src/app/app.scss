@@ -1,25 +1,43 @@
+ion-menu{
+    .scroll-content {
+        flex-direction: column;
+        overflow: hidden;
+    }
+    width: 50%;
+}
 .background-menu{
-    background-color: black;
-         
-   }
+    background-color:rgb(17,20,25);
+    
+}
  
  .background-btn-menu{
-     background-color: black;
-     color: whitesmoke;
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     text-align: justify;
-     margin: 20px 0px 0px 0px;
-     padding: 0px 10px 0px 10px;
-          
+    background-color: rgb(43, 52, 61);
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    margin: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    padding-left: 20px;
  }
  
- .conteudo1 {
-     position: unset;
-     margin: 0px;
-    //  padding: 100px;
-     width: 100%;
-     box-shadow: none;
-     background-color: black;
-     
- }
-  
+.conteudo1 {
+    position: unset;
+    margin: 0px;
+    margin-bottom: 20px;
+    height: 150px;
+    width: 100%;
+    box-shadow: none;
+    background-color: rgb(17,20,25);
+}
+
+
+
+ion-icon{
+    color: white;
+    margin-right: 0px;
+}
+.item-md ion-icon[item-left] + .item-inner, .item-md ion-icon[item-left] + .item-input, .item-md ion-icon[item-start] + .item-inner, .item-md ion-icon[item-start] + .item-input {
+    margin-left: 8px;
+}
+

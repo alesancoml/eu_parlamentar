@@ -3,22 +3,15 @@
 Essencial/Crítica
 
 - Login com o firebase;
-- Menu;
-    - Tutorial
-    - Perguntas
-    - Sugestões
-    - Compartilhe
-    - Sobre
-    - Logout
-- Implementar mecanismo de propaganda na app; (Interessante fazer em conjunto nós dois)
-- Bug nas transições de tela quando há problema com a conexão. (Reorganizar as chamadas ao provider).
+- Implementar mecanismo de propaganda na app;
 - Transferir banco e api para um servidor real.
 - Limpar o código.
 
-
 Implementação Futura (Feature)
 
+- Bug nas transições de tela quando há problema com a conexão. (Reorganizar as chamadas ao provider).
 - Implementar efeito de transição de tela;
+- Botão para compartilhar telas. (é chato fazer isso) (social sharing)
 - Dialect do BD com UTF8;
 - Fazer ligação do botão nas questões com o seu conteúdo em navegador.
 - Menu com histórico de respostas da pesquisa do usuário;
@@ -29,7 +22,12 @@ Implementação Futura (Feature)
 
 
 ##########   DONE   #######################################################################################
-- Rever layout.
+- Menu
+    - Tutorial				(OK)
+    - Contato 				(OK)
+    - Sobre 				(OK)
+    - Logout 				(só depois do firebase);
+- Rever layout
     - Tela inicial
 	- Botões de credenciamento
 	- Frase central 

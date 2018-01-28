@@ -24,6 +24,15 @@ export class ServiceProvider {
       (res:Response) => {return res.json();}
     );
   }
+  enviaMensagem(parans){
+    let headers = new Headers({ 'Content-Type' : 'application/x-www-form-urlencoded' });
+    return this.http.post(this.api + "contato.php", parans, {
+      headers: headers,
+      method:"POST"
+    }).map(
+      (res:Response) => {return res.json();}
+    );
+  }
 
   //Coleta perguntas do banco para exibir ao usuário (perguntas.ts)
   getPerguntas() {

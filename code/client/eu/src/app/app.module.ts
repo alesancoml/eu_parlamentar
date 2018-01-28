@@ -14,6 +14,7 @@ import { Sobre } from '../pages/sobre/sobre';
 import { Detalhamento } from '../pages/detalhamento/detalhamento';
 import { Perguntas } from '../pages/perguntas/perguntas';
 import { Resultados } from '../pages/resultados/resultados';
+import { Contato } from '../pages/contato/contato';
 import { ServiceProvider } from '../providers/service-provider';
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ServiceProvider } from '../providers/service-provider';
     Sobre,
     Perguntas,
     Resultados,
-    Detalhamento
+    Detalhamento,
+    Contato
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { ServiceProvider } from '../providers/service-provider';
     Sobre,
     Perguntas,
     Resultados,
-    Detalhamento
+    Detalhamento,
+    Contato
   ],
   providers: [
     StatusBar,

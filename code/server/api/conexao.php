@@ -53,6 +53,22 @@
             $qs = null;
             return 0;
         }
+
+        public function contato( $tabela, Array $dados){
+            $dado = "VALUES (".$dados[0].", '".$dados[1]."', '".$dados[2]."', '".$dados[3]."', '".$dados[4]."', '".$dados[5]."', '".$dados[6]."', '".$dados[7]."')";
+            if($qs = $this->db->query(" INSERT INTO `{$tabela}` {$dado} ") )
+            {
+                $query = "email = '".$dados[2]."' AND data = '".$dados[5]."' ORDER BY data desc LIMIT 1";
+                $n = new Model();
+                $a = $n->read( "contatos", $query);
+                if ($a)
+                {
+                    return $a[0][0];
+                }
+            }
+            $qs = null;
+            return 'Instabilidade no banco ou tabela ausente!';
+        }
     }
 
     //TESTE DA CLASSE
