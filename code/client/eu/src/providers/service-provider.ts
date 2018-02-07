@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ServiceProvider {
 
-      api : string = 'http://localhost/api/';
+      api : string = 'https://ttbywuyqqj.localtunnel.me/api/';
 
   constructor(public http: Http) {}
 

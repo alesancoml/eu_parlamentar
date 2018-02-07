@@ -4,7 +4,7 @@ USE `eu_parlamentar`;
 --
 -- Host: 127.0.0.1    Database: eu_parlamentar
 -- ------------------------------------------------------
--- Server version	5.5.5-10.1.29-MariaDB
+-- Server version	5.5.5-10.1.28-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -34,7 +34,7 @@ CREATE TABLE `contatos` (
   `respondido` varchar(1) NOT NULL,
   `resposta` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -51,7 +51,24 @@ CREATE TABLE `deputados` (
   `estado` varchar(25) NOT NULL,
   `foto` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id_deputado`)
-) ENGINE=InnoDB AUTO_INCREMENT=588 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `estados`
+--
+
+DROP TABLE IF EXISTS `estados`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `estados` (
+  `id_estado` int(11) NOT NULL AUTO_INCREMENT,
+  `codigo_ibge` varchar(4) NOT NULL,
+  `sigla` char(2) NOT NULL,
+  `nome` varchar(30) NOT NULL,
+  `dtm_lcto` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_estado`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +84,7 @@ CREATE TABLE `historico` (
   `partido` varchar(45) NOT NULL,
   `estado` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -79,13 +96,16 @@ DROP TABLE IF EXISTS `opinioes`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `opinioes` (
   `id_quest` int(3) NOT NULL,
-  `id_usuar` int(10) NOT NULL,
+  `id_usuar` int(12) NOT NULL,
+  `id_estad` int(3) NOT NULL,
   `opiniao` varchar(20) NOT NULL,
   `data` datetime NOT NULL,
   KEY `fk_opinioes_1_idx` (`id_quest`),
   KEY `fk_opinioes_2_idx` (`id_usuar`),
+  KEY `fk_opinioes_3_idx` (`id_estad`),
   CONSTRAINT `fk_opinioes_1` FOREIGN KEY (`id_quest`) REFERENCES `questoes` (`id_questao`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_opinioes_2` FOREIGN KEY (`id_usuar`) REFERENCES `usuarios` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_opinioes_2` FOREIGN KEY (`id_usuar`) REFERENCES `usuarios` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_opinioes_3` FOREIGN KEY (`id_estad`) REFERENCES `estados` (`id_estado`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -104,7 +124,7 @@ CREATE TABLE `questoes` (
   `link` varchar(300) NOT NULL,
   `resumo` varchar(45) NOT NULL,
   PRIMARY KEY (`id_questao`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -115,12 +135,14 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuarios` (
-  `id_usuario` int(10) NOT NULL AUTO_INCREMENT,
+  `id_usuario` int(12) NOT NULL AUTO_INCREMENT,
+  `uid` varchar(40) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `foto` varchar(200) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `estado_user` varchar(45) NOT NULL,
   `data` date NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -150,4 +172,4 @@ CREATE TABLE `votos` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-28  5:55:02
+-- Dump completed on 2018-02-07  8:36:57

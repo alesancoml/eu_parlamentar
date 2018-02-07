@@ -13,19 +13,25 @@
         }
 
         public function insereUsuario( $tabela, Array $dados){
-            $dado = "VALUES (".$dados[0].", '".$dados[1]."', '".$dados[2]."', '".$dados[3]."')";
-            if($qs = $this->db->query(" INSERT INTO `{$tabela}` {$dado} ") )
-            {
-                $query = "email = '".$dados[1]."' AND estado_user = '".$dados[2]."' ORDER BY id_usuario desc";
-                $n = new Model();
-                $a = $n->read( "usuarios", $query);
-                if ($a)
-                {
-                    return $a[0][0];
-                }
+            $query = "email = '".$dados[4]."' ORDER BY id_usuario desc";
+            $n = new Model();
+            $a = $n->read( "usuarios", $query);
+            if ($a){
+                return $a[0][0];
             }
-            $qs = null;
-            return 'Instabilidade no banco ou tabela ausente!';
+            else{
+                $dado = "VALUES (".$dados[0].", '".$dados[1]."', '".$dados[2]."', '".$dados[3]."', '".$dados[4]."', '".$dados[5]."')";
+                if($qs = $this->db->query(" INSERT INTO `{$tabela}` {$dado} ")){
+                    $query = "email = '".$dados[4]."' ORDER BY id_usuario desc";
+                    $n = new Model();
+                    $a = $n->read( "usuarios", $query);
+                    if ($a){
+                        return $a[0][0];
+                    }
+                }
+                $qs = null;
+                return 0;
+            }
         }
 
         public function read($tabela, $where = null){
@@ -41,11 +47,11 @@
                 }
             }
             $qs = null;
-            return 'Instabilidade no banco ou tabela ausente!';
+            return 0;
         }
 
         public function insereResposta( $tabela, Array $dados){
-            $dado = "VALUES (".$dados[0].", '".$dados[1]."', '".$dados[2]."', '".$dados[3]."')";
+            $dado = "VALUES (".$dados[0].", '".$dados[1]."', '".$dados[2]."', '".$dados[3]."', '".$dados[4]."')";
             if($qs = $this->db->query(" INSERT INTO `{$tabela}` {$dado} ") )
             {
                 return 1;
@@ -67,7 +73,7 @@
                 }
             }
             $qs = null;
-            return 'Instabilidade no banco ou tabela ausente!';
+            return 0;
         }
     }
 

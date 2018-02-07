@@ -16,10 +16,13 @@
     $respostas      = $objData->R;
     $userId         = $objData->U;
     $estado         = $objData->E;
+    $estado2         = utf8_decode($estado);
 
     // $perguntas      = ["1", "2", "3", "4", "5", "6", "7", "8"];
     // $respostas      = ["Nao", "Nao", "Nao", "Nao", "Nao", "Nao", "Nao", "Nao"];
     // $userId         = "1";
+    // $estado         = "São Paulo";
+    // $estado2        = utf8_decode($estado);
 
     $tz_string      = "America/Recife"; // Use one from list of TZ names http://php.net/manual/en/timezones.php 
     $tz_object      = new DateTimeZone($tz_string); 
@@ -29,28 +32,35 @@
     $sql            = "";
     $dados; // RECEBE ARRAY PARA RETORNO
 
-    $m = new Model();
-
-    if($m){
-        $flag = 0;
-        foreach ($perguntas as $key => $value){
-            $insercao = $m->insereResposta( 'opinioes', [$value, $userId, $respostas[$key], $dataAtual] );
-            if(!$insercao){
-                $flag = 1;
+    $n = new Model();
+    $query = "nome = '".$estado2."' ORDER BY id_estado asc";
+    $a = $n->read( "estados", $query);
+    $id_estado = "";
+    if ($a){
+        $id_estado = $a[0][0];
+        $m = new Model();
+    
+        if($m){
+            $flag = 0;
+            foreach ($perguntas as $key => $value){
+                $insercao = $m->insereResposta( 'opinioes', [$value, $userId, $id_estado, $respostas[$key], $dataAtual] );
+                if(!$insercao){
+                    $flag = 1;
+                }
             }
+            if ($flag){
+                $dados = array('mensage' => "Problema no envio");
+                echo json_encode($dados);
+            }
+            else{
+                $busca = buscaResultados($userId, $estado);
+                $opinioes = $busca["opinioes"];
+                $pontuacao = $busca["scores"];
+                $dados = array('mensage' => "Os dados foram inseridos com sucesso.", 'id' => $userId, 'estado' => $estado, 'opinioes' => $opinioes, 'pontuacao' => $pontuacao);
+                echo json_encode($dados);
+            }
+    
         }
-        if ($flag){
-            $dados = array('mensage' => "Problema no envio");
-            echo json_encode($dados);
-        }
-        else{
-            $busca = buscaResultados($userId, $estado);
-            //$estado = $busca["estado"];
-            $opinioes = $busca["opinioes"];
-            $pontuacao = $busca["scores"];
-            $dados = array('mensage' => "Os dados foram inseridos com sucesso.", 'id' => $userId, 'estado' => $estado, 'opinioes' => $opinioes, 'pontuacao' => $pontuacao);
-            echo json_encode($dados);
-        }
-
     }
+
 ?>

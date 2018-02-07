@@ -17,6 +17,20 @@ import { Resultados } from '../pages/resultados/resultados';
 import { Contato } from '../pages/contato/contato';
 import { ServiceProvider } from '../providers/service-provider';
 
+import { GooglePlus } from '@ionic-native/google-plus';
+import { AngularFireModule } from 'angularfire2';
+import firebase from 'firebase';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyAsnWrP6g9-XKwFiSeqW4UeSx2hsUsCRoA",
+  authDomain: "euparlamentar2018-02.firebaseapp.com",
+  databaseURL: "https://euparlamentar2018-02.firebaseio.com",
+  projectId: "euparlamentar2018-02",
+  storageBucket: "euparlamentar2018-02.appspot.com",
+  messagingSenderId: "629457841992"
+};
+firebase.initializeApp(firebaseConfig)
+
 @NgModule({
   declarations: [
     MyApp,
@@ -37,7 +51,8 @@ import { ServiceProvider } from '../providers/service-provider';
       ios: {
         backButtonText: ''
       }
-    }})
+    }}),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -53,6 +68,7 @@ import { ServiceProvider } from '../providers/service-provider';
     Contato
   ],
   providers: [
+    GooglePlus,
     StatusBar,
     SplashScreen,
     ServiceProvider,

@@ -31,6 +31,7 @@ export class MyApp {
   
   @ViewChild(Nav) nav: Nav;
   rootPage:any = Login;
+  logado: boolean = false;
   
   pages: Array<{title: string, component: any, icone_ios: string, icone_md: string}>;
 

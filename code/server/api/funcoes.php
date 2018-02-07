@@ -27,7 +27,7 @@
             $opinioes = [];
             foreach( $a as $key => $value){
                 $opiniao[0] = $value[0];
-                $opiniao[1] = $value[2];
+                $opiniao[1] = $value[3];
                 $opinioes[$key] = $opiniao;
             }
             return $opinioes;

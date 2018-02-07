@@ -10,14 +10,21 @@
     $objData= json_decode($data);
 
     // TRANSFORMA OS DADOS
-    $email  = $objData->email;
-    $uf     = $objData->uf;
+    $iden           = $objData->I;
+    $nome           = $objData->N;
+    $foto           = $objData->F;
+    $email          = $objData->E;
 
+    // $iden           = "5kfIF7lVnWhEpDP6HCJ8tEnBtnp1";
+    // $nome           = "Alesanco Andrade";
+    // $foto           = "fotoasdasdasdasddd";
+    // $email          = "alesancoml@gmail.com";
+    
     // LIMPA OS DADOS
-    $email  = stripslashes($email);
-    $uf     = stripslashes($uf);
-    $email  = trim($email);
-    $uf     = trim($uf);
+    $email      = stripslashes($email);
+    $nome       = stripslashes($nome);
+    $email      = trim($email);
+    $nome       = trim($nome);
 
     $dados; // RECEBE ARRAY PARA RETORNO
 
@@ -33,7 +40,7 @@
     
    //SE TIVER CONEXÃO, TENTA A INSERÇÃO
     if($m){
-        $insercao = $m->insereUsuario( 'usuarios', ['NULL', $email, $uf, $dataAtual] );
+        $insercao = $m->insereUsuario( 'usuarios', ['NULL', $iden, $nome, $foto, $email, $dataAtual] );
         if(!$insercao){
             $dados = array('mensage' => "Não foi possivel enviar os dados ", 'idUser' => "");
             echo json_encode($dados);
