@@ -5,7 +5,8 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ServiceProvider {
 
-      api : string = 'https://ttbywuyqqj.localtunnel.me/api/';
+      api : string = 'http://lcpcm1.hopto.org:1313/api/';
+      //api : string = 'https://tlmdwenuvk.localtunnel.me/api/';
 
   constructor(public http: Http) {}
 
@@ -24,6 +25,8 @@ export class ServiceProvider {
       (res:Response) => {return res.json();}
     );
   }
+
+  //Envia mensagem de contato
   enviaMensagem(parans){
     let headers = new Headers({ 'Content-Type' : 'application/x-www-form-urlencoded' });
     return this.http.post(this.api + "contato.php", parans, {

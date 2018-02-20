@@ -86,6 +86,27 @@ page-login {
         margin: 13px auto 0px;
     } 
     
-
+    .linha2{
+        padding-top: 0px;
+        margin: 0px 70px 0px 70px;
+    }
+    .botao{
+        padding: 0px;
+        height: 40px;
+        background-color: rgb(74,110,169);
+        color:white !important;
+        width: 200px;
+        p{  
+            color:white !important;
+            height: 40px;
+            margin: 0px;
+            padding: 5px;
+            padding-left:0px;
+            padding-top: 4px;
+            font-size: 20px;
+            text-indent: 0em;
+            text-align: center;
+        }
+    }
     
 }

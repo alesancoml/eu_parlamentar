@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule } from '@angular/http';
-import 'rxjs/add/operator/map';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Login } from '../pages/login/login';
@@ -16,20 +15,21 @@ import { Perguntas } from '../pages/perguntas/perguntas';
 import { Resultados } from '../pages/resultados/resultados';
 import { Contato } from '../pages/contato/contato';
 import { ServiceProvider } from '../providers/service-provider';
-
+import { UsuarioService } from '../domain/usuario/usuario-service';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { AngularFireModule } from 'angularfire2';
-import firebase from 'firebase';
+import 'rxjs/add/operator/map';
 
-export const firebaseConfig = {
-  apiKey: "AIzaSyAsnWrP6g9-XKwFiSeqW4UeSx2hsUsCRoA",
-  authDomain: "euparlamentar2018-02.firebaseapp.com",
-  databaseURL: "https://euparlamentar2018-02.firebaseio.com",
-  projectId: "euparlamentar2018-02",
-  storageBucket: "euparlamentar2018-02.appspot.com",
-  messagingSenderId: "629457841992"
-};
-firebase.initializeApp(firebaseConfig)
+import { DatePipe } from '@angular/common';
+import { IonicStorageModule } from '@ionic/storage';
+import { ArmazenamentoProvider } from '../providers/armazenamento';
+
+// Imports do tutorial de logout no side menu.
+import { AuthProvider } from '../providers/auth/auth';
+import * as firebase from 'firebase';
+import { environment } from '../environments/environment';
+
+firebase.initializeApp(environment.firebase);
 
 @NgModule({
   declarations: [
@@ -47,12 +47,13 @@ firebase.initializeApp(firebaseConfig)
   imports: [
     BrowserModule,
     HttpModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp,{platforms: {
       ios: {
         backButtonText: ''
       }
     }}),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -68,11 +69,16 @@ firebase.initializeApp(firebaseConfig)
     Contato
   ],
   providers: [
+    
     GooglePlus,
     StatusBar,
     SplashScreen,
     ServiceProvider,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    UsuarioService,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ArmazenamentoProvider,
+    DatePipe,
+    AuthProvider
   ]
 })
 export class AppModule {}

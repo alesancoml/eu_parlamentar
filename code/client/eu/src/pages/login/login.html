@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="verde" class="barra">
+  <ion-navbar color="preto" class="barra">
     <ion-title class="titulo">Eu Parlamentar
     </ion-title>
   </ion-navbar>
@@ -19,7 +19,7 @@
   <ion-card class="conteudo2">
     <ion-card-content>
       <ion-grid>
-        <ion-row class="linha">
+        <ion-row class="linha1" *ngIf="!logado && !protecao">
           <ion-col class="coluna1" (click)="login('facebook')">
             <p><img src="assets/imgs/f.png" id="face" class="logo1"></p>
           </ion-col>
@@ -27,8 +27,12 @@
               <p><img src="assets/imgs/g.png" id="google" class="logo2"></p>
           </ion-col>
         </ion-row>
+        <ion-row class="linha2" *ngIf="logado">
+          <ion-col class="botao" (click)="login('google')">
+              <p>Avançar</p>
+          </ion-col>
+        </ion-row>
       </ion-grid>
-      <!-- <p>{{campo}}</p> -->
     </ion-card-content>
   </ion-card>
 </ion-content>

@@ -1,5 +1,5 @@
-import { Component, ViewChild, trigger, state, style, transition, animate } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Component, ViewChild, trigger, state, OnInit } from '@angular/core';
+import { Nav, Platform, ToastController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Login } from '../pages/login/login';
@@ -10,55 +10,92 @@ import { HomePage } from '../pages/home/home';
 import { Perguntas } from '../pages/perguntas/perguntas';
 import { Detalhamento } from '../pages/detalhamento/detalhamento';
 import { Contato } from '../pages/contato/contato';
-
+import { GooglePlus }         from '@ionic-native/google-plus';
+import firebase               from 'firebase';
+import { AuthProvider } from './../providers/auth/auth';
 
 @Component({
-  templateUrl: 'app.html',
-  animations: [
-    trigger('slideInOut', [
-      state('in', style({
-        transform: 'translate3d(0, 0, 0)'
-      })),
-      state('out', style({
-        transform: 'translate3d(100%, 0, 0)'
-      })),
-      transition('in => out', animate('400ms ease-in-out')),
-      transition('out => in', animate('400ms ease-in-out'))
-    ]),
-  ]
+  templateUrl: 'app.html'
 })
 export class MyApp {
   
   @ViewChild(Nav) nav: Nav;
   rootPage:any = Login;
-  logado: boolean = false;
-  
-  pages: Array<{title: string, component: any, icone_ios: string, icone_md: string}>;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  private pages: Array<{title: string, component: any, icone_ios: string, icone_md: string}>;
 
-    // used for an example of ngFor and navigation
+  constructor(
+    public platform: Platform, 
+    public statusBar: StatusBar, 
+    public splashScreen: SplashScreen,
+    public googleplus:  GooglePlus,
+    public toastCtrl:   ToastController,
+    private _AUTH        : AuthProvider) {
+
     this.pages = [
-      { title: 'Home', component: Login, icone_ios: 'ios-home', icone_md: 'md-home' },
-      { title: 'Tutorial', component: Tutorial, icone_ios: 'ios-bulb', icone_md: 'md-bulb' },
-      //{ title: 'Compartilhe', component: Sobre, icone_ios: 'ios-share', icone_md: 'md-share' },
-      { title: 'Sobre', component: Sobre, icone_ios: 'ios-information-circle', icone_md: 'md-information-circle' },
-      { title: 'Contato', component: Contato, icone_ios: 'ios-contact', icone_md: 'md-contact' },
+      // { title: 'Home',      component: Login,     icone_ios: 'ios-home',                icone_md: 'md-home' },
+      { title: 'Tutorial',  component: Tutorial,  icone_ios: 'ios-bulb',                icone_md: 'md-bulb' },
+      { title: 'Sobre',     component: Sobre,     icone_ios: 'ios-information-circle',  icone_md: 'md-information-circle' },
+      { title: 'Contato',   component: Contato,   icone_ios: 'ios-contact',             icone_md: 'md-contact' },
+      { title: 'Logout',    component: Login,     icone_ios: 'ios-log-out',             icone_md: 'md-log-out' },
     ];
   
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
     });
   }
 
-  openPage(page){
-    this.nav.setRoot(page.component);
+  showToast(position: string, mensagem: string) {
+    let toast = this.toastCtrl.create({
+      duration: 3000,
+      message: mensagem,
+      position: position
+    });
+    toast.present(toast);
+  }
     
-    
-
+  openPage(page: any) {
+    if(page.title == 'Logout'){
+      this._AUTH.logout()
+        .then((data : any) => {
+          this.googleplus.trySilentLogin({})
+            .then(res => {
+              this.googleplus.logout()
+                .then(res => {
+                  this.nav.setRoot(page.component);
+                })
+                .catch(error => {
+                  alert(error);
+                });
+            })
+            .catch(error => {
+              this.googleplus.disconnect()
+                .then(res => {
+                  console.log("logout user")
+                })
+                .catch(error => {
+                  alert(error);
+                });
+            });
+          this.nav.setRoot(page.component);   
+        })
+        .catch((err : any) => {
+          console.log(err)
+        });
+    }
+    if(page.title == 'Tutorial'){
+      this._AUTH.logged()
+        .then(res => {
+          this.nav.setRoot(Tutorial, {I: res.uid, N: res.displayName, F: res.photoURL, E: res.email});
+        })
+        .catch(() =>{
+          alert("Erro");
+        })
+    }
+    else {
+      this.nav.setRoot(page.component);
+    }
   }
 }
 
