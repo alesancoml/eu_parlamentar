@@ -2,20 +2,23 @@
 
 Essencial/Crítica
 
-- Armazenar status de login em banco local.
-- Logout no menu lateral.
-- Foto no menu lateral.
-
-- Implementar mecanismo de propaganda na app;
-
-- Transferir banco e api para um servidor real.
-
-- Limpar o código.
-- Testes.
-
+- Login com facebook
+- Transições e splash.
+- Ícones e textos.
+- Layout em diferentes tamanhos de tela
 - Entender melhor monetização.
-- Publicação.
-- Propaganda.
+- Implementar mecanismo de propaganda na app.
+- Transferir banco e api para um servidor pago
+- Envio das mensagens de contato para nossos emails
+- Colocar mais 2 questões
+- Preparar app para atualizações
+- Ver uma forma de aviso sobre atualizações
+- Aumentar compatibilidade entre versões do android
+- Testes
+- Publicação
+- Desenvolvimento para IOS
+- Propagar o APP
+- Fazer a nossa página
 
 
 Implementação Futura (Feature)
@@ -33,6 +36,12 @@ Implementação Futura (Feature)
 
 
 ##########   DONE   #######################################################################################
+- Login com Google.
+- Banco local para armazenar status de login.
+- Modificação nos botões de login para prosseguir.
+- Logout no menu lateral.
+- Bugs de credenciamento.
+
 - Criação do email para o projeto eusouparlamentar@gmail.com
 - Login com o firebase;
 - Menu
