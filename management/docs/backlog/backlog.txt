@@ -15,6 +15,7 @@ Essencial/Crítica
 - Aumentar compatibilidade entre versões do android.
 - Testes.
 - Publicação.
+
 - Desenvolvimento para IOS.
 - Propagar o APP.
 - Fazer a nossa página.
