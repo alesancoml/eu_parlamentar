@@ -27,7 +27,6 @@ export class AuthProvider {
         .then(res => {
           return firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.idToken))
           .then((user: firebase.User) => {
-            //this.bancoLocal(user.uid,user.displayName,user.photoURL,user.email);
             this.storage.set('uid', user.uid);
             this.storage.set('displayName',user.displayName);
             this.storage.set('photoURL',user.photoURL);
