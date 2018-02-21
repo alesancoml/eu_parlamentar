@@ -3,6 +3,12 @@
     <name>Eu Parlamentar</name>
     <description>Um app que ajuda nas escolhas políticas.</description>
     <author email="eusouparlamentar@gmail.com" href="http://ionicframework.com/">Eu Parlamentar Team</author>
+    <universal-links>
+        <host name="https://y37e8.app.goo.gl" scheme="https" />
+        <host name="euparlamentar2018-02.firebaseapp.com" scheme="https">
+            <path url="/__/auth/callback" />
+        </host>
+    </universal-links>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -85,5 +91,9 @@
         <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.629457841992-3b81psoutt76to1n8qnfquap6vkudgvj" />
     </plugin>
     <plugin name="cordova-sqlite-storage" spec="^2.2.1" />
+    <plugin name="cordova-plugin-buildinfo" spec="^2.0.1" />
+    <plugin name="cordova-universal-links-plugin" spec="^1.2.1" />
+    <plugin name="cordova-plugin-browsertab" spec="^0.2.0" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^2.0.2" />
     <engine name="android" spec="7.0.0" />
 </widget>

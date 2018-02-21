@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController, MenuController, NavParams } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
 import { Perguntas } from '../perguntas/perguntas';
 

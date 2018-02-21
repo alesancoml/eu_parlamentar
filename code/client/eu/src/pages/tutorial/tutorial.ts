@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, MenuController, NavParams, ToastController, LoadingController } from 'ionic-angular';
+import { NavController, NavParams, ToastController, LoadingController } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
 import { Perguntas } from '../perguntas/perguntas';
-import { Storage } from '@ionic/storage';
  
 @Component({
   selector: 'page-tutorial',

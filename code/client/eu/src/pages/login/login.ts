@@ -1,6 +1,5 @@
-import { NavController, MenuController, NavParams, ToastController, Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { Component, OnInit }  from '@angular/core';
+import { NavController, NavParams, ToastController, Platform } from 'ionic-angular';
+import { Component }  from '@angular/core';
 import { Tutorial }           from '../tutorial/tutorial';
 import { GooglePlus }         from '@ionic-native/google-plus';
 import { AuthProvider } from './../../providers/auth/auth';
@@ -43,23 +42,19 @@ export class Login  {
   }
 
   login(metodo : string): void {
-    if (metodo=="google"){
-      this.protecao = true;
-      this._AUTH.logged()
+    this.protecao = true;
+    this._AUTH.logged()
+      .then(res => {
+        this.navCtrl.setRoot(Tutorial, {I: res.uid, N: res.displayName, F: res.photoURL, E: res.email});
+      })
+      .catch(() =>{
+        this._AUTH.login(metodo)
         .then(res => {
           this.navCtrl.setRoot(Tutorial, {I: res.uid, N: res.displayName, F: res.photoURL, E: res.email});
         })
-        .catch(() =>{
-          this._AUTH.login(metodo)
-          .then(res => {
-            this.navCtrl.setRoot(Tutorial, {I: res.uid, N: res.displayName, F: res.photoURL, E: res.email});
-          })
-          .catch(err => {
-            this.protecao = false;
-          });
-        })
-    }else{
-      this.showToast('middle','Login com Facebook em produção!');
-    }
+        .catch(err => {
+          this.protecao = false;
+        });
+      })
   };  
 }

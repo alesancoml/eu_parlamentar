@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, MenuController, NavParams, LoadingController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
 import { FormGroup, FormControl} from '@angular/forms';
 
@@ -18,8 +18,7 @@ export class Teste2 {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
-    public service: ServiceProvider,
-    private _loadingCtrl: LoadingController) {
+    public service: ServiceProvider) {
 
       this.getDados();
       this.langForm = new FormGroup({

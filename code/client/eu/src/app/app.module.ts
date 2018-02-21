@@ -15,14 +15,12 @@ import { Perguntas } from '../pages/perguntas/perguntas';
 import { Resultados } from '../pages/resultados/resultados';
 import { Contato } from '../pages/contato/contato';
 import { ServiceProvider } from '../providers/service-provider';
-import { UsuarioService } from '../domain/usuario/usuario-service';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { AngularFireModule } from 'angularfire2';
 import 'rxjs/add/operator/map';
 
 import { DatePipe } from '@angular/common';
 import { IonicStorageModule } from '@ionic/storage';
-import { ArmazenamentoProvider } from '../providers/armazenamento';
 
 // Imports do tutorial de logout no side menu.
 import { AuthProvider } from '../providers/auth/auth';
@@ -74,9 +72,7 @@ firebase.initializeApp(environment.firebase);
     StatusBar,
     SplashScreen,
     ServiceProvider,
-    UsuarioService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ArmazenamentoProvider,
     DatePipe,
     AuthProvider
   ]

@@ -1,17 +1,12 @@
-import { Component, ViewChild, trigger, state, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, ToastController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Login } from '../pages/login/login';
 import { Sobre } from '../pages/sobre/sobre';
-import { Estado } from '../pages/estado/estado';
 import { Tutorial } from '../pages/tutorial/tutorial';
-import { HomePage } from '../pages/home/home';
-import { Perguntas } from '../pages/perguntas/perguntas';
-import { Detalhamento } from '../pages/detalhamento/detalhamento';
 import { Contato } from '../pages/contato/contato';
 import { GooglePlus }         from '@ionic-native/google-plus';
-import firebase               from 'firebase';
 import { AuthProvider } from './../providers/auth/auth';
 
 @Component({
@@ -65,17 +60,17 @@ export class MyApp {
                 .then(res => {
                   this.nav.setRoot(page.component);
                 })
-                .catch(error => {
-                  alert(error);
+                .catch(err => {
+                  console.log(err);
                 });
             })
-            .catch(error => {
+            .catch(err => {
               this.googleplus.disconnect()
                 .then(res => {
                   console.log("logout user")
                 })
-                .catch(error => {
-                  alert(error);
+                .catch(err => {
+                  console.log(err);
                 });
             });
           this.nav.setRoot(page.component);   
@@ -90,7 +85,7 @@ export class MyApp {
           this.nav.setRoot(Tutorial, {I: res.uid, N: res.displayName, F: res.photoURL, E: res.email});
         })
         .catch(() =>{
-          alert("Erro");
+          console.log("erro");
         })
     }
     else {

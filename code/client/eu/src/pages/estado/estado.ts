@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, MenuController, NavParams, LoadingController, AlertController, ToastController } from 'ionic-angular';
-import { Login } from '../login/login';
+import { NavController, NavParams, LoadingController, AlertController, ToastController } from 'ionic-angular';
 import { Perguntas } from '../perguntas/perguntas';
 import { Tutorial } from '../tutorial/tutorial';
 import { ServiceProvider } from '../../providers/service-provider';

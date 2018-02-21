@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, MenuController, NavParams, LoadingController, ToastController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
 import { Detalhamento } from '../detalhamento/detalhamento';
-import { Perguntas } from '../perguntas/perguntas';
 
 @Component({
   selector: 'page-resultados',
