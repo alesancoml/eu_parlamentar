@@ -83,7 +83,7 @@ export class Perguntas implements OnInit {
   }
   enviar(){
     if (!this.estado){
-      this.showToast('middle','Favor, informar um Estado (campo amarelo no topo da tela)!');
+      this.showToast('middle','Favor, informar um Estado (campo amarelo no topo da tela).');
     }
     else{
       if(this.coleta1.length==this.perguntas.length){
