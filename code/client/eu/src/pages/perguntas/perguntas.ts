@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Tutorial } from '../tutorial/tutorial';
+import { Login } from '../login/login';
 import { Resultados } from '../resultados/resultados';
 
 @Component({
@@ -22,7 +22,7 @@ export class Perguntas implements OnInit {
   indice;
   private usuario;
   private estado: string = "";
-  frase="Informe um Estado?";
+  frase="Informe um Estado:";
   private loader;
 
   constructor(
@@ -51,15 +51,15 @@ export class Perguntas implements OnInit {
   }
 
   getDados(){
-    //this.loader.present();
+    this.loader.present();
     this.service.getPerguntas().subscribe(
       data => {
-        //this.loader.dismiss();
+        this.loader.dismiss();
         this.perguntas = data},
       err => {
-        //this.loader.dismiss();
+        this.loader.dismiss();
         this.showToast('middle','Servidor fora do ar! Tente mais tarde.');
-        this.navCtrl.setRoot(Tutorial);
+        this.navCtrl.setRoot(Login);
       }
     )
   }
@@ -83,7 +83,7 @@ export class Perguntas implements OnInit {
   }
   enviar(){
     if (!this.estado){
-      this.showToast('middle','Favor, informar um Estado!');
+      this.showToast('middle','Favor, informar um Estado (campo amarelo no topo da tela)!');
     }
     else{
       if(this.coleta1.length==this.perguntas.length){

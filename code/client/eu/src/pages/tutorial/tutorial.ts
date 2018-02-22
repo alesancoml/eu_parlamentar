@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, ToastController, LoadingController } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
 import { Perguntas } from '../perguntas/perguntas';
+import { Login } from '../login/login';
  
 @Component({
   selector: 'page-tutorial',
@@ -50,7 +51,9 @@ export class Tutorial implements OnInit {
         this.idUsuario = data.idUser;
       },
       err => {
-        this.showToast('middle',err);
+        this._loader.dismiss();
+        this.showToast('middle','Servidor fora do ar! Tente mais tarde.');
+        this.navCtrl.setRoot(Login);
       }
     );
   }

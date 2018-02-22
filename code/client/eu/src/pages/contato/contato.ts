@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
 import { Validators, FormBuilder } from '@angular/forms';
+import { Login } from '../login/login';
 
 @Component({
   selector: 'page-contato',
@@ -40,7 +41,7 @@ export class Contato implements OnInit {
 
   showToast(position: string, mensagem: string) {
     let toast = this.toastCtrl.create({
-      duration: 5000,
+      duration: 3000,
       message: mensagem,
       position: position
     });
@@ -55,11 +56,12 @@ export class Contato implements OnInit {
         this.loader.dismiss();
         this.retorno = data.retorno;
         this.cadastro.reset();
-        this.showToast('middle', "Mensagem enviada com sucesso. Responderemos em breve.");
+        this.showToast('middle', "Mensagem enviada com Sucesso. Responderemos em breve.");
       },
       err => {
         this.loader.dismiss();
-        this.showToast('middle','Servidor fora do ar! Tente mais tarde.')
+        this.showToast('middle','Servidor fora do ar! Tente mais tarde.');
+        this.navCtrl.setRoot(Login);
       });
   }
 

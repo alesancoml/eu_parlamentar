@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
 import { Detalhamento } from '../detalhamento/detalhamento';
+import { Login } from '../login/login';
 
 @Component({
   selector: 'page-resultados',
@@ -57,7 +58,8 @@ export class Resultados implements OnInit {
       err => {
         console.log(err);
         this.loader.dismiss();
-        this.showToast('middle','Problemas no servidor ou em sua internet.');
+        this.showToast('middle','Problemas no servidor ou em sua internet. Tente mais tarde.');
+        this.navCtrl.setRoot(Login);
         this.navCtrl.pop();
       }
     );
