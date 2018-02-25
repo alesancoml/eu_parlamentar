@@ -7,7 +7,8 @@ import { Sobre } from '../pages/sobre/sobre';
 import { Tutorial } from '../pages/tutorial/tutorial';
 import { Contato } from '../pages/contato/contato';
 import { GooglePlus }         from '@ionic-native/google-plus';
-import { AuthProvider } from './../providers/auth/auth';
+import { AuthProvider } from '../providers/auth/auth';
+import { AdModService } from '../providers/ad-mod-service/ad-mod-service';
 
 @Component({
   templateUrl: 'app.html'
@@ -20,12 +21,13 @@ export class MyApp {
   private pages: Array<{title: string, component: any, icone_ios: string, icone_md: string}>;
 
   constructor(
-    public platform: Platform, 
-    public statusBar: StatusBar, 
-    public splashScreen: SplashScreen,
-    public googleplus:  GooglePlus,
-    public toastCtrl:   ToastController,
-    private _AUTH        : AuthProvider) {
+    public platform:      Platform, 
+    public statusBar:     StatusBar, 
+    public splashScreen:  SplashScreen,
+    public googleplus:    GooglePlus,
+    public toastCtrl:     ToastController,
+    private _AUTH:        AuthProvider,
+    public admob:         AdModService) {
 
     this.pages = [
       // { title: 'Home',      component: Login,     icone_ios: 'ios-home',                icone_md: 'md-home' },
@@ -51,6 +53,7 @@ export class MyApp {
   }
     
   openPage(page: any) {
+    this.hideBanner();
     if(page.title == 'Logout'){
       this._AUTH.logout()
         .then((data : any) => {
@@ -91,6 +94,11 @@ export class MyApp {
     else {
       this.nav.setRoot(page.component);
     }
+  }
+
+  public hideBanner(){
+    this.admob.hideBanner();
+    this.admob.removeBanner();
   }
 }
 

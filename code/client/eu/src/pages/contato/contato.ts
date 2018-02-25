@@ -3,6 +3,7 @@ import { NavController, NavParams, LoadingController, ToastController } from 'io
 import { ServiceProvider } from '../../providers/service-provider';
 import { Validators, FormBuilder } from '@angular/forms';
 import { Login } from '../login/login';
+import { AdModService } from '../../providers/ad-mod-service/ad-mod-service';
 
 @Component({
   selector: 'page-contato',
@@ -26,8 +27,8 @@ export class Contato implements OnInit {
     public service:     ServiceProvider, 
     public formBuilder: FormBuilder, 
     public loadingCtrl: LoadingController,
-    public toastCtrl:   ToastController ) {
-  }
+    public toastCtrl:   ToastController,
+    public admob:       AdModService) { }
 
   ngOnInit(){
     this.loader = this.loadingCtrl.create({content: 'Enviando mensagem. Aguarde...'});
@@ -37,6 +38,7 @@ export class Contato implements OnInit {
       nome:['', Validators.required],
       mensagem:['', Validators.required]
     });
+    this.showBanner();
   }
 
   showToast(position: string, mensagem: string) {
@@ -48,6 +50,11 @@ export class Contato implements OnInit {
     toast.present(toast);
   }
 
+  public showBanner(){
+    this.admob.prepareBanner();
+    this.admob.showBanner();
+  }
+  
   postDados(){
     this.loader.present();
     this.service.enviaMensagem(this.cadastro.value)

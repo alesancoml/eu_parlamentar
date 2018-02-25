@@ -97,5 +97,8 @@
     <plugin name="cordova-universal-links-plugin" spec="^1.2.1" />
     <plugin name="cordova-plugin-browsertab" spec="^0.2.0" />
     <plugin name="cordova-plugin-inappbrowser" spec="^2.0.2" />
+    <plugin name="lycwed-cordova-plugin-admob-free" spec="https://github.com/RenaudROHLINGER/lycwed-cordova-plugin-admob-free" />
+    <allow-navigation href="http://10.0.2.15:8100" />
+    <allow-navigation href="http://169.254.126.150:8100" />
     <engine name="android" spec="7.0.0" />
 </widget>

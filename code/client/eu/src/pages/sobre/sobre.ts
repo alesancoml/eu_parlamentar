@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { AdModService } from '../../providers/ad-mod-service/ad-mod-service';
 
 @Component({
   selector: 'page-sobre',
@@ -8,12 +8,18 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class Sobre {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public admob:       AdModService) { }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Sobre');
+    this.showBanner();
   }
 
-
+  public showBanner(){
+    this.admob.prepareBanner();
+    this.admob.showBanner();
+  }
+  
 }

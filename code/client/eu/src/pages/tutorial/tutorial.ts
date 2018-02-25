@@ -3,6 +3,7 @@ import { NavController, NavParams, ToastController, LoadingController } from 'io
 import { ServiceProvider } from '../../providers/service-provider';
 import { Perguntas } from '../perguntas/perguntas';
 import { Login } from '../login/login';
+import { AdModService } from '../../providers/ad-mod-service/ad-mod-service';
  
 @Component({
   selector: 'page-tutorial',
@@ -22,7 +23,8 @@ export class Tutorial implements OnInit {
     public navParams:   NavParams,
     public service:     ServiceProvider,
     public toastCtrl:   ToastController,
-    public loadingCtrl: LoadingController) {}
+    public loadingCtrl: LoadingController,
+    public admob:       AdModService) { }
 
   ngOnInit(){
     this.nome       = this.navParams.get('N');
@@ -30,9 +32,10 @@ export class Tutorial implements OnInit {
     this.email      = this.navParams.get('E');
     this.iden       = this.navParams.get('I');
     this._loader    = this.loadingCtrl.create();
+    this.showBanner();
     this.cadastraUser();
   }
-
+  
   showToast(position: string, mensagem: string) {
     let toast = this.toastCtrl.create({
       duration: 3000,
@@ -40,6 +43,16 @@ export class Tutorial implements OnInit {
       position: position
     });
     toast.present(toast);
+  }
+
+  public showBanner(){
+    this.admob.prepareBanner();
+    this.admob.showBanner();
+  }
+  
+  public hideBanner(){
+    this.admob.hideBanner();
+    this.admob.removeBanner();
   }
 
   cadastraUser(){
@@ -59,6 +72,7 @@ export class Tutorial implements OnInit {
   }
 
   proximaTela(){
+    this.hideBanner();
     this.navCtrl.setRoot(Perguntas, {user: this.idUsuario});
   }
 

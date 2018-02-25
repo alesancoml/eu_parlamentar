@@ -15,17 +15,23 @@ import { Perguntas } from '../pages/perguntas/perguntas';
 import { Resultados } from '../pages/resultados/resultados';
 import { Contato } from '../pages/contato/contato';
 import { ServiceProvider } from '../providers/service-provider';
-import { GooglePlus } from '@ionic-native/google-plus';
-import { AngularFireModule } from 'angularfire2';
 import 'rxjs/add/operator/map';
 
-import { DatePipe } from '@angular/common';
-import { IonicStorageModule } from '@ionic/storage';
-
-// Imports do tutorial de logout no side menu.
+// Autenticação
+import { GooglePlus } from '@ionic-native/google-plus';
+import { AngularFireModule } from 'angularfire2';
 import { AuthProvider } from '../providers/auth/auth';
 import * as firebase from 'firebase';
 import { environment } from '../environments/environment';
+
+// Storage
+import { DatePipe } from '@angular/common';
+import { IonicStorageModule } from '@ionic/storage';
+
+// AdMob Free
+import { AdMobFree } from '@ionic-native/admob-free';
+import { AdModService } from '../providers/ad-mod-service/ad-mod-service';
+import { HttpClientModule } from '@angular/common/http';
 
 firebase.initializeApp(environment.firebase);
 
@@ -45,6 +51,7 @@ firebase.initializeApp(environment.firebase);
   imports: [
     BrowserModule,
     HttpModule,
+    HttpClientModule,
     IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp,{platforms: {
       ios: {
@@ -67,14 +74,16 @@ firebase.initializeApp(environment.firebase);
     Contato
   ],
   providers: [
-    
+    HttpModule,
     GooglePlus,
     StatusBar,
     SplashScreen,
     ServiceProvider,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
     DatePipe,
-    AuthProvider
+    AuthProvider,
+    AdMobFree,
+    AdModService,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}

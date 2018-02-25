@@ -1,9 +1,8 @@
-import { NavController, NavParams, ToastController, Platform } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { Component }  from '@angular/core';
 import { Tutorial }           from '../tutorial/tutorial';
 import { GooglePlus }         from '@ionic-native/google-plus';
 import { AuthProvider } from './../../providers/auth/auth';
-
 
 @Component({
   selector: 'page-login',
@@ -15,12 +14,13 @@ export class Login  {
   public protecao : boolean = false;
 
   constructor(
-    public platform:    Platform,
     public googleplus:  GooglePlus,
     public navCtrl:     NavController, 
     public navParams:   NavParams, 
     public toastCtrl:   ToastController,
     private _AUTH:      AuthProvider) { }
+
+  
   
   ionViewDidLoad(){
     this._AUTH.logged()

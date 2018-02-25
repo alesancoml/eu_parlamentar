@@ -4,6 +4,7 @@ import { ServiceProvider } from '../../providers/service-provider';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Login } from '../login/login';
 import { Resultados } from '../resultados/resultados';
+import { AdModService } from '../../providers/ad-mod-service/ad-mod-service';
 
 @Component({
   selector: 'page-perguntas',
@@ -30,7 +31,8 @@ export class Perguntas implements OnInit {
     public navParams:   NavParams, 
     public service:     ServiceProvider,
     public loadingCtrl: LoadingController,
-    public toastCtrl:   ToastController) {}
+    public toastCtrl:   ToastController,
+    public admob:       AdModService) { }
   
   ngOnInit(){
     this.usuario = this.navParams.get('user');
@@ -40,6 +42,9 @@ export class Perguntas implements OnInit {
       "langs": new FormControl()
     });
   }
+  ionViewDidLoad() {
+    this.hideBanner();
+  }
 
   showToast(position: string, mensagem: string) {
     let toast = this.toastCtrl.create({
@@ -48,6 +53,11 @@ export class Perguntas implements OnInit {
       position: position
     });
     toast.present(toast);
+  }
+
+  public hideBanner(){
+    this.admob.hideBanner();
+    this.admob.removeBanner();
   }
 
   getDados(){

@@ -20,6 +20,7 @@
     "@angular/http": "5.0.3",
     "@angular/platform-browser": "5.0.3",
     "@angular/platform-browser-dynamic": "5.0.3",
+    "@ionic-native/admob-free": "^4.5.3",
     "@ionic-native/core": "4.4.0",
     "@ionic-native/google-plus": "^4.5.3",
     "@ionic-native/splash-screen": "4.4.0",
@@ -37,11 +38,13 @@
     "cordova-plugin-ionic-webview": "^1.1.16",
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-whitelist": "^1.3.3",
+    "cordova-promise-polyfill": "0.0.2",
     "cordova-sqlite-storage": "^2.2.1",
     "cordova-universal-links-plugin": "^1.2.1",
     "firebase": "^4.9.1",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
+    "lycwed-cordova-plugin-admob-free": "git+https://github.com/RenaudROHLINGER/lycwed-cordova-plugin-admob-free.git",
     "promise-polyfill": "7.1.0",
     "rxjs": "^5.5.6",
     "sw-toolbox": "3.6.0",
@@ -67,7 +70,8 @@
       "cordova-plugin-buildinfo": {},
       "cordova-universal-links-plugin": {},
       "cordova-plugin-browsertab": {},
-      "cordova-plugin-inappbrowser": {}
+      "cordova-plugin-inappbrowser": {},
+      "lycwed-cordova-plugin-admob-free": {}
     },
     "platforms": [
       "android"

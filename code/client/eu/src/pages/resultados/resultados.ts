@@ -1,8 +1,10 @@
+import { Platform } from 'ionic-angular/';
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
 import { Detalhamento } from '../detalhamento/detalhamento';
 import { Login } from '../login/login';
+import { AdModService } from '../../providers/ad-mod-service/ad-mod-service';
 
 @Component({
   selector: 'page-resultados',
@@ -25,7 +27,8 @@ export class Resultados implements OnInit {
     public navParams:   NavParams, 
     public service:     ServiceProvider,
     public loadingCtrl: LoadingController,
-    public toastCtrl:   ToastController) {}
+    public toastCtrl:   ToastController,
+    public admob:       AdModService) { }
   
   ngOnInit(){
     this.loader = this.loadingCtrl.create({content: 'Calculando similaridade no servidor. Aguarde...'});
@@ -37,6 +40,10 @@ export class Resultados implements OnInit {
     this.postDados();
   }
 
+  ionViewDidLoad() {
+    this.showBanner();
+  }
+
   showToast(position: string, mensagem: string) {
     let toast = this.toastCtrl.create({
       duration: 3000,
@@ -44,6 +51,16 @@ export class Resultados implements OnInit {
       position: position
     });
     toast.present(toast);
+  }
+
+  public showBanner(){
+    this.admob.prepareBanner();
+    this.admob.showBanner();
+  }
+  
+  public hideBanner(){
+    this.admob.hideBanner();
+    this.admob.removeBanner();
   }
 
   postDados(){
