@@ -1,12 +1,8 @@
-MELHORIAS
+﻿MELHORIAS
 
 Essencial/Crítica
 
-- Transições e Splash.
-- Ícones e textos.
-- Layout em diferentes tamanhos de tela.
-- Entender melhor monetização.
-- Implementar mecanismo de propaganda na app.
+- Tapa no layout.
 - Transferir banco e api para um servidor pago.
 - Envio das mensagens de contato para nossos emails.
 - Colocar mais 2 questões.
@@ -36,6 +32,11 @@ Implementação Futura (Feature)
 
 
 ##########   DONE   #######################################################################################
+- Layout em diferentes tamanhos de tela.
+- Entender melhor monetização.
+- Implementar mecanismo de propaganda na app.
+- Transições e Splash.
+- Ícones e textos.
 - Login com Facebook.
 - Login com Google.
 - Banco local para armazenar status de login.
