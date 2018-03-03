@@ -15,11 +15,22 @@ export class Sobre {
 
   ionViewDidLoad() {
     this.showBanner();
+    this.showVideo();
   }
 
   public showBanner(){
     this.admob.prepareBanner();
     this.admob.showBanner();
+  }
+
+  public interstitial(){
+    this.admob.prepareInterstitial();
+    this.admob.showInterstitial();
+  }
+
+  public showVideo(){
+    this.admob.prepareVideoRewards();
+    this.admob.showVideoRewards();
   }
   
 }

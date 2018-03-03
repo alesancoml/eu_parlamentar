@@ -5,7 +5,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Login } from '../pages/login/login';
 import { Sobre } from '../pages/sobre/sobre';
 import { Tutorial } from '../pages/tutorial/tutorial';
+import { Perguntas } from '../pages/perguntas/perguntas';
 import { Contato } from '../pages/contato/contato';
+import { Resultados } from '../pages/resultados/resultados';
+import { Detalhamento } from '../pages/detalhamento/detalhamento';
 import { GooglePlus }         from '@ionic-native/google-plus';
 import { AuthProvider } from '../providers/auth/auth';
 import { AdModService } from '../providers/ad-mod-service/ad-mod-service';
@@ -40,6 +43,45 @@ export class MyApp {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();
+      var lastTimeBackPress = 0;
+      var timePeriodToExit = 2000;
+
+      // if(this.platform.backButton){
+      //   alert("oi");
+      // }
+      // if(this.nav.canGoBack){
+      //   alert("oi 1");
+      // }
+      // document.addEventListener('backbutton', () => {
+      //   alert("Back button tapped");
+      // }, false);
+      // document.addEventListener("backbutton", onBackKeyDown, false);
+      // function onBackKeyDown() {
+      //   alert("Back button tapped");
+      // }
+
+      this.platform.registerBackButtonAction(() => {
+        
+        let view = this.nav.getActive();
+         if (view.instance instanceof Login) {
+          if (new Date().getTime() - lastTimeBackPress < timePeriodToExit) {
+              this.platform.exitApp(); //Exit from app
+          } else {
+            let toast = this.toastCtrl.create({
+              message: 'Toque novamente para fechar a aplicação.',
+              duration: 2000,
+              position: 'bottom',
+            });
+            toast.present();     
+            lastTimeBackPress = new Date().getTime();
+          } 
+        } else if (view.instance instanceof Tutorial) {
+        } else if (view.instance instanceof Perguntas) {
+          this.nav.setRoot(Login);
+        } else if (view.instance instanceof Resultados || view.instance instanceof Detalhamento) {
+          this.nav.pop();
+        }
+      });
     });
   }
 
@@ -51,7 +93,7 @@ export class MyApp {
     });
     toast.present(toast);
   }
-    
+
   openPage(page: any) {
     this.hideBanner();
     if(page.title == 'Logout'){

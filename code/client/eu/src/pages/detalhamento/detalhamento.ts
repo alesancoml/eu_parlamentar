@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, Navbar, Platform } from 'ionic-angular';
 import { AdModService } from '../../providers/ad-mod-service/ad-mod-service';
 
 @Component({
@@ -12,21 +12,37 @@ export class Detalhamento {
   public votos;
   public opinioes;
   public resumos;
+  @ViewChild(Navbar) navBar: Navbar;
 
   constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams,
-    public admob:       AdModService) {
+    public navCtrl:                 NavController, 
+    public navParams:               NavParams,
+    public platform:                Platform,
+    public admob:                   AdModService) {
 
       this.deputado = this.navParams.get('deputado');
       this.opinioes = this.navParams.get('opina');
-      this.resumos = this.navParams.get('resumos');
-      this.votos = this.deputado[5];
-      this.ajuste();
-      this.hideBanner();
-      this.Interstitial();
+      this.resumos  = this.navParams.get('resumos');
+      this.votos    = this.deputado[5];
+      this.ajusteVotos();
+      this.showBanner();
     }
 
+    ionViewDidLoad() {
+      this.setBackButtonAction()
+    }
+
+    setBackButtonAction(){
+      this.navBar.backButtonClick = () => {
+        this.navCtrl.pop();
+      }
+    }
+  
+  public showBanner(){
+    this.admob.prepareBanner();
+    this.admob.showBanner();
+  }
+  
   public hideBanner(){
     this.admob.hideBanner();
     this.admob.removeBanner();
@@ -37,7 +53,7 @@ export class Detalhamento {
     this.admob.showInterstitial();
   }
   
-  ajuste(){
+  ajusteVotos(){
     this.votos.forEach((item, index) => {
       if (item[1]=="Nao"){
         this.votos[index][1] = "Não"
@@ -50,5 +66,4 @@ export class Detalhamento {
     });
   }
 
-  
 }

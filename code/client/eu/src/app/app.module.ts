@@ -33,6 +33,10 @@ import { AdMobFree } from '@ionic-native/admob-free';
 import { AdModService } from '../providers/ad-mod-service/ad-mod-service';
 import { HttpClientModule } from '@angular/common/http';
 
+// Transitions Effects
+import { NativePageTransitions } from '@ionic-native/native-page-transitions';
+
+
 firebase.initializeApp(environment.firebase);
 
 @NgModule({
@@ -83,6 +87,7 @@ firebase.initializeApp(environment.firebase);
     AuthProvider,
     AdMobFree,
     AdModService,
+    NativePageTransitions,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })

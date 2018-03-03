@@ -1,6 +1,5 @@
-import { Platform } from 'ionic-angular/';
-import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NavController, NavParams, LoadingController, ToastController, Platform, Navbar } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
 import { Detalhamento } from '../detalhamento/detalhamento';
 import { Login } from '../login/login';
@@ -21,8 +20,10 @@ export class Resultados implements OnInit {
   public scores:any[];
   public resumos:any[];
   private loader;
+  @ViewChild(Navbar) navBar: Navbar;
 
   constructor(
+    public platform:    Platform,
     public navCtrl:     NavController, 
     public navParams:   NavParams, 
     public service:     ServiceProvider,
@@ -40,8 +41,8 @@ export class Resultados implements OnInit {
     this.postDados();
   }
 
-  ionViewDidLoad() {
-    this.showBanner();
+  ionViewWillEnter(){
+    this.hideBanner();
   }
 
   showToast(position: string, mensagem: string) {
@@ -71,6 +72,7 @@ export class Resultados implements OnInit {
         this.loader.dismiss();
         this.opinioes = data.opinioes;
         this.scores = data.pontuacao;
+        this.showToast('bottom','Toque em um deputado para ver seus votos.');
       },
       err => {
         console.log(err);
@@ -84,4 +86,9 @@ export class Resultados implements OnInit {
   detalhamento(linha: any[]){
     this.navCtrl.push(Detalhamento, {deputado: linha, opina: this.opinioes, resumos: this.resumos});
   }
+
+  setBackButtonAction(){
+    this.navCtrl.pop();
+  }
+
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController, ToastController, Platform } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Login } from '../login/login';
@@ -27,6 +27,7 @@ export class Perguntas implements OnInit {
   private loader;
 
   constructor(
+    public platform:    Platform,
     public navCtrl:     NavController, 
     public navParams:   NavParams, 
     public service:     ServiceProvider,
@@ -42,7 +43,8 @@ export class Perguntas implements OnInit {
       "langs": new FormControl()
     });
   }
-  ionViewDidLoad() {
+
+  ionViewWillEnter(){
     this.hideBanner();
   }
 
@@ -55,6 +57,11 @@ export class Perguntas implements OnInit {
     toast.present(toast);
   }
 
+  public showBanner(){
+    this.admob.prepareBanner();
+    this.admob.showBanner();
+  }
+  
   public hideBanner(){
     this.admob.hideBanner();
     this.admob.removeBanner();
@@ -78,17 +85,10 @@ export class Perguntas implements OnInit {
     if (!this.coleta1.some(x => x === pergunta)){
       this.coleta1.push(pergunta);
       this.coleta2.push(resp);
-      this.coleta3.push(resumo);
-      console.log(this.coleta1);
-      console.log(this.coleta2);
-      console.log(this.coleta3);
-      
+      this.coleta3.push(resumo);    
     }else{
       this.indice = this.coleta1.indexOf(pergunta);
       this.coleta2[this.indice] = resp;
-      console.log(this.coleta1);
-      console.log(this.coleta2);
-      console.log(this.coleta3);
     }
   }
   enviar(){
@@ -98,7 +98,7 @@ export class Perguntas implements OnInit {
     else{
       if(this.coleta1.length==this.perguntas.length){
         this.navCtrl.push(Resultados,{Perguntas: this.coleta1, Respostas: this.coleta2, Usuario: this.usuario, Estado: this.estado, Resumos: this.coleta3});
-      } else{
+      } else {
         this.showToast('middle','Favor, responder todas as questões!');
       }
     }

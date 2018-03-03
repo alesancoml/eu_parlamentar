@@ -39,6 +39,7 @@ export class Contato implements OnInit {
       mensagem:['', Validators.required]
     });
     this.showBanner();
+    this.interstitial();
   }
 
   showToast(position: string, mensagem: string) {
@@ -53,6 +54,10 @@ export class Contato implements OnInit {
   public showBanner(){
     this.admob.prepareBanner();
     this.admob.showBanner();
+  }
+  public interstitial(){
+    this.admob.prepareInterstitial();
+    this.admob.showInterstitial();
   }
   
   postDados(){

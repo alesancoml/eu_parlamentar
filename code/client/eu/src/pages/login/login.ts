@@ -14,13 +14,11 @@ export class Login  {
   public protecao : boolean = false;
 
   constructor(
-    public googleplus:  GooglePlus,
-    public navCtrl:     NavController, 
-    public navParams:   NavParams, 
-    public toastCtrl:   ToastController,
-    private _AUTH:      AuthProvider) { }
-
-  
+    public googleplus:              GooglePlus,
+    public navCtrl:                 NavController, 
+    public navParams:               NavParams, 
+    public toastCtrl:               ToastController,
+    private _AUTH:                  AuthProvider) { }
   
   ionViewDidLoad(){
     this._AUTH.logged()

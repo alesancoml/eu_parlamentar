@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams, ToastController, LoadingController } from 'ionic-angular';
+import { NavController, NavParams, ToastController, LoadingController, Platform } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service-provider';
 import { Perguntas } from '../perguntas/perguntas';
 import { Login } from '../login/login';
@@ -19,12 +19,13 @@ export class Tutorial implements OnInit {
   private _loader;
 
   constructor(
-    public navCtrl:     NavController, 
-    public navParams:   NavParams,
-    public service:     ServiceProvider,
-    public toastCtrl:   ToastController,
-    public loadingCtrl: LoadingController,
-    public admob:       AdModService) { }
+    public platform:                Platform,
+    public navCtrl:                 NavController, 
+    public navParams:               NavParams,
+    public service:                 ServiceProvider,
+    public toastCtrl:               ToastController,
+    public loadingCtrl:             LoadingController,
+    public admob:                   AdModService) { }
 
   ngOnInit(){
     this.nome       = this.navParams.get('N');
@@ -35,6 +36,8 @@ export class Tutorial implements OnInit {
     this.showBanner();
     this.cadastraUser();
   }
+
+  public volta(){ }
   
   showToast(position: string, mensagem: string) {
     let toast = this.toastCtrl.create({
