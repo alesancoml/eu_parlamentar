@@ -12,10 +12,11 @@ interface AdMobType {
 @Injectable()
 export class AdModService {
 
-  private admobid: AdMobType;
-  private bannerPrepared: boolean = false;
-  private interstitialPrepared: boolean = false;
-  private videoPrepared: boolean = false;
+    private admobid: AdMobType;
+    private bannerPrepared: boolean = false;
+    private interstitialPrepared: boolean = false;
+    private videoPrepared: boolean = false;
+    private controleExibicao: number = 1;
 
     constructor(
     public http: HttpClient, 
@@ -30,17 +31,6 @@ export class AdModService {
                 video: 'ca-app-pub-8206886605835078/5941714099'
                 };
             } 
-            else if(_platform.is('ios')) {
-                // this.admobid = {
-                //   banner: 'ca-app-pub-xxx/xxx',
-                //   interstitial: 'ca-app-pub-xxx/xxx'
-                // };
-            } else {
-                // this.admobid = {
-                //   banner: 'ca-app-pub-xxx/xxx',
-                //   interstitial: 'ca-app-pub-xxx/xxx'
-                // };
-            };
         })
     }
 
@@ -72,7 +62,7 @@ export class AdModService {
     }
     hideBanner() {
         this.adMob.banner.hide().then(() => {
-            this.bannerPrepared = true;
+            this.removeBanner();
         }).catch((err) => {
             throw new Error(err);
         });
@@ -93,32 +83,42 @@ export class AdModService {
         this.adMob.interstitial.config(interstitialConfig);
         this.adMob.interstitial.prepare().then(() => {
             this.interstitialPrepared = true;
+            this.showInterstitial();
         }).catch((err) => {
             throw new Error(err);
         })
+       
     }
+
     showInterstitial() {
-        if(this.interstitialPrepared) {
-            this.adMob.interstitial.show().then(() => {
-                this.interstitialPrepared = false;   
+        this.adMob.interstitial.show().then(() => {
+            this.interstitialPrepared = false;   
+        }).catch((err) => {
+            throw new Error(err);
+        });
+    }
+
+    prepareVideoRewards() {
+        if (this.controleExibicao % 4 === 0){
+            this.controleExibicao = 1;
+            const videoRewardsConfig: AdMobFreeRewardVideoConfig  = {
+                id: this.admobid.video,
+                isTesting: false,
+                autoShow: true
+            };
+            this.adMob.rewardVideo.config(videoRewardsConfig);
+            this.adMob.rewardVideo.prepare().then(() => {
+                this.videoPrepared = true;
             }).catch((err) => {
                 throw new Error(err);
-            });
+            })
+            this.showVideoRewards()
+        }
+        else{
+            this.controleExibicao = this.controleExibicao + 1;
         }
     }
-    prepareVideoRewards() {
-        const videoRewardsConfig: AdMobFreeRewardVideoConfig  = {
-            id: this.admobid.video,
-            isTesting: false,
-            autoShow: true
-        };
-        this.adMob.rewardVideo.config(videoRewardsConfig);
-        this.adMob.rewardVideo.prepare().then(() => {
-            this.videoPrepared = true;
-        }).catch((err) => {
-            throw new Error(err);
-        })
-    }
+    
     showVideoRewards() {
         if(this.videoPrepared) {
             this.adMob.rewardVideo.show().then(() => {
@@ -127,6 +127,23 @@ export class AdModService {
                 throw new Error(err);
             });
         }
+    }
+
+    showAds(){
+        if (this.controleExibicao % 4 === 0){
+            this.controleExibicao = 1;
+            this.prepareInterstitial();
+            this.showInterstitial();
+        }
+        else{
+            this.controleExibicao = this.controleExibicao + 1;
+            this.prepareBanner();
+            this.showBanner();
+        }
+    }
+    hideAds(){
+        this.hideBanner();
+        this.removeBanner();
     }
 
 }

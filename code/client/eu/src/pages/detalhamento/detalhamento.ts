@@ -25,34 +25,29 @@ export class Detalhamento {
       this.resumos  = this.navParams.get('resumos');
       this.votos    = this.deputado[5];
       this.ajusteVotos();
-      this.showBanner();
+      
     }
 
     ionViewDidLoad() {
+      this.showAds();
       this.setBackButtonAction()
     }
 
     setBackButtonAction(){
       this.navBar.backButtonClick = () => {
+        this.hideAds();
         this.navCtrl.pop();
       }
     }
   
-  public showBanner(){
-    this.admob.prepareBanner();
-    this.admob.showBanner();
+  public showAds(){
+    this.admob.showAds();
   }
   
-  public hideBanner(){
-    this.admob.hideBanner();
-    this.admob.removeBanner();
+  public hideAds(){
+    this.admob.hideAds();
   }
-  
-  public Interstitial(){
-    this.admob.prepareInterstitial();
-    this.admob.showInterstitial();
-  }
-  
+
   ajusteVotos(){
     this.votos.forEach((item, index) => {
       if (item[1]=="Nao"){

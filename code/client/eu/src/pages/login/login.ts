@@ -40,6 +40,11 @@ export class Login  {
   }
 
   login(metodo : string): void {
+    // let uid = 1;
+    // let displayName = "Alesanco";
+    // let photoURL = "foto";
+    // let email = "alesancoml@gmail.com";
+    // this.navCtrl.setRoot(Tutorial, {I: uid, N: displayName, F: photoURL, E: email});
     this.protecao = true;
     this._AUTH.logged()
       .then(res => {

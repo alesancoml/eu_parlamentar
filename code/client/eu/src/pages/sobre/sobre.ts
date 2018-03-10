@@ -14,23 +14,15 @@ export class Sobre {
     public admob:       AdModService) { }
 
   ionViewDidLoad() {
-    this.showBanner();
-    this.showVideo();
+    this.showAds;
   }
 
-  public showBanner(){
-    this.admob.prepareBanner();
-    this.admob.showBanner();
+  public showAds(){
+    this.admob.showAds();
   }
-
-  public interstitial(){
-    this.admob.prepareInterstitial();
-    this.admob.showInterstitial();
-  }
-
-  public showVideo(){
-    this.admob.prepareVideoRewards();
-    this.admob.showVideoRewards();
+  
+  public hideAds(){
+    this.admob.hideAds();
   }
   
 }

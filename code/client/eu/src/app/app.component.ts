@@ -95,7 +95,7 @@ export class MyApp {
   }
 
   openPage(page: any) {
-    this.hideBanner();
+    this.hideAds();
     if(page.title == 'Logout'){
       this._AUTH.logout()
         .then((data : any) => {
@@ -138,9 +138,8 @@ export class MyApp {
     }
   }
 
-  public hideBanner(){
-    this.admob.hideBanner();
-    this.admob.removeBanner();
+  public hideAds(){
+    this.admob.hideAds();
   }
 }
 

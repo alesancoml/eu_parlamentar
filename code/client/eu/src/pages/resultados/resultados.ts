@@ -42,7 +42,7 @@ export class Resultados implements OnInit {
   }
 
   ionViewWillEnter(){
-    this.hideBanner();
+    this.hideAds();
   }
 
   showToast(position: string, mensagem: string) {
@@ -54,14 +54,8 @@ export class Resultados implements OnInit {
     toast.present(toast);
   }
 
-  public showBanner(){
-    this.admob.prepareBanner();
-    this.admob.showBanner();
-  }
-  
-  public hideBanner(){
-    this.admob.hideBanner();
-    this.admob.removeBanner();
+  public hideAds(){
+    this.admob.hideAds();
   }
 
   postDados(){

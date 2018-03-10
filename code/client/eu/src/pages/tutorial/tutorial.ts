@@ -33,7 +33,7 @@ export class Tutorial implements OnInit {
     this.email      = this.navParams.get('E');
     this.iden       = this.navParams.get('I');
     this._loader    = this.loadingCtrl.create();
-    this.showBanner();
+    this.showAds();
     this.cadastraUser();
   }
 
@@ -48,14 +48,12 @@ export class Tutorial implements OnInit {
     toast.present(toast);
   }
 
-  public showBanner(){
-    this.admob.prepareBanner();
-    this.admob.showBanner();
+  public showAds(){
+    this.admob.showAds();
   }
   
-  public hideBanner(){
-    this.admob.hideBanner();
-    this.admob.removeBanner();
+  public hideAds(){
+    this.admob.hideAds();
   }
 
   cadastraUser(){
@@ -75,7 +73,7 @@ export class Tutorial implements OnInit {
   }
 
   proximaTela(){
-    this.hideBanner();
+    this.hideAds();
     this.navCtrl.setRoot(Perguntas, {user: this.idUsuario});
   }
 

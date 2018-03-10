@@ -10,12 +10,13 @@ import { Storage } from '@ionic/storage';
 @Injectable()
 export class AuthProvider {
 
-  public user        : Observable<any>;
+  public user   : Observable<any>;
+  public coisa   : any = 0;
 
   constructor(
-    public http: Http, 
+    public http:        Http, 
     public googleplus:  GooglePlus,
-    public storage: Storage) { }
+    public storage:     Storage) { }
 
   login(metodo: string) : Promise<any> {
     if(metodo=="google"){
@@ -97,27 +98,24 @@ export class AuthProvider {
     this.storage.get('logged')
       .then(res => {
         if (res){
-          var a   : any;
-          var b   : any;
-          var c   : any;
-          var d   : any;
-          this.storage.get('uid').then((val) => {a = val});
-          this.storage.get('displayName').then((val) => {b = val});
-          this.storage.get('photoURL').then((val) => {c = val});
-          this.storage.get('email').then((val) => {d = val});
-          
-          var flag: any;
+          let uid           : any;
+          var displayName   : any;
+          var photoURL      : any;
+          var email         : any;
+
+          this.storage.get('uid').then((val) => {uid = val});
+          this.storage.get('displayName').then((val) => {displayName = val});
+          this.storage.get('photoURL').then((val) => {photoURL = val});
+          this.storage.get('email').then((val) => {email = val});
+
+          let sinal = this.coisa;
           var intervalo = setInterval(function(){ 
-            if (a!= null && flag==null){
-              console.log("A: ", a);
-              console.log("B: ", b);
-              flag = 1;
+            if (uid!= null && sinal==0){
+              sinal = 1;
               clearTimeout(intervalo);
-              resolve ({'uid': a, 'displayName': b, 'photoURL': c, 'email': d});
+              resolve ({'uid': uid, 'displayName': displayName, 'photoURL': photoURL, 'email': email});
             }
           }, 1000);
-          
-           
         }else{
           reject (false);
         }
@@ -125,3 +123,5 @@ export class AuthProvider {
     })
   }
 }
+
+
