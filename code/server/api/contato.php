@@ -34,6 +34,48 @@
     $datetime       ->setTimezone($tz_object); 
     $dataAtual      = $datetime->format('Y-m-d');
 
+    //######################################################################################################
+    // ENVIA O EMAIL
+    
+    //REMETENTE --> ESTE EMAIL TEM QUE SER VALIDO DO DOMINIO
+    //==================================================== 
+    $email_remetente = $email; // deve ser uma conta de email do seu dominio 
+    //====================================================
+
+    //Configurações do email, ajustar conforme necessidade
+    //==================================================== 
+    $email_destinatario = "eusouparlamentar@gmail.com"; // pode ser qualquer email que receberá as mensagens
+    $email_reply = $email; 
+    $email_assunto = "Contato - ".$email; // Este será o assunto da mensagem
+    //====================================================
+
+    //Monta o Corpo da Mensagem
+    //====================================================
+    $corpo		= "<html><body>";
+    $corpo 	   .= "<strong> Mensagem de Contato pelo Site</strong><br><br>";
+    $corpo 	   .= "<table border=1 solid #000000 cellpadding=5 cellspacing=0 width=500";
+    $corpo	   .= "<tr><td bgcolor=#cccccc valing=middle width=20%><strong> Nome: 		</strong></td valing=middle><td> $nome </td></tr>";
+    $corpo	   .= "<tr><td bgcolor=#cccccc valing=middle width=20%><strong> Email: 	</strong></td valing=middle><td> $email </td></tr>";
+    $corpo	   .= "<tr><td bgcolor=#cccccc valing=middle width=20%><strong> UF: 	</strong></td valing=middle><td> $uf </td></tr>";
+    $corpo	   .= "<tr><td bgcolor=#cccccc valing=middle width=20%><strong> Mensagem: 	</strong></td valing=middle><td> $mensagem </td></tr>";
+    $corpo     .= "</table></body></html>";
+    //====================================================
+
+    //Seta os Headers (Alterar somente caso necessario) 
+    //==================================================== 
+    $email_headers = implode ( "\n",array ( "From: $email_remetente", "Reply-To: $email_reply", "Return-Path: $email_remetente","MIME-Version: 1.0","X-Priority: 3","Content-Type: text/html; charset=UTF-8" ) );
+    //====================================================
+
+    //Enviando o email 
+    //==================================================== 
+    if (mail ($email_destinatario, $email_assunto, nl2br($corpo), $email_headers)){ 
+        $a = "ok"; 
+    } 
+    else{
+        $a = "falha";
+    }  
+    //######################################################################################################
+
     // ABRE CONEXÃO
     $m = new Model();
     

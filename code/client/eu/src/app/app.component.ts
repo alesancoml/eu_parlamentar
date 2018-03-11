@@ -46,20 +46,6 @@ export class MyApp {
       var lastTimeBackPress = 0;
       var timePeriodToExit = 2000;
 
-      // if(this.platform.backButton){
-      //   alert("oi");
-      // }
-      // if(this.nav.canGoBack){
-      //   alert("oi 1");
-      // }
-      // document.addEventListener('backbutton', () => {
-      //   alert("Back button tapped");
-      // }, false);
-      // document.addEventListener("backbutton", onBackKeyDown, false);
-      // function onBackKeyDown() {
-      //   alert("Back button tapped");
-      // }
-
       this.platform.registerBackButtonAction(() => {
         
         let view = this.nav.getActive();

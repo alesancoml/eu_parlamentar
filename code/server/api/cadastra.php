@@ -16,9 +16,9 @@
     $email          = $objData->E;
 
     // $iden           = "5kfIF7lVnWhEpDP6HCJ8tEnBtnp1";
-    // $nome           = "Alesanco Andrade";
+    // $nome           = "Renata Gomes";
     // $foto           = "fotoasdasdasdasddd";
-    // $email          = "alesancoml@gmail.com";
+    // $email          = "etecoordenacao2@gmail.com";
     
     // LIMPA OS DADOS
     $email      = stripslashes($email);

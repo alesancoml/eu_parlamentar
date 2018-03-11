@@ -49,6 +49,37 @@
             $qs = null;
             return 0;
         }
+        
+        public function buscaQuestoes($consulta = null){
+            if($qs = $this->db->query("$consulta") )
+            {   
+                if ($qs->rowCount() > 0)
+                {
+                    $rows = $qs->fetchAll();
+                    foreach ($rows as $row) {
+                        return $rows;
+                    }
+                }
+            }
+            $qs = null;
+            return 0;
+        }
+
+        public function buscaUFs($tabela, $where = null){
+            $where = ($where != null ? " WHERE {$where}" : "");
+            if($qs = $this->db->query(" SELECT distinct(estado) FROM `{$tabela}` {$where} ") )
+            {   
+                if ($qs->rowCount() > 0)
+                {
+                    $rows = $qs->fetchAll();
+                    foreach ($rows as $row) {
+                        return $rows;
+                    }
+                }
+            }
+            $qs = null;
+            return 0;
+        }
 
         public function insereResposta( $tabela, Array $dados){
             $dado = "VALUES (".$dados[0].", '".$dados[1]."', '".$dados[2]."', '".$dados[3]."', '".$dados[4]."')";

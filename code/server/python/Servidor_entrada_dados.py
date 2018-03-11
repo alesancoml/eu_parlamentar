@@ -2,6 +2,7 @@
 import MySQLdb
 import csv
 from difflib import SequenceMatcher
+import time
 
 con = MySQLdb.connect(host='localhost', user='root', passwd='', db='eu_parlamentar')
 c = con.cursor()
@@ -34,10 +35,12 @@ def menu2():
     print "*******************"
     print "INSERIR VOTOS PARA QUAL QUESTAO?"
     listarQuestoes()
-    questao  = raw_input("Digite o numero da questao: ")
-    arquivo  = raw_input("Digite o nome do arquivo de dados com sua extensao: ")
-    arquivo = './questoes/'+arquivo
-    capturarVotos(questao, arquivo)
+    listaArquivos = ["voto.csv","maioridade.csv","doacoes.csv","dilma.csv","cunha.csv","teto.csv","terceirizacao.csv","ensino.csv","trabalhista.csv","temer.csv"]
+    questao = 0;
+    for arquivo in listaArquivos:
+        questao += 1;
+        arquivo = './questoes/'+arquivo
+        capturarVotos(questao, arquivo)
 
 def cadastrarQuestao():
     print ""
@@ -69,7 +72,7 @@ def listarQuestoes():
     print ""
     for row in results:
         print "PERGUNTA",row[0],"-",
-        print row[3][0:150]
+        print row[3][0:100]
     print ""
 
 def capturarVotos(questao, arquivo):
@@ -81,6 +84,27 @@ def capturarVotos(questao, arquivo):
             header = row
         else:
             estado   = row[0]
+            # Coleta do nome correto do estado.
+            verifica = c.execute("SELECT nome FROM estados WHERE nome='%s'" % (estado))
+            if (verifica == 0):
+                sql = "SELECT nome FROM estados"
+                c.execute(sql)
+                results = c.fetchall()
+                similar = []
+                estadoTemp = estado.replace(' ','').upper()
+                for linha in results:
+                    estadoDoBanco = linha[0].replace(' ','').upper()
+                    similaridade = calculo(estadoDoBanco,estadoTemp)
+                    similaridade = "%.3f" %(similaridade)
+                    if (len(similar)!=0):
+                        if (similar[1]<similaridade):
+                            similar[0] = linha[0]
+                            similar[1] = similaridade
+                    else:
+                        if float(similaridade)>0.50:
+                            similar.append(linha[0])
+                            similar.append(similaridade)
+                estado = similar[0].upper()
             nome     = row[1]
             partido  = row[2]
             voto     = row[3]
@@ -92,7 +116,7 @@ def capturarVotos(questao, arquivo):
     ifile.close()
 
 def coletaDeputado(estado, nome, partido):
-    verifica = c.execute("SELECT id_deputado FROM deputados WHERE nome='%s' and partido='%s' and estado='%s'" % (nome, partido, estado))
+    verifica = c.execute("SELECT id_deputado FROM deputados WHERE nome='%s' and estado='%s'" % (nome, estado))
     if (verifica == 0):
         sql = "SELECT * FROM deputados where estado='%s'"% (estado)
         c.execute(sql)

@@ -1,0 +1,475 @@
+ESTADO,Deputado,Partido,Voto
+ACRE,Alan Rick,PRB,Sim
+ACRE,Angelim,PT,Nao
+ACRE,J�ssica Sales,PMDB,Sim
+ACRE,Leo de Brito,PT,Nao
+ACRE,Rocha,PSDB,Sim
+ACRE,Sib� Machado,PT,Nao
+ALAGOAS,Arthur Lira,PP,Sim
+ALAGOAS,C�cero Almeida,PRTB,Sim
+ALAGOAS,Givaldo Carimb�o,PROS,Nao
+ALAGOAS,JHC,Solidaried,Sim
+ALAGOAS,Marx Beltr�o,PMDB,Sim
+ALAGOAS,Maur�cio Quintella Lessa,PR,Sim
+ALAGOAS,Paul�o,PT,Nao
+ALAGOAS,Pedro Vilela,PSDB,Sim
+ALAGOAS,Ronaldo Lessa,PDT,Nao
+AMAP�,Andr� Abdon,PRB,Sim
+AMAP�,Cabu�u Borges,PMDB,Sim
+AMAP�,Jozi Rocha,PTB,Sim
+AMAP�,Marcos Reategui,PSC,Sim
+AMAP�,Professora Marcivania,PT,Nao
+AMAP�,Vinicius Gurgel,PR,Sim
+AMAZONAS,Alfredo Nascimento,PR,Sim
+AMAZONAS,Arthur Virg�lio Bisneto,PSDB,Sim
+AMAZONAS,�tila Lins,PSD,Sim
+AMAZONAS,Concei��o Sampaio,PP,Sim
+AMAZONAS,Hissa Abrah�o,PPS,Nao
+AMAZONAS,Marcos Rotta,PMDB,Sim
+AMAZONAS,Pauderney Avelino,DEM,Sim
+AMAZONAS,Silas C�mara,PSD,Sim
+BAHIA,Afonso Florence,PT,Nao
+BAHIA,Alice Portugal,PCdoB,Nao
+BAHIA,Antonio Brito,PTB,Nao
+BAHIA,Antonio Imbassahy,PSDB,Sim
+BAHIA,Arthur Oliveira Maia,Solidaried,Sim
+BAHIA,Bacelar,PTN,Nao
+BAHIA,Benito Gama,PTB,Sim
+BAHIA,Cac� Le�o,PP,Sim
+BAHIA,Caetano,PT,Nao
+BAHIA,Claudio Cajado,DEM,Sim
+BAHIA,Daniel Almeida,PCdoB,Nao
+BAHIA,Davidson Magalh�es,PCdoB,Nao
+BAHIA,Elmar Nascimento,DEM,Sim
+BAHIA,Erivelton Santana,PSC,Sim
+BAHIA,F�lix Mendon�a J�nior,PDT,Nao
+BAHIA,Fernando Torres,PSD,Nao
+BAHIA,Jo�o Carlos Bacelar,PR,Sim
+BAHIA,Jo�o Gualberto,PSDB,Sim
+BAHIA,Jorge Solla,PT,Nao
+BAHIA,Jos� Carlos Aleluia,DEM,Sim
+BAHIA,Jos� Carlos Ara�jo,PSD,Sim
+BAHIA,Jos� Rocha,PR,Sim
+BAHIA,Jutahy Junior,PSDB,Sim
+BAHIA,Lucio Vieira Lima,PMDB,Sim
+BAHIA,M�rcio Marinho,PRB,Sim
+BAHIA,M�rio Negromonte Jr.,PP,Sim
+BAHIA,Moema Gramacho,PT,Nao
+BAHIA,Paulo Azi,DEM,Sim
+BAHIA,Paulo Magalh�es,PSD,Nao
+BAHIA,Roberto Britto,PP,Sim
+BAHIA,Ronaldo Carletto,PP,Sim
+BAHIA,S�rgio Brito,PSD,Sim
+BAHIA,Tia Eron,PRB,Sim
+BAHIA,Uldurico Junior,PTC,Nao
+BAHIA,Valmir Assun��o,PT,Nao
+CEAR�,Adail Carneiro,PHS,Sim
+CEAR�,Andr� Figueiredo,PDT,Nao
+CEAR�,Arnon Bezerra,PTB,Nao
+CEAR�,Cabo Sabino,PR,Sim
+CEAR�,Chico Lopes,PCdoB,Nao
+CEAR�,Danilo Forte,PMDB,Sim
+CEAR�,Domingos Neto,PROS,Nao
+CEAR�,Genecias Noronha,Solidaried,Sim
+CEAR�,Gorete Pereira,PR,Sim
+CEAR�,Jos� Airton Cirilo,PT,Nao
+CEAR�,Jos� Guimar�es,PT,Nao
+CEAR�,Le�nidas Cristino,PROS,Nao
+CEAR�,Luizianne Lins,PT,Nao
+CEAR�,Macedo,PSL,Sim
+CEAR�,Moroni Torgan,DEM,Sim
+CEAR�,Moses Rodrigues,PPS,Sim
+CEAR�,Odorico Monteiro,PT,Nao
+CEAR�,Raimundo Gomes de Matos,PSDB,Nao
+CEAR�,Ronaldo Martins,PRB,Sim
+CEAR�,Vicente Arruda,PROS,Nao
+CEAR�,Vitor Valim,PMDB,Sim
+DISTRITO FEDERAL,Alberto Fraga,DEM,Sim
+DISTRITO FEDERAL,Augusto Carvalho,Solidaried,Nao
+DISTRITO FEDERAL,Erika Kokay,PT,Nao
+DISTRITO FEDERAL,Izalci,PSDB,Sim
+DISTRITO FEDERAL,Laerte Bessa,PR,Sim
+DISTRITO FEDERAL,Rog�rio Rosso,PSD,Sim
+DISTRITO FEDERAL,Ronaldo Fonseca,PROS,Sim
+DISTRITO FEDERAL,Roney Nemer,PMDB,Sim
+ESP�RITO SANTO,Carlos Manato,Solidaried,Sim
+ESP�RITO SANTO,Dr. Jorge Silva,PROS,Nao
+ESP�RITO SANTO,Evair de Melo,PV,Sim
+ESP�RITO SANTO,Givaldo Vieira,PT,Nao
+ESP�RITO SANTO,Helder Salom�o,PT,Nao
+ESP�RITO SANTO,Lelo Coimbra,PMDB,Nao
+ESP�RITO SANTO,Marcus Vicente,PP,Sim
+ESP�RITO SANTO,Max Filho,PSDB,Nao
+ESP�RITO SANTO,Paulo Foletto,PSB,Sim
+ESP�RITO SANTO,Sergio Vidigal,PDT,Nao
+GOI�S,Alexandre Baldy,PSDB,Sim
+GOI�S,C�lio Silveira,PSDB,Sim
+GOI�S,Daniel Vilela,PMDB,Sim
+GOI�S,Delegado Waldir,PSDB,Sim
+GOI�S,Giuseppe Vecci,PSDB,Sim
+GOI�S,Heuler Cruvinel,PSD,Sim
+GOI�S,Jo�o Campos,PSDB,Sim
+GOI�S,Jovair Arantes,PTB,Sim
+GOI�S,Lucas Vergilio,Solidaried,Sim
+GOI�S,Magda Mofatto,PR,Sim
+GOI�S,Marcos Abr�o,PPS,Sim
+GOI�S,Pedro Chaves,PMDB,Sim
+GOI�S,Roberto Balestra,PP,Sim
+GOI�S,Rubens Otoni,PT,Nao
+GOI�S,Sandes J�nior,PP,Sim
+MARANH�O,Alberto Filho,PMDB,Sim
+MARANH�O,Aluisio Mendes,PSDC,Sim
+MARANH�O,Andr� Fufuca,PEN,Sim
+MARANH�O,Cleber Verde,PRB,Sim
+MARANH�O,Eliziane Gama,PPS,Nao
+MARANH�O,Hildo Rocha,PMDB,Sim
+MARANH�O,Jo�o Marcelo Souza,PMDB,Nao
+MARANH�O,Junior Marreca,PEN,Sim
+MARANH�O,Juscelino Filho,PRP,Sim
+MARANH�O,Pedro Fernandes,PTB,Nao
+MARANH�O,Rubens Pereira J�nior,PCdoB,Nao
+MARANH�O,Sarney Filho,PV,Nao
+MARANH�O,Victor Mendes,PV,Sim
+MARANH�O,Waldir Maranh�o,PP,Sim
+MARANH�O,Weverton Rocha,PDT,Nao
+MARANH�O,Z� Carlos,PT,Nao
+MATO GROSSO,Adilton Sachetti,PSB,Sim
+MATO GROSSO,Ezequiel Fonseca,PP,Sim
+MATO GROSSO,Fabio Garcia,PSB,Sim
+MATO GROSSO,Nilson Leit�o,PSDB,Sim
+MATO GROSSO,Professor Vict�rio Galli,PSC,Sim
+MATO GROSSO,S�guas Moraes,PT,Nao
+MATO GROSSO,Valtenir Pereira,PROS,Sim
+MATO GROSSO DO SUL,Carlos Marun,PMDB,Sim
+MATO GROSSO DO SUL,Dagoberto,PDT,Nao
+MATO GROSSO DO SUL,Elizeu Dionizio,Solidaried,Sim
+MATO GROSSO DO SUL,Geraldo Resende,PMDB,Sim
+MATO GROSSO DO SUL,Mandetta,DEM,Sim
+MATO GROSSO DO SUL,Tereza Cristina,PSB,Sim
+MATO GROSSO DO SUL,Vander Loubet,PT,Nao
+MATO GROSSO DO SUL,Zeca do Pt,PT,Nao
+MINAS GERAIS,Adelmo Carneiro Le�o,PT,Nao
+MINAS GERAIS,Ademir Camilo,PROS,Sim
+MINAS GERAIS,Aelton Freitas,PR,Sim
+MINAS GERAIS,Bilac Pinto,PR,Sim
+MINAS GERAIS,Bonif�cio de Andrada,PSDB,Sim
+MINAS GERAIS,Brunny,PTC,Sim
+MINAS GERAIS,Caio Narcio,PSDB,Sim
+MINAS GERAIS,Carlos Melles,DEM,Sim
+MINAS GERAIS,Delegado Edson Moreira,PTN,Sim
+MINAS GERAIS,Diego Andrade,PSD,Sim
+MINAS GERAIS,Dimas Fabiano,PP,Sim
+MINAS GERAIS,Domingos S�vio,PSDB,Sim
+MINAS GERAIS,Eduardo Barbosa,PSDB,Nao
+MINAS GERAIS,Eros Biondini,PTB,Sim
+MINAS GERAIS,F�bio Ramalho,PV,Nao
+MINAS GERAIS,Gabriel Guimar�es,PT,Nao
+MINAS GERAIS,Jaime Martins,PSD,Sim
+MINAS GERAIS,J� Moraes,PCdoB,Nao
+MINAS GERAIS,J�lio Delgado,PSB,Nao
+MINAS GERAIS,Laudivio Carvalho,PMDB,Sim
+MINAS GERAIS,Leonardo Monteiro,PT,Nao
+MINAS GERAIS,Leonardo Quint�o,PMDB,Sim
+MINAS GERAIS,Lincoln Portela,PR,Sim
+MINAS GERAIS,Luis Tib�,PTdoB,Sim
+MINAS GERAIS,Luiz Fernando Faria,PP,Sim
+MINAS GERAIS,Marcelo �lvaro Ant�nio,PRP,Sim
+MINAS GERAIS,Marcelo Aro,PHS,Sim
+MINAS GERAIS,Marcos Montes,PSD,Sim
+MINAS GERAIS,Marcus Pestana,PSDB,Sim
+MINAS GERAIS,Margarida Salom�o,PT,Nao
+MINAS GERAIS,M�rio Heringer,PDT,Nao
+MINAS GERAIS,Mauro Lopes,PMDB,Sim
+MINAS GERAIS,Misael Varella,DEM,Sim
+MINAS GERAIS,Newton Cardoso Jr,PMDB,Sim
+MINAS GERAIS,Odelmo Le�o,PP,Sim
+MINAS GERAIS,Padre Jo�o,PT,Nao
+MINAS GERAIS,Pastor Franklin,PTdoB,Sim
+MINAS GERAIS,Paulo Abi-Ackel,PSDB,Sim
+MINAS GERAIS,Raquel Muniz,PSC,Sim
+MINAS GERAIS,Reginaldo Lopes,PT,Nao
+MINAS GERAIS,Renzo Braz,PP,Sim
+MINAS GERAIS,Rodrigo de Castro,PSDB,Sim
+MINAS GERAIS,Rodrigo Pacheco,PMDB,Nao
+MINAS GERAIS,Saraiva Felipe,PMDB,Nao
+MINAS GERAIS,Silas Brasileiro,PMDB,Sim
+MINAS GERAIS,Subtenente Gonzaga,PDT,Sim
+MINAS GERAIS,Tenente L�cio,PSB,Nao
+MINAS GERAIS,Toninho Pinheiro,PP,Sim
+MINAS GERAIS,Wadson Ribeiro,PCdoB,Nao
+MINAS GERAIS,Weliton Prado,PT,Sim
+MINAS GERAIS,Z� Silva,Solidaried,Sim
+PAR�,Arnaldo Jordy,PPS,Nao
+PAR�,Beto Faro,PT,Nao
+PAR�,Beto Salame,PROS,Nao
+PAR�,Delegado �der Mauro,PSD,Sim
+PAR�,Edmilson Rodrigues,PSOL,Nao
+PAR�,Francisco Chapadinha,PSD,Sim
+PAR�,H�lio Leite,DEM,Sim
+PAR�,Joaquim Passarinho,PSD,Sim
+PAR�,Jos� Priante,PMDB,Sim
+PAR�,Josu� Bengtson,PTB,Sim
+PAR�,J�lia Marinho,PSC,Sim
+PAR�,L�cio Vale,PR,Sim
+PAR�,Nilson Pinto,PSDB,Sim
+PAR�,Simone Morgado,PMDB,Nao
+PAR�,Wladimir Costa,Solidaried,Sim
+PAR�,Z� Geraldo,PT,Nao
+PARA�BA,Aguinaldo Ribeiro,PP,Sim
+PARA�BA,Benjamin Maranh�o,Solidaried,Sim
+PARA�BA,Dami�o Feliciano,PDT,Nao
+PARA�BA,Efraim Filho,DEM,Sim
+PARA�BA,Hugo Motta,PMDB,Sim
+PARA�BA,Luiz Couto,PT,Nao
+PARA�BA,Manoel Junior,PMDB,Sim
+PARA�BA,Pedro Cunha Lima,PSDB,Sim
+PARA�BA,R�mulo Gouveia,PSD,Sim
+PARA�BA,Veneziano Vital do R�go,PMDB,Sim
+PARA�BA,Wellington Roberto,PR,Sim
+PARA�BA,Wilson Filho,PTB,Sim
+PARAN�,Alfredo Kaefer,PSDB,Sim
+PARAN�,Aliel Machado,PCdoB,Nao
+PARAN�,Assis do Couto,PT,Nao
+PARAN�,Christiane de Souza Yared,PTN,Nao
+PARAN�,Diego Garcia,PHS,Nao
+PARAN�,Dilceu Sperafico,PP,Sim
+PARAN�,Enio Verri,PT,Nao
+PARAN�,Fernando Francischini,Solidaried,Sim
+PARAN�,Giacobo,PR,Sim
+PARAN�,Hermes Parcianello,PMDB,Sim
+PARAN�,Jo�o Arruda,PMDB,Nao
+PARAN�,Leandre,PV,Sim
+PARAN�,Leopoldo Meyer,PSB,Nao
+PARAN�,Luciano Ducci,PSB,Sim
+PARAN�,Luiz Carlos Hauly,PSDB,Sim
+PARAN�,Marcelo Belinati,PP,Sim
+PARAN�,Nelson Meurer,PP,Sim
+PARAN�,Osmar Serraglio,PMDB,Sim
+PARAN�,Ricardo Barros,PP,Nao
+PARAN�,Rubens Bueno,PPS,Nao
+PARAN�,Sandro Alex,PPS,Sim
+PARAN�,Sergio Souza,PMDB,Sim
+PARAN�,Takayama,PSC,Sim
+PARAN�,Toninho Wandscheer,PT,Nao
+PARAN�,Zeca Dirceu,PT,Nao
+PERNAMBUCO,Adalberto Cavalcanti,PTB,Sim
+PERNAMBUCO,Anderson Ferreira,PR,Sim
+PERNAMBUCO,Augusto Coutinho,Solidaried,Sim
+PERNAMBUCO,Betinho Gomes,PSDB,Nao
+PERNAMBUCO,Bruno Ara�jo,PSDB,Sim
+PERNAMBUCO,Carlos Eduardo Cadoca,PCdoB,Nao
+PERNAMBUCO,Daniel Coelho,PSDB,Sim
+PERNAMBUCO,Eduardo da Fonte,PP,Sim
+PERNAMBUCO,Fernando Coelho Filho,PSB,Nao
+PERNAMBUCO,Fernando Monteiro,PP,Sim
+PERNAMBUCO,Gonzaga Patriota,PSB,Sim
+PERNAMBUCO,Jo�o Fernando Coutinho,PSB,Nao
+PERNAMBUCO,Jorge C�rte Real,PTB,Sim
+PERNAMBUCO,Luciana Santos,PCdoB,Nao
+PERNAMBUCO,Marinaldo Rosendo,PSB,Sim
+PERNAMBUCO,Mendon�a Filho,DEM,Sim
+PERNAMBUCO,Pastor Eurico,PSB,Sim
+PERNAMBUCO,Raul Jungmann,PPS,Nao
+PERNAMBUCO,Ricardo Teobaldo,PTB,Sim
+PERNAMBUCO,Silvio Costa,PSC,Nao
+PERNAMBUCO,Tadeu Alencar,PSB,Nao
+PERNAMBUCO,Wolney Queiroz,PDT,Nao
+PERNAMBUCO,Zeca Cavalcanti,PTB,Sim
+PIAU�,Assis Carvalho,PT,Nao
+PIAU�,�tila Lira,PSB,Nao
+PIAU�,Her�clito Fortes,PSB,Sim
+PIAU�,Iracema Portella,PP,Sim
+PIAU�,J�lio Cesar,PSD,Sim
+PIAU�,Mainha,Solidaried,Nao
+PIAU�,Marcelo Castro,PMDB,Abstencao
+PIAU�,Paes Landim,PTB,Sim
+PIAU�,Rodrigo Martins,PSB,Sim
+PIAU�,Silas Freire,PR,Sim
+RIO DE JANEIRO,Alessandro Molon,PT,Nao
+RIO DE JANEIRO,Alexandre Serfiotis,PSD,Sim
+RIO DE JANEIRO,Alexandre Valle,PRP,Sim
+RIO DE JANEIRO,Altineu C�rtes,PR,Sim
+RIO DE JANEIRO,Aureo,Solidaried,Nao
+RIO DE JANEIRO,Benedita da Silva,PT,Nao
+RIO DE JANEIRO,Celso Jacob,PMDB,Sim
+RIO DE JANEIRO,Celso Pansera,PMDB,Nao
+RIO DE JANEIRO,Chico Alencar,PSOL,Nao
+RIO DE JANEIRO,Chico D Angelo,PT,Nao
+RIO DE JANEIRO,Clarissa Garotinho,PR,Nao
+RIO DE JANEIRO,Cristiane Brasil,PTB,Sim
+RIO DE JANEIRO,Deley,PTB,Nao
+RIO DE JANEIRO,Dr. Jo�o,PR,Sim
+RIO DE JANEIRO,Eduardo Cunha,PMDB,Art. 17
+RIO DE JANEIRO,Ezequiel Teixeira,Solidaried,Sim
+RIO DE JANEIRO,Felipe Bornier,PSD,Sim
+RIO DE JANEIRO,Fernando Jord�o,PMDB,Sim
+RIO DE JANEIRO,Francisco Floriano,PR,Sim
+RIO DE JANEIRO,Glauber Braga,PSB,Nao
+RIO DE JANEIRO,Indio da Costa,PSD,Sim
+RIO DE JANEIRO,Jair Bolsonaro,PP,Sim
+RIO DE JANEIRO,Jandira Feghali,PCdoB,Nao
+RIO DE JANEIRO,Jean Wyllys,PSOL,Nao
+RIO DE JANEIRO,Julio Lopes,PP,Sim
+RIO DE JANEIRO,Leonardo Picciani,PMDB,Sim
+RIO DE JANEIRO,Luiz Carlos Ramos,PSDC,Sim
+RIO DE JANEIRO,Luiz S�rgio,PT,Nao
+RIO DE JANEIRO,Marcelo Matos,PDT,Sim
+RIO DE JANEIRO,Marcos Soares,PR,Sim
+RIO DE JANEIRO,Marquinho Mendes,PMDB,Sim
+RIO DE JANEIRO,Miro Teixeira,PROS,Nao
+RIO DE JANEIRO,Otavio Leite,PSDB,Sim
+RIO DE JANEIRO,Paulo Feij�,PR,Sim
+RIO DE JANEIRO,Roberto Sales,PRB,Sim
+RIO DE JANEIRO,Rodrigo Maia,DEM,Sim
+RIO DE JANEIRO,Rosangela Gomes,PRB,Sim
+RIO DE JANEIRO,Sergio Zveiter,PSD,Sim
+RIO DE JANEIRO,Soraya Santos,PMDB,Sim
+RIO DE JANEIRO,S�stenes Cavalcante,PSD,Sim
+RIO DE JANEIRO,Wadih Damous,PT,Nao
+RIO DE JANEIRO,Walney Rocha,PTB,Sim
+RIO DE JANEIRO,Washington Reis,PMDB,Nao
+RIO GRANDE DO NORTE,Ant�nio J�come,PMN,Sim
+RIO GRANDE DO NORTE,Beto Rosado,PP,Sim
+RIO GRANDE DO NORTE,F�bio Faria,PSD,Sim
+RIO GRANDE DO NORTE,Felipe Maia,DEM,Sim
+RIO GRANDE DO NORTE,Rafael Motta,PROS,Sim
+RIO GRANDE DO NORTE,Rog�rio Marinho,PSDB,Sim
+RIO GRANDE DO NORTE,Walter Alves,PMDB,Sim
+RIO GRANDE DO SUL,Afonso Hamm,PP,Sim
+RIO GRANDE DO SUL,Afonso Motta,PDT,Nao
+RIO GRANDE DO SUL,Alceu Moreira,PMDB,Sim
+RIO GRANDE DO SUL,Bohn Gass,PT,Nao
+RIO GRANDE DO SUL,Carlos Gomes,PRB,Sim
+RIO GRANDE DO SUL,Covatti Filho,PP,Sim
+RIO GRANDE DO SUL,Danrlei de Deus Hinterholz,PSD,Sim
+RIO GRANDE DO SUL,Darc�sio Perondi,PMDB,Nao
+RIO GRANDE DO SUL,Fernando Marroni,PT,Nao
+RIO GRANDE DO SUL,Giovani Cherini,PDT,Sim
+RIO GRANDE DO SUL,Heitor Schuch,PSB,Nao
+RIO GRANDE DO SUL,Henrique Fontana,PT,Nao
+RIO GRANDE DO SUL,Jer�nimo Goergen,PP,Sim
+RIO GRANDE DO SUL,Jo�o Derly,PCdoB,Nao
+RIO GRANDE DO SUL,Jos� Foga�a,PMDB,Nao
+RIO GRANDE DO SUL,Jos� Ot�vio Germano,PP,Sim
+RIO GRANDE DO SUL,Jose St�dile,PSB,Nao
+RIO GRANDE DO SUL,Luis Carlos Heinze,PP,Sim
+RIO GRANDE DO SUL,Luiz Carlos Busato,PTB,Sim
+RIO GRANDE DO SUL,Marco Maia,PT,Nao
+RIO GRANDE DO SUL,Marcon,PT,Nao
+RIO GRANDE DO SUL,Maria do Ros�rio,PT,Nao
+RIO GRANDE DO SUL,Mauro Pereira,PMDB,Sim
+RIO GRANDE DO SUL,Nelson Marchezan Junior,PSDB,Sim
+RIO GRANDE DO SUL,Osmar Terra,PMDB,Nao
+RIO GRANDE DO SUL,Paulo Pimenta,PT,Nao
+RIO GRANDE DO SUL,Pompeo de Mattos,PDT,Nao
+RIO GRANDE DO SUL,Renato Molling,PP,Sim
+RIO GRANDE DO SUL,Ronaldo Nogueira,PTB,Sim
+RONDONIA,Expedito Netto,Solidaried,Sim
+RONDONIA,Lindomar Gar�on,PMDB,Sim
+RONDONIA,Lucio Mosquini,PMDB,Sim
+RONDONIA,Luiz Cl�udio,PR,Sim
+RONDONIA,Marcos Rog�rio,PDT,Sim
+RONDONIA,Mariana Carvalho,PSDB,Sim
+RONDONIA,Marinha Raupp,PMDB,Nao
+RONDONIA,Nilton Capixaba,PTB,Sim
+RORAIMA,Carlos Andrade,PHS,Sim
+RORAIMA,Edio Lopes,PMDB,Sim
+RORAIMA,Hiran Gon�alves,PMN,Sim
+RORAIMA,Jhonatan de Jesus,PRB,Sim
+RORAIMA,Rem�dio Monai,PR,Sim
+RORAIMA,Sh�ridan,PSDB,Sim
+SANTA CATARINA,Carmen Zanotto,PPS,Nao
+SANTA CATARINA,Celso Maldaner,PMDB,Sim
+SANTA CATARINA,Cesar Souza,PSD,Sim
+SANTA CATARINA,D�cio Lima,PT,Nao
+SANTA CATARINA,Edinho Bez,PMDB,Sim
+SANTA CATARINA,Esperidi�o Amin,PP,Sim
+SANTA CATARINA,Fabricio Oliveira,PSB,Sim
+SANTA CATARINA,Geovania de S�,PSDB,Sim
+SANTA CATARINA,Jo�o Rodrigues,PSD,Sim
+SANTA CATARINA,Jorginho Mello,PR,Sim
+SANTA CATARINA,Marco Tebaldi,PSDB,Sim
+SANTA CATARINA,Mauro Mariani,PMDB,Sim
+SANTA CATARINA,Pedro Uczai,PT,Nao
+SANTA CATARINA,Rog�rio Peninha Mendon�a,PMDB,Sim
+SANTA CATARINA,Ronaldo Benedet,PMDB,Sim
+SANTA CATARINA,Valdir Colatto,PMDB,Sim
+S�O PAULO,Alex Manente,PPS,Sim
+S�O PAULO,Alexandre Leite,DEM,Sim
+S�O PAULO,Ana Perugini,PT,Nao
+S�O PAULO,Andres Sanchez,PT,Nao
+S�O PAULO,Antonio Bulh�es,PRB,Sim
+S�O PAULO,Arlindo Chinaglia,PT,Nao
+S�O PAULO,Arnaldo Faria de S�,PTB,Sim
+S�O PAULO,Baleia Rossi,PMDB,Sim
+S�O PAULO,Beto Mansur,PRB,Sim
+S�O PAULO,Bruna Furlan,PSDB,Sim
+S�O PAULO,Bruno Covas,PSDB,Sim
+S�O PAULO,Capit�o Augusto,PR,Sim
+S�O PAULO,Carlos Sampaio,PSDB,Sim
+S�O PAULO,Carlos Zarattini,PT,Nao
+S�O PAULO,Celso Russomanno,PRB,Sim
+S�O PAULO,Dr. Sinval Malheiros,PV,Sim
+S�O PAULO,Eduardo Bolsonaro,PSC,Sim
+S�O PAULO,Eduardo Cury,PSDB,Sim
+S�O PAULO,Eli Corr�a Filho,DEM,Sim
+S�O PAULO,Evandro Gussi,PV,Nao
+S�O PAULO,Fausto Pinato,PRB,Sim
+S�O PAULO,Flavinho,PSB,Nao
+S�O PAULO,Gilberto Nascimento,PSC,Sim
+S�O PAULO,Goulart,PSD,Sim
+S�O PAULO,Guilherme Mussi,PP,Sim
+S�O PAULO,Herculano Passos,PSD,Sim
+S�O PAULO,Ivan Valente,PSOL,Nao
+S�O PAULO,Jefferson Campos,PSD,Sim
+S�O PAULO,Jo�o Paulo Papa,PSDB,Sim
+S�O PAULO,Jorge Tadeu Mudalen,DEM,Sim
+S�O PAULO,Jos� Mentor,PT,Nao
+S�O PAULO,Keiko Ota,PSB,Sim
+S�O PAULO,Lobbe Neto,PSDB,Sim
+S�O PAULO,Luiz Lauro Filho,PSB,Sim
+S�O PAULO,Luiza Erundina,PSB,Nao
+S�O PAULO,Major Olimpio,PDT,Sim
+S�O PAULO,Mara Gabrilli,PSDB,Sim
+S�O PAULO,Marcelo Aguiar,DEM,Sim
+S�O PAULO,Marcelo Squassoni,PRB,Sim
+S�O PAULO,Marcio Alvino,PR,Sim
+S�O PAULO,Miguel Haddad,PSDB,Sim
+S�O PAULO,Miguel Lombardi,PR,Sim
+S�O PAULO,Milton Monti,PR,Sim
+S�O PAULO,Mission�rio Jos� Olimpio,PP,Sim
+S�O PAULO,Nilto Tatto,PT,Nao
+S�O PAULO,Orlando Silva,PCdoB,Nao
+S�O PAULO,Paulo Freire,PR,Sim
+S�O PAULO,Paulo Pereira da Silva,Solidaried,Sim
+S�O PAULO,Paulo Teixeira,PT,Nao
+S�O PAULO,Penna,PV,Nao
+S�O PAULO,Pr. Marco Feliciano,PSC,Sim
+S�O PAULO,Renata Abreu,PTN,Sim
+S�O PAULO,Ricardo Izar,PSD,Sim
+S�O PAULO,Roberto Alves,PRB,Sim
+S�O PAULO,Roberto Freire,PPS,Nao
+S�O PAULO,Samuel Moreira,PSDB,Sim
+S�O PAULO,S�rgio Reis,PRB,Sim
+S�O PAULO,Silvio Torres,PSDB,Sim
+S�O PAULO,Tiririca,PR,Sim
+S�O PAULO,Valmir Prascidelli,PT,Nao
+S�O PAULO,Vicente Candido,PT,Nao
+S�O PAULO,Vicentinho,PT,Nao
+S�O PAULO,Vinicius Carvalho,PRB,Sim
+S�O PAULO,Vitor Lippi,PSDB,Sim
+S�O PAULO,Walter Ihoshi,PSD,Sim
+SERGIPE,Adelson Barreto,PTB,Sim
+SERGIPE,Andre Moura,PSC,Sim
+SERGIPE,F�bio Mitidieri,PSD,Sim
+SERGIPE,Fabio Reis,PMDB,Sim
+SERGIPE,Jony Marcos,PRB,Sim
+SERGIPE,Valadares Filho,PSB,Sim
+TOCANTINS,Carlos Henrique Gaguim,PMDB,Sim
+TOCANTINS,C�sar Halum,PRB,Sim
+TOCANTINS,Dulce Miranda,PMDB,Sim
+TOCANTINS,Iraj� Abreu,PSD,Sim
+TOCANTINS,Josi Nunes,PMDB,Nao
+TOCANTINS,L�zaro Botelho,PP,Sim
+TOCANTINS,Professora Dorinha Seabra Rezende,DEM,Nao
+TOCANTINS,Vicentinho J�nior,PSB,Sim

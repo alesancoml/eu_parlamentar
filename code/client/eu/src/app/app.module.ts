@@ -8,7 +8,6 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Login } from '../pages/login/login';
 import { Tutorial } from '../pages/tutorial/tutorial';
-import { Estado } from '../pages/estado/estado';
 import { Sobre } from '../pages/sobre/sobre';
 import { Detalhamento } from '../pages/detalhamento/detalhamento';
 import { Perguntas } from '../pages/perguntas/perguntas';
@@ -45,7 +44,6 @@ firebase.initializeApp(environment.firebase);
     HomePage,
     Login,
     Tutorial,
-    Estado,
     Sobre,
     Perguntas,
     Resultados,
@@ -70,7 +68,6 @@ firebase.initializeApp(environment.firebase);
     HomePage,
     Login,
     Tutorial,
-    Estado,
     Sobre,
     Perguntas,
     Resultados,

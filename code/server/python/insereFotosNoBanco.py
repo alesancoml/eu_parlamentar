@@ -91,11 +91,9 @@ for estado in os.listdir(endereco1):
                             dep = str(row[0])
                             g.execute("UPDATE deputados SET foto=%s WHERE id_deputado=%s",(local,dep))
                             con.commit()
-                            print local,dep
-
                     else:
                         similar = []
-                        sql = "SELECT * FROM deputados where foto is NULL and estado='%s' order by estado"%(estados[indice])
+                        sql = "SELECT * FROM deputados where foto is NULL order by estado"
                         d.execute(sql)
                         results = d.fetchall()
                         if results:
@@ -105,12 +103,12 @@ for estado in os.listdir(endereco1):
                                 similaridade = calculo(nomeDoBanco,pessoa)
                                 similaridade = "%.3f" %(similaridade)
                                 if (len(similar)!=0):
-                                    if (similar[2]<similaridade and float(similaridade)>0.75):
+                                    if (similar[2]<similaridade and float(similaridade)>0.50):
                                         similar[0] = row[0]
                                         similar[1] = row[1]
                                         similar[2] = similaridade
                                 else:
-                                    if float(similaridade)>0.75:
+                                    if float(similaridade)>0.50:
                                         similar.append(row[0])
                                         similar.append(row[1])
                                         similar.append(similaridade)

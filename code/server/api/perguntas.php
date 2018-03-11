@@ -8,8 +8,8 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 $m = new Model();
 
 if($m){
-
-    $query = $m->read( 'questoes');
+    $consulta = "select * from (SELECT * FROM eu_parlamentar.questoes order by data desc limit 8) as subquery order by subquery.data asc";
+    $query = $m->buscaQuestoes($consulta);
     $out = "[";
     foreach( $query as $key => $value){
         if ($out != "[") {

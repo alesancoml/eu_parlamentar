@@ -37,9 +37,31 @@
         }
     }
 
+    function coletaEstados($state){
+        $m = new Model();
+        if($m){
+            $query = "order by estado";
+            $a = $m->buscaUFs("deputados");
+            $estados = [];
+            $state = strtolower($state);
+            foreach( $a as $key => $value){
+                $banco = utf8_encode($value[0]);
+                $banco = strtolower($banco);
+                if ($banco == $state){
+                    echo $banco;
+                    echo "<br>";
+                }
+                
+               
+            }
+            return $estados;
+        }
+    }
+
     function coletaDeputadosDoEstado($estado){
         $m = new Model();
         if($m){
+            $estado = strtoupper($estado);
             $query = "estado='".$estado."' order by nome";
             $a = $m->read( "deputados", $query);
             $deputados = [];
@@ -55,7 +77,6 @@
         else{
             echo ("Problema na coleta dos dados dos deputados.");
         }
-    
     }
 
     function coletaVotos($deputados){

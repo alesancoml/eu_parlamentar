@@ -42,12 +42,12 @@
       </ion-select>
     </ion-item>
     <p class="espaco">&nbsp;</p>
-    <ion-card *ngFor="let pergunta of perguntas" class='cards'>
+    <ion-card *ngFor="let pergunta of perguntas; let i = index;" class='cards'>
         <ion-list>
           <ion-card-content >
-            <p class='titulo'>{{pergunta.id}}º {{pergunta.pergunta}}</p>
+            <p class='titulo'>{{i+1}}º {{pergunta.pergunta}}</p>
             <p class='obs'>Proposta: {{pergunta.codigo}}</p>
-            <p class='obs'>Votada dia: {{pergunta.data}}</p>
+            <p class='obs'>Votada em: {{pergunta.data}}</p>
             <!-- <button ion-button class="btnDoc" color="primary">Ler Doc</button> -->
             <ion-segment [ngModel]="pergunta.id">
               <ion-segment-button value="Sim" (click)="doSubmit('Sim', pergunta.id, pergunta.resumo)">
