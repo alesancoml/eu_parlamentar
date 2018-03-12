@@ -43,9 +43,9 @@ export class Perguntas implements OnInit {
       "langs": new FormControl()
     });
   }
-  ionViewWillEnter(){
-    this.hideAds();
-  }
+  // ionViewWillEnter(){
+  //   this.hideAds();
+  // }
 
   showToast(position: string, mensagem: string) {
     let toast = this.toastCtrl.create({
@@ -56,9 +56,9 @@ export class Perguntas implements OnInit {
     toast.present(toast);
   }
 
-  public hideAds(){
-    this.admob.hideAds();
-  }
+  // public hideAds(){
+  //   this.admob.hideAds();
+  // }
 
   getDados(){
     this.loader.present();

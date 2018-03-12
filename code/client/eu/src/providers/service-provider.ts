@@ -4,8 +4,8 @@ import { Http, Headers, Response } from '@angular/http';
 @Injectable()
 export class ServiceProvider {
 
-      api : string = 'http://lcpcm1.hopto.org:1313/api/';
-      // api : string = 'https://dvrqgbvyzg.localtunnel.me/api/';
+      api : string = 'http://lcpcm1.hopto.org:1315/';
+      // api : string = 'https://qzmntnbare.localtunnel.me/api/';
 
   constructor(public http: Http) {}
 

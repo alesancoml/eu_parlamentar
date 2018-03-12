@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 	header("Access-Control-Allow-Origin:http://localhost:8100");
     header("Content-Type: application/x-www-form-urlencoded");
@@ -9,7 +9,7 @@
         protected $db;
 
         public function __construct(){
-            $this->db = new PDO('mysql:host=localhost;dbname=eu_parlamentar', 'root', '');
+            $this->db = new PDO('mysql:host=lcpcm1.hopto.org;dbname=eu_parlamentar;port=2913', 'root', 'aa1234bb');
         }
 
         public function insereUsuario( $tabela, Array $dados){
@@ -110,7 +110,7 @@
 
     //TESTE DA CLASSE
 
-    $m = new Model();
+    // $m = new Model();
 
     //READ
     // $a = $m->read( 'usuarios');

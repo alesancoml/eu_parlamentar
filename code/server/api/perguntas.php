@@ -8,7 +8,7 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 $m = new Model();
 
 if($m){
-    $consulta = "select * from (SELECT * FROM eu_parlamentar.questoes order by data desc limit 8) as subquery order by subquery.data asc";
+    $consulta = "select * from (SELECT * FROM eu_parlamentar.questoes order by data desc limit 10) as subquery order by subquery.data asc";
     $query = $m->buscaQuestoes($consulta);
     $out = "[";
     foreach( $query as $key => $value){
@@ -23,7 +23,7 @@ if($m){
         $out .= '"resumo": "'.$value["resumo"].'"}';
     }
     $out .= "]";
-    $out = utf8_encode($out);
+    $out = $out;
     echo $out;
 
 }   

@@ -1,0 +1,2 @@
+<?php phpinfo(); 
+echo "alesanco"?>

@@ -41,9 +41,9 @@ export class Resultados implements OnInit {
     this.postDados();
   }
 
-  ionViewWillEnter(){
-    this.hideAds();
-  }
+  // ionViewWillEnter(){
+  //   this.hideAds();
+  // }
 
   showToast(position: string, mensagem: string) {
     let toast = this.toastCtrl.create({
@@ -54,9 +54,9 @@ export class Resultados implements OnInit {
     toast.present(toast);
   }
 
-  public hideAds(){
-    this.admob.hideAds();
-  }
+  // public hideAds(){
+  //   this.admob.hideAds();
+  // }
 
   postDados(){
     this.loader.present();

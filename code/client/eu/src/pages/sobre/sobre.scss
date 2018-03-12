@@ -10,6 +10,7 @@ page-sobre {
         color: #000;
         font-size: 16px;
         width: 100%;
+        background-color: rgb(236, 235, 235);
     }
     p{
         margin:10px 5px 10px 5px;
@@ -19,6 +20,10 @@ page-sobre {
     .scroll-content {
         overflow-y: auto !important;
      }
+
+     .final{
+        margin-bottom: 30px;
+    }
 
 }
 

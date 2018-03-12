@@ -5,11 +5,11 @@
     header("Content-Type: application/x-www-form-urlencoded");
     header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
-    //RECUPERAÇÃO DO FORMULÁRIO
+    // // RECUPERAÇÃO DO FORMULÁRIO
     $data   = file_get_contents("php://input");
     $objData= json_decode($data);
 
-    // TRANSFORMA OS DADOS
+    // // TRANSFORMA OS DADOS
     $iden           = $objData->I;
     $nome           = $objData->N;
     $foto           = $objData->F;
@@ -18,7 +18,7 @@
     // $iden           = "5kfIF7lVnWhEpDP6HCJ8tEnBtnp1";
     // $nome           = "Renata Gomes";
     // $foto           = "fotoasdasdasdasddd";
-    // $email          = "etecoordenacao2@gmail.com";
+    // $email          = "etecoordenacao44@gmail.com";
     
     // LIMPA OS DADOS
     $email      = stripslashes($email);
