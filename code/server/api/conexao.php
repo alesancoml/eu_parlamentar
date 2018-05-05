@@ -9,7 +9,7 @@
         protected $db;
 
         public function __construct(){
-            $this->db = new PDO('mysql:host=lcpcm1.hopto.org;dbname=eu_parlamentar;port=2913', 'root', 'aa1234bb');
+            //$this->db = new PDO(); //ver no bitbucket
         }
 
         public function insereUsuario( $tabela, Array $dados){
