@@ -1,4 +1,0 @@
-﻿DF IZALCI LUCAS (adicionar o lucas no arquivo txt)
-MG FRANKLIN	(no banco, remover a palavra pastor)
-MS DAGOBERTO NOGUEIRA (adicionar o nogueira no arquivo txt)
-Remover o acento do estado Rondônia na tabela de deputados do banco
