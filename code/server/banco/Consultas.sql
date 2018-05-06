@@ -1,2 +1,0 @@
-select * from (SELECT * FROM eu_parlamentar.questoes order by data desc limit 10) as subquery order by subquery.data asc;
-select id_quest, voto, count(*) as qtde from votos group by id_quest, voto order by id_quest, qtde desc
